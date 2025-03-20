@@ -40,10 +40,10 @@ In this repository, we systematically analyze and compare recent efforts to repr
 ### Overview
 
 
-|                         | Links                                                        | Date                                               | Base Model                                                   | Tasks                     | Training Resources                                  | Details                      |
+|                         | Links                                                        | Date                                               | Backbone                                                  | Tasks                     | Training Resources                                  | Details                      |
 | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | DAPO          | [[Homepage]](https://dapo-sia.github.io)<br/>[[Code]](https://github.com/BytedTsinghua-SIA/DAPO)<br/>[[Paper]](https://arxiv.org/pdf/2503.14476) | 2025/03/18                                        | Qwen2.5-32B                                       | Mathematical  Reasoning | -                                                   | [[DAPO]](#dapo)                                    |
-| TinyZero                | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) | 2025/01/24                             | Qwen-2.5-3B Instruct                                        | Countdown               | 4 A800s                                             | [[TinyZero]](#tinyzero) |
+| TinyZero                | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) | 2025/01/24                             | Qwen2.5-3B-Instruct                | Countdown               | 4 A800s                                             | [[TinyZero]](#tinyzero) |
 
 ---
 
@@ -58,7 +58,7 @@ In this repository, we systematically analyze and compare recent efforts to repr
 | :------------ | :----------------------------------------------------------- |
 | Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
 | Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| Training Data | [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>Size: 17k<br/>Source: AoPS website |
+| Training Data | [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
 | RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
 | Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 15%;" /> |
 | Tricks        |                                                              |
