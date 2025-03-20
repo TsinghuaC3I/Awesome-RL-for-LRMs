@@ -9,27 +9,7 @@ Collection of Reasoning RL Tricks (RRT).
 
 In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
 
-## Table of Contents
 
-- [Awesome-RRT ](#awesome-rrt-)
-  - [Table of Contents](#table-of-contents)
-  - [Updates](#updates)
-  - [Projects](#projects)
-    - [Overview](#overview)
-    - [LLM](#llm)
-      - [DAPO](#dapo)
-      - [TinyZero](#tinyzero)
-    - [LMM](#lmm)
-      - [R1-VL](#r1-vl)
-  - [Findings](#findings)
-  - [Resources](#resources)
-      - [Backbones](#backbones)
-      - [Datasets](#datasets)
-      - [Frameworks](#frameworks)
-      - [Benchmarks](#benchmarks)
-  - [Acknowledgment](#acknowledgment)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Updates
 
@@ -40,10 +20,10 @@ In this repository, we systematically analyze and compare recent efforts to repr
 ### Overview
 
 
-|                         | Links                                                        | Date                                               | Backbone                                                  | Tasks                     | Training Resources                                  | Details                      |
-| ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| DAPO          | [[Homepage]](https://dapo-sia.github.io)<br/>[[Code]](https://github.com/BytedTsinghua-SIA/DAPO)<br/>[[Paper]](https://arxiv.org/pdf/2503.14476) | 2025/03/18                                        | Qwen2.5-32B                                       | Mathematical  Reasoning | -                                                   | [[DAPO]](#dapo)                                    |
-| TinyZero                | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) | 2025/01/24                             | Qwen2.5-3B-Instruct                | Countdown               | 4 A800s                                             | [[TinyZero]](#tinyzero) |
+| Date                                               |                         | Backbone                                                  | Tasks                     | Training                                  | Findings                          | Details                      | Links                                                        |
+| ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 2025/03/18                                        | DAPO          | Qwen2.5-32B                                       | Mathematical  Reasoning | -                                                   |                                                    | [[DAPO]](#dapo)                                    | [[Code]](https://github.com/BytedTsinghua-SIA/DAPO)<br/>[[Paper]](https://arxiv.org/pdf/2503.14476) |
+| 2025/01/24                             | TinyZero                | Qwen2.5-3B-Instruct                | Countdown               | 4 A800s                                             |                                              | [[TinyZero]](#tinyzero) | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) |
 
 ---
 
@@ -54,14 +34,13 @@ In this repository, we systematically analyze and compare recent efforts to repr
 - Paper: https://arxiv.org/pdf/2503.14476v1
 - Code: https://github.com/BytedTsinghua-SIA/DAPO
 
-| Name          | Value                                                        |
-| :------------ | :----------------------------------------------------------- |
-| Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
-| Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| Training Data | [[Data Link]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
-| RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
-| Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 15%;" /> |
-| Tricks        |                                                              |
+| Name              | Value                                                        |
+| :---------------- | :----------------------------------------------------------- |
+| Backbone Model    | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
+| Training Data     | [[Data Link]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
+| Hyperparams       | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
+| RL-Curve          | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
+| Tricks & Findings |                                                              |
 
 #### <mark>TinyZero</mark>
 
@@ -70,46 +49,15 @@ In this repository, we systematically analyze and compare recent efforts to repr
 
 ---
 
-### LMM
+### VLM
 
 #### <mark>R1-VL</mark>
 
 
 
+### Application
 
-
-## Findings
-
-Based on the above reproduction projects, we can derive several findings for stable and efficient training:
-
-- Hyperparams
-- Phases
-- Datasets
-- Backbones
-
-## Resources
-
-#### Backbones
-
-DeepSeek-R1-Distill Series:
-
-| Model ID                      | ModelScope                                                   | Hugging Face                                                 |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| DeepSeek-R1-Distill-Qwen-32B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) |
-| DeepSeek-R1-Distill-Qwen-14B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) |
-| DeepSeek-R1-Distill-Llama-8B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) |
-| DeepSeek-R1-Distill-Qwen-7B   | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) |
-| DeepSeek-R1-Distill-Qwen-1.5B | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) |
-
-#### Datasets
-
-
-
-#### Frameworks
-
-
-
-#### Benchmarks
+- Medical & Search
 
 
 
