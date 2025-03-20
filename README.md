@@ -58,7 +58,7 @@ In this repository, we systematically analyze and compare recent efforts to repr
 | :------------ | :----------------------------------------------------------- |
 | Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
 | Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| Training Data | [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
+| Training Data | [[Data Link]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
 | RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
 | Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 15%;" /> |
 | Tricks        |                                                              |
@@ -95,11 +95,11 @@ DeepSeek-R1-Distill Series:
 
 | Model ID                      | ModelScope                                                   | Hugging Face                                                 |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| DeepSeek-R1-Distill-Qwen-32B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) |
-| DeepSeek-R1-Distill-Qwen-14B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) |
-| DeepSeek-R1-Distill-Llama-8B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) |
-| DeepSeek-R1-Distill-Qwen-7B   | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) |
-| DeepSeek-R1-Distill-Qwen-1.5B | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) |
+| DeepSeek-R1-Distill-Qwen-32B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) |
+| DeepSeek-R1-Distill-Qwen-14B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) |
+| DeepSeek-R1-Distill-Llama-8B  | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) |
+| DeepSeek-R1-Distill-Qwen-7B   | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) |
+| DeepSeek-R1-Distill-Qwen-1.5B | [[Model Link]](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) | [[Model Link]](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) |
 
 #### Datasets
 
