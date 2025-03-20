@@ -3,15 +3,17 @@
 
 Collection of Reasoning RL Tricks (RRT).
 
+> While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data.
+>
 > The **Awesome-RRT Collection** aims to provide resources and empirical insights on reinforcement learning (RL) training for large language model (LLM) reasoning.
 
-While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data. In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
+In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
 
-## Table of Contents:mag:
+## Table of Contents
 
 - [Awesome-RRT ](#awesome-rrt-)
-  - [Table of Contents:mag:](#table-of-contentsmag)
-  - [Updates🔥](#updates)
+  - [Table of Contents](#table-of-contents)
+  - [Updates](#updates)
   - [Projects](#projects)
     - [Overview](#overview)
     - [LLM](#llm)
@@ -29,7 +31,7 @@ While RL has significantly advanced LLM reasoning, its training remains highly u
   - [Contributing](#contributing)
   - [License](#license)
 
-## Updates🔥
+## Updates
 
 - **[2025.03.20]** Add [DAPO](https://dapo-sia.github.io) - an Open-Source LLM Reinforcement Learning System at Scale.
 
@@ -54,7 +56,7 @@ While RL has significantly advanced LLM reasoning, its training remains highly u
 
 | Name          | Value                                                        |
 | :------------ | :----------------------------------------------------------- |
-| Backbone      | :hugs:[[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B) |
+| Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B) |
 | Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
 | Training Data | Link: [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>Size: 17k<br/>Source: AoPS website |
 | RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
@@ -65,15 +67,6 @@ While RL has significantly advanced LLM reasoning, its training remains highly u
 
 - Code: https://github.com/Jiayi-Pan/TinyZero
 - Experiment log: https://wandb.ai/jiayipan/TinyZero
-
-| Name          | Value                                                        |
-| :------------ | :----------------------------------------------------------- |
-| Backbone      |                                                              |
-| Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| Training Data | Link:<br/>Size:<br/>Source:                                  |
-| RL-Curve      |                                                              |
-| Results       |                                                              |
-| Tricks        |                                                              |
 
 ---
 
@@ -135,8 +128,8 @@ We thank the following projects for providing valuable resources:
 
 ## Contributing
 
-If you have any updates or improvements for this document, please feel free to submit a Pull Request. Thank you!
+If you have any updates or improvements for this document, please feel free to submit a **Pull Request**. Thank you!
 
 ## License
 
-This project is licensed under the [MIT License]((https://github.com/TsinghuaC3I/Awesome-RRT/blob/main/LICENSE)).
+This project is licensed under the [MIT License](https://github.com/TsinghuaC3I/Awesome-RRT/blob/main/LICENSE).
