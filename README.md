@@ -36,7 +36,7 @@ In this repository, we systematically analyze and compare recent efforts to repr
 ### Overview
 
 
-| Date                                               |                         | Backbone                                                  | Tasks                     | Training                                  | Findings                          | Details                      | Links                                                        |
+| Date                                               | Name | Backbone                                                  | Tasks                     | Training                                  | Findings                          | Details                      | Links                                                        |
 | ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 2025/03/18                                        | DAPO          | Qwen2.5-32B                                       | Mathematical  Reasoning | -                                                   |                                                    | [[DAPO]](#dapo)                                    | [[Code]](https://github.com/BytedTsinghua-SIA/DAPO)<br/>[[Paper]](https://arxiv.org/pdf/2503.14476) |
 | 2025/01/24                             | TinyZero                | Qwen2.5-3B-Instruct                | Countdown               | 4 A800s                                             |                                              | [[TinyZero]](#tinyzero) | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) |
@@ -52,8 +52,8 @@ In this repository, we systematically analyze and compare recent efforts to repr
 
 | Name              | Value                                                        |
 | :---------------- | :----------------------------------------------------------- |
-| Backbone Model    | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
-| Training Data     | [[Data Link]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
+| Backbone Model    | Qwen2.5-32B    |
+| Training Data     | [[BytedTsinghua-SIA/DAPO-Math-17k]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
 | Hyperparams       | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
 | RL-Curve          | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
 | Tricks & Findings |                                                              |
