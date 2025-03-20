@@ -3,29 +3,33 @@
 
 Collection of Reasoning RL Tricks (RRT).
 
-> The **Awesome-RRT Collection** aims to provide resources and empirical insights on reinforcement learning (RL) training for large language model (LLM) reasoning. While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data.
+> The **Awesome-RRT Collection** aims to provide resources and empirical insights on reinforcement learning (RL) training for large language model (LLM) reasoning.
 
-In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
+While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data. In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
 
-## :mag:Table of Contents
+## Table of Contents:mag:
 
-- [🔥Updates](#updates)
-- [Projects](#projects)
-  - [Overview](#overview)
-  - [LLM](#llm)
-    - [DAPO](#dapo)
-    - [TinyZero](#tinyzero)
-  - [LMM](#lmm)
-    - [R1-VL](#r1-vl)
-- [Findings](#findings)
-- [Resources](#resources)
-    - [Backbones](#backbones)
-    - [Datasets](#datasets)
-    - [Frameworks](#frameworks)
-    - [Benchmarks](#benchmarks)
-- [Acknowledgment](#acknowledgment)
+- [Awesome-RRT ](#awesome-rrt-)
+  - [Table of Contents:mag:](#table-of-contentsmag)
+  - [Updates🔥](#updates)
+  - [Projects](#projects)
+    - [Overview](#overview)
+    - [LLM](#llm)
+      - [DAPO](#dapo)
+      - [TinyZero](#tinyzero)
+    - [LMM](#lmm)
+      - [R1-VL](#r1-vl)
+  - [Findings](#findings)
+  - [Resources](#resources)
+      - [Backbones](#backbones)
+      - [Datasets](#datasets)
+      - [Frameworks](#frameworks)
+      - [Benchmarks](#benchmarks)
+  - [Acknowledgment](#acknowledgment)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-## 🔥Updates
+## Updates🔥
 
 - **[2025.03.20]** Add [DAPO](https://dapo-sia.github.io) - an Open-Source LLM Reinforcement Learning System at Scale.
 
@@ -53,11 +57,23 @@ In this repository, we systematically analyze and compare recent efforts to repr
 | Backbone      | :hugs:[[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B) |
 | Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
 | Training Data | Link: [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>Size: 17k<br/>Source: AoPS website |
-| RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 25%;" /> |
-| Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 25%;" /> |
+| RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
+| Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 15%;" /> |
 | Tricks        |                                                              |
 
 #### <mark>TinyZero</mark>
+
+- Code: https://github.com/Jiayi-Pan/TinyZero
+- Experiment log: https://wandb.ai/jiayipan/TinyZero
+
+| Name          | Value                                                        |
+| :------------ | :----------------------------------------------------------- |
+| Backbone      |                                                              |
+| Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
+| Training Data | Link:<br/>Size:<br/>Source:                                  |
+| RL-Curve      |                                                              |
+| Results       |                                                              |
+| Tricks        |                                                              |
 
 ---
 
@@ -82,8 +98,15 @@ Based on the above reproduction projects, we can derive several findings for sta
 
 #### Backbones
 
-- DeepSeek Series
-- Qwen Series
+DeepSeek-R1-Distill Series:
+
+| Model ID                      | ModelScope                                                   | Hugging Face                                                 |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| DeepSeek-R1-Distill-Qwen-32B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B) |
+| DeepSeek-R1-Distill-Qwen-14B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) |
+| DeepSeek-R1-Distill-Llama-8B  | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B) |
+| DeepSeek-R1-Distill-Qwen-7B   | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) |
+| DeepSeek-R1-Distill-Qwen-1.5B | [Model Link](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) | [Model Link](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) |
 
 #### Datasets
 
@@ -101,12 +124,6 @@ Based on the above reproduction projects, we can derive several findings for sta
 
 We thank the following projects for providing valuable resources:
 
-Blog:
-
-- https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/
-
-Awesome List:
-
 - https://github.com/huggingface/open-r1
 - https://github.com/haoyangliu123/awesome-deepseek-r1
 - https://github.com/JarvisUSTC/Awesome-DeepSeek-R1-Reproduction
@@ -114,3 +131,12 @@ Awesome List:
 - https://github.com/bruno686/Awesome-RL-based-LLM-Reasoning
 - https://github.com/pemami4911/awesome-hyperparams
 
+
+
+## Contributing
+
+If you have any updates or improvements for this document, please feel free to submit a Pull Request. Thank you!
+
+## License
+
+This project is licensed under the [MIT License]((https://github.com/TsinghuaC3I/Awesome-RRT/blob/main/LICENSE)).
