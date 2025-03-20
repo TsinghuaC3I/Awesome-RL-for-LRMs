@@ -33,7 +33,7 @@ In this repository, we systematically analyze and compare recent efforts to repr
 
 ## Updates
 
-- **[2025.03.20]** Add [DAPO](https://dapo-sia.github.io) - an Open-Source LLM Reinforcement Learning System at Scale.
+- :fire: **[2025.03.20]** Add [DAPO](https://dapo-sia.github.io) - an Open-Source LLM Reinforcement Learning System at Scale.
 
 ## Projects
 
@@ -56,9 +56,9 @@ In this repository, we systematically analyze and compare recent efforts to repr
 
 | Name          | Value                                                        |
 | :------------ | :----------------------------------------------------------- |
-| Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B) |
+| Backbone      | [[Qwen2.5-32B]](https://huggingface.co/Qwen/Qwen2.5-32B)     |
 | Hyperparams   | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| Training Data | Link: [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>Size: 17k<br/>Source: AoPS website |
+| Training Data | [[Data]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>Size: 17k<br/>Source: AoPS website |
 | RL-Curve      | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
 | Results       | <img src="figs/dapo_results.png" alt="Results" style="zoom: 15%;" /> |
 | Tricks        |                                                              |
