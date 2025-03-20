@@ -10,6 +10,22 @@ Collection of Reasoning RL Tricks (RRT).
 In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
 
 
+## Table of Contents
+
+- [Awesome-RRT ](#awesome-rrt-)
+  - [Table of Contents](#table-of-contents)
+  - [Updates](#updates)
+  - [Projects](#projects)
+    - [Overview](#overview)
+    - [LLM](#llm)
+      - [DAPO](#dapo)
+      - [TinyZero](#tinyzero)
+    - [VLM](#vlm)
+      - [R1-VL](#r1-vl)
+    - [Application](#application)
+  - [Acknowledgment](#acknowledgment)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Updates
 
