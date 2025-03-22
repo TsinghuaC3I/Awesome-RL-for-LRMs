@@ -2,15 +2,7 @@
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-Awesome collections of **Reasoning with RL Recipes (RRR, TripleR)**, including reward, loss, hyper-parameters, findings and all about reasoning with rl.
-
-> While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data.
->
-> The **Awesome-RRT Collection** aims to provide resources and empirical insights on reinforcement learning (RL) training for large language model (LLM) reasoning.
-
-In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
-
- 
+> A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
 [TOC]
 
@@ -21,7 +13,7 @@ In this repository, we systematically analyze and compare recent efforts to repr
 | 2025/01/24 | TinyZero | Qwen2.5-3B-Instruct | Countdown               | 4 A800s  |          | [[TinyZero]](#tinyzero) |
 | 2025/03/18 | DAPO     | Qwen2.5-32B         | Mathematical  Reasoning | -        |          | [[DAPO]](#dapo)         |
 
-## Projects
+## Projecst
 
 ### Template
 
@@ -31,10 +23,10 @@ In this repository, we systematically analyze and compare recent efforts to repr
 | Backbone Model        | (Base / Instruct / Reasoning;  HF Model)                 |
 | RL Algorithm          | (PPO / GRPO / RLOO / REINFORCE++; OpenRLHF / Verl / Trl) |
 | Training Dataset      | (Size / Source / HF Dataset)                             |
-| Rollout Configuration | (Batch Size * N samples per prompt; Temperature)         |
+| Rollout Configuration | (Batch Size * N Samples ; Temperature; Dynamic Sampling) |
 | Reward Function       | (Outcome; Process; Repetition & Length)                  |
-| Loss Function         | (KL Loss; Length Penalty; Token-level loss)              |
-| Benchmark             | (Performance; R1-level; GPT-4o level)                    |
+| Policy Optimization   | (KL Loss; Length Penalty; Token-level loss)              |
+| Benchmark             | (MATH/GPQA; R1 level; GPT-4o level)                      |
 | Core Insights         | ——                                                       |
 | Additional Notes      | ——                                                       |
 
@@ -178,6 +170,8 @@ In this repository, we systematically analyze and compare recent efforts to repr
 ### 2025.02xx, LLM-R1
 
 
+
+### 2025.xxxx, xxx
 
 
 
