@@ -1,4 +1,4 @@
-# Awesome-TripleR 
+# Awesome Reasoning with RL Recipes ("Triple R")
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
@@ -8,31 +8,17 @@
 
 ## Overview
 
-| Date       | Name     | Backbone            | Tasks                   | Training | Findings | Details                 |
-| ---------- | -------- | ------------------- | ----------------------- | -------- | -------- | ----------------------- |
-| 2025/01/24 | TinyZero | Qwen2.5-3B-Instruct | Countdown               | 4 A800s  |          | [[TinyZero]](#tinyzero) |
-| 2025/03/18 | DAPO     | Qwen2.5-32B         | Mathematical  Reasoning | -        |          | [[DAPO]](#dapo)         |
+| Date       | Project  | Org  | Model | Dataset | Note              |
+| ---------- | -------- | ---- | ----- | ------- | ----------------- |
+| 2025.0102  | PRIME-RL |      |       |         | [More](#primerl)  |
+|            |          |      |       |         |                   |
+|            |          |      |       |         |                   |
+| 2025/01/24 | TinyZero |      |       |         | [More](#tinyzero) |
+| 2025/03/18 | DAPO     |      |       |         |                   |
 
-## Projecst
+## Projects
 
-### Template
-
-| Project or Paper      | [Project name or Paper title]()                          |
-| :-------------------- | :------------------------------------------------------- |
-| GitHub                | [Username/Project]()                                     |
-| Backbone Model        | (Base / Instruct / Reasoning;  HF Model)                 |
-| RL Algorithm          | (PPO / GRPO / RLOO / REINFORCE++; OpenRLHF / Verl / Trl) |
-| Training Dataset      | (Size / Source / HF Dataset)                             |
-| Rollout Configuration | (Batch Size * N Samples ; Temperature; Dynamic Sampling) |
-| Reward Function       | (Outcome; Process; Repetition & Length)                  |
-| Policy Optimization   | (KL Loss; Length Penalty; Token-level loss)              |
-| Benchmark             | (MATH/GPQA; R1 level; GPT-4o level)                      |
-| Core Insights         | ——                                                       |
-| Additional Notes      | ——                                                       |
-
-
-
-### 2025.0102, PRIME-RL
+### <div id="primerl">2025.0102, PRIME-RL</div>
 
 
 
@@ -46,7 +32,7 @@
 
 
 
-### 2025.0124, TinyZero
+### <div id="tinyzero">2025.0124, TinyZero</div>
 
 
 
@@ -91,6 +77,10 @@
 
 
 ### 2025.0220, Logic-RL
+
+
+
+### 2025.0225, SWE-RL
 
 
 
@@ -155,15 +145,17 @@
 
 
 
+### 2025.02xx, VisualThinker-R1-Zero
+
+[R1-Zero's "Aha Moment" in Visual Reasoning on a 2B Non-SFT Model](https://arxiv.org/abs/2503.05132)
+
+
+
 ### 2025.02xx, R1-Searcher
 
 
 
 ### 2025.02xx, Med-RLVR
-
-
-
-### 2025.02xx, SWE-RL
 
 
 
@@ -190,11 +182,28 @@ We thank the following projects for providing valuable resources:
 
 ## Contributing
 
-
-
 If you have any updates or improvements for this document, please feel free to submit a **Pull Request**. Thank you!
+
+### <div id="template">202x.0x0x, Template</div>
+
+| Project or Paper      | [Project name or Paper title]()                          |
+| :-------------------- | :------------------------------------------------------- |
+| GitHub                | [Username/Project]()                                     |
+| Backbone Model        | (Base / Instruct / Reasoning;  HF Model)                 |
+| RL Algorithm          | (PPO / GRPO / RLOO / REINFORCE++; OpenRLHF / Verl / Trl) |
+| Training Dataset      | (Size / Source / HF Dataset)                             |
+| Rollout Configuration | (Batch Size * N Samples ; Temperature; Dynamic Sampling) |
+| Reward Function       | (Outcome; Process; Repetition & Length)                  |
+| Policy Optimization   | (KL Loss; Length Penalty; Token-level loss)              |
+| Benchmark             | (MATH/GPQA; R1 level; GPT-4o level)                      |
+| Core Insights         | ——                                                       |
+| Additional Notes      | ——                                                       |
 
 
 
 ## Citation
+
+```tex
+
+```
 
