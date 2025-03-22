@@ -1,7 +1,8 @@
-# Awesome-RRT [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome-TripleR 
 
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-Collection of Reasoning RL Tricks (RRT).
+Awesome collections of **Reasoning with RL Recipes (RRR, TripleR)**, including reward, loss, hyper-parameters, findings and all about reasoning with rl.
 
 > While RL has significantly advanced LLM reasoning, its training remains highly unstable and is influenced by various factors, such as hyperparameters and data.
 >
@@ -9,71 +10,174 @@ Collection of Reasoning RL Tricks (RRT).
 
 In this repository, we systematically analyze and compare recent efforts to reproduce DeepSeek-R1, focusing on training details to provide insights that facilitate the efficient implementation of RL training. Additionally, we track the latest advancements in this field and curate relevant resources such as datasets and frameworks.
 
+ 
 
-## Table of Contents
+[TOC]
 
-- [Awesome-RRT ](#awesome-rrt-)
-  - [Table of Contents](#table-of-contents)
-  - [Updates](#updates)
-  - [Projects](#projects)
-    - [Overview](#overview)
-    - [LLM](#llm)
-      - [DAPO](#dapo)
-      - [TinyZero](#tinyzero)
-    - [VLM](#vlm)
-      - [R1-VL](#r1-vl)
-    - [Application](#application)
-  - [Acknowledgment](#acknowledgment)
-  - [Contributing](#contributing)
-  - [License](#license)
+## Overview
 
-## Updates
-
-- :fire: **[2025.03.20]** Add [DAPO](https://dapo-sia.github.io) - an Open-Source LLM Reinforcement Learning System at Scale.
+| Date       | Name     | Backbone            | Tasks                   | Training | Findings | Details                 |
+| ---------- | -------- | ------------------- | ----------------------- | -------- | -------- | ----------------------- |
+| 2025/01/24 | TinyZero | Qwen2.5-3B-Instruct | Countdown               | 4 A800s  |          | [[TinyZero]](#tinyzero) |
+| 2025/03/18 | DAPO     | Qwen2.5-32B         | Mathematical  Reasoning | -        |          | [[DAPO]](#dapo)         |
 
 ## Projects
 
-### Overview
+### Template
 
-
-| Date                                               | Name | Backbone                                                  | Tasks                     | Training                                  | Findings                          | Details                      | Links                                                        |
-| ------------------------------------------------------------ | ----------------------- | ------------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 2025/03/18                                        | DAPO          | Qwen2.5-32B                                       | Mathematical  Reasoning | -                                                   |                                                    | [[DAPO]](#dapo)                                    | [[Code]](https://github.com/BytedTsinghua-SIA/DAPO)<br/>[[Paper]](https://arxiv.org/pdf/2503.14476) |
-| 2025/01/24                             | TinyZero                | Qwen2.5-3B-Instruct                | Countdown               | 4 A800s                                             |                                              | [[TinyZero]](#tinyzero) | [[Code]](https://github.com/Jiayi-Pan/TinyZero)<br/>[[Experiment Log]](https://wandb.ai/jiayipan/TinyZero) |
-
----
-
-### LLM
-
-#### <mark>DAPO</mark>
-
-- Paper: https://arxiv.org/pdf/2503.14476v1
-- Code: https://github.com/BytedTsinghua-SIA/DAPO
-
-| Name              | Value                                                        |
-| :---------------- | :----------------------------------------------------------- |
-| Backbone Model    | Qwen2.5-32B    |
-| Training Data     | [[BytedTsinghua-SIA/DAPO-Math-17k]](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k)<br/>size: 17k<br/>source: AoPS website |
-| Hyperparams       | train_batch_size:<br/>rollout_batch_size:<br/>n_samples_per_prompt:<br/>episode:<br/>epoch:<br/>learning_rate:<br/>rl_advantage:<br/>gpus (hours): |
-| RL-Curve          | <img src="figs/dapo_curve.png" alt="RL-Curve" style="zoom: 15%;" /> |
-| Tricks & Findings |                                                              |
-
-#### <mark>TinyZero</mark>
-
-- Code: https://github.com/Jiayi-Pan/TinyZero
-- Experiment log: https://wandb.ai/jiayipan/TinyZero
-
----
-
-### VLM
-
-#### <mark>R1-VL</mark>
+| Project or Paper      | [Project name or Paper title]()                          |
+| :-------------------- | :------------------------------------------------------- |
+| GitHub                | [Username/Project]()                                     |
+| Backbone Model        | (Base / Instruct / Reasoning;  HF Model)                 |
+| RL Algorithm          | (PPO / GRPO / RLOO / REINFORCE++; OpenRLHF / Verl / Trl) |
+| Training Dataset      | (Size / Source / HF Dataset)                             |
+| Rollout Configuration | (Batch Size * N samples per prompt; Temperature)         |
+| Reward Function       | (Outcome; Process; Repetition & Length)                  |
+| Loss Function         | (KL Loss; Length Penalty; Token-level loss)              |
+| Benchmark             | (Performance; R1-level; GPT-4o level)                    |
+| Core Insights         | ——                                                       |
+| Additional Notes      | ——                                                       |
 
 
 
-### Application
+### 2025.0102, PRIME-RL
 
-- Medical & Search
+
+
+### 2025.0122, DeepSeek-R1
+
+
+
+### 2025.0122, Kimi k1.5
+
+ [Kimi k1.5: Scaling Reinforcement Learning with LLMs](https://arxiv.org/pdf/2501.12599?)
+
+
+
+### 2025.0124, TinyZero
+
+
+
+### 2025.0124, Open-R1
+
+
+
+### 2025.0125, SimpleRL
+
+
+
+### 2025.0126, RAGEN
+
+
+
+### 2025.0203, Verifier
+
+
+
+### 2025.0206, Demysitify-long-CoT
+
+
+
+### 2025.0210, DeepScaler
+
+
+
+### 2025.0210, OREAL
+
+[Exploring the Limit of Outcome Reward for Learning Mathematical Reasoning](https://arxiv.org/abs/2502.06781)
+
+
+
+### 2025.0217, LIMR
+
+[LIMR: Less is More for RL Scaling](https://arxiv.org/abs/2502.11886)
+
+
+
+### 2025.0220, Open-Reasoner-Zero
+
+
+
+### 2025.0220, Logic-RL
+
+
+
+### 2025.0303, VC-PPO
+
+[What’s Behind PPO’s Collapse in Long-CoT? Value Optimization Holds the Secret](https://arxiv.org/pdf/2503.01491)
+
+
+
+### 2025.0306, LCPO-L1
+
+[L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](https://www.arxiv.org/pdf/2503.04697)
+
+
+
+### 2025.0310, MetaRL
+
+[Optimizing Test-Time Compute via Meta Reinforcement Fine-Tuning](https://arxiv.org/pdf/2503.07572)
+
+
+
+### 2025.0318, TOPR
+
+[Tapered Off-Policy REINFORCE: Stable and efficient reinforcement learning for LLMs](https://arxiv.org/abs/2503.14286v2)
+
+
+
+### 2025.0318, DAPO
+
+| Project or Paper      | [DAPO: An Open-Source LLM Reinforcement Learning System at Scale](https://arxiv.org/pdf/2503.14476v1) |
+| :-------------------- | :----------------------------------------------------------- |
+| GitHub                | [BytedTsinghua-SIA/DAPO](https://github.com/BytedTsinghua-SIA/DAPO) |
+| Backbone Model        | Qwen2.5-32B                                                  |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | [BytedTsinghua-SIA/DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k) (AoPS Website) |
+| Rollout Configuration | 256*16, temperature=1.0                                      |
+| Reward Function       |                                                              |
+| Loss Function         |                                                              |
+| Benchmark             |                                                              |
+| Core Insights         | Outperforming DeepSeek-R1-Zero-Qwen-32B with 50% training steps |
+| Additional Notes      |                                                              |
+
+
+
+### 2025.0321, Oat-Zero
+
+
+
+### 2025.02xx, VLM-R1
+
+
+
+### 2025.02xx, R1-V
+
+
+
+### 2025.02xx, r1-vlm
+
+
+
+### 2025.02xx, open-r1-multimodal
+
+
+
+### 2025.02xx, R1-Searcher
+
+
+
+### 2025.02xx, Med-RLVR
+
+
+
+### 2025.02xx, SWE-RL
+
+
+
+### 2025.02xx, LLM-R1
+
+
 
 
 
@@ -92,8 +196,11 @@ We thank the following projects for providing valuable resources:
 
 ## Contributing
 
+
+
 If you have any updates or improvements for this document, please feel free to submit a **Pull Request**. Thank you!
 
-## License
 
-This project is licensed under the [MIT License](https://github.com/TsinghuaC3I/Awesome-RRT/blob/main/LICENSE).
+
+## Citation
+
