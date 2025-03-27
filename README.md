@@ -6,7 +6,40 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 ## Contents
 
-[TOC]
+- [Awesome RL Reasoning Recipes ("Triple R")](#awesome-rl-reasoning-recipes-triple-r)
+  - [Contents](#contents)
+  - [Overview](#overview)
+    - [Large Language Models](#large-language-models)
+    - [Multimodal and Applications](#multimodal-and-applications)
+  - [Projects](#projects)
+    - [2025.0102, PRIME-RL](#20250102-prime-rl)
+    - [2025.0122, DeepSeek-R1](#20250122-deepseek-r1)
+    - [2025.0122, Kimi k1.5](#20250122-kimi-k15)
+    - [2025.0124, TinyZero](#20250124-tinyzero)
+    - [2025.0125, SimpleRL](#20250125-simplerl)
+    - [2025.0206, Demysitify-long-CoT](#20250206-demysitify-long-cot)
+    - [2025.0210, DeepScaler](#20250210-deepscaler)
+    - [2025.0210, Logic-RL](#20250210-logic-rl)
+    - [2025.0210, OREAL](#20250210-oreal)
+    - [2025.0217, LIMR](#20250217-limr)
+    - [2025.0217, Open-Reasoner-Zero](#20250217-open-reasoner-zero)
+    - [ 2025.0225, SWE-RL](#-20250225-swe-rl)
+    - [2025.0303, VC-PPO ](#20250303-vc-ppo-)
+    - [2025.0306, LCPO-L1 ](#20250306-lcpo-l1-)
+    - [2025.0310, MetaRL ](#20250310-metarl-)
+    - [2025.0318, TOPR ](#20250318-topr-)
+    - [2025.0318, DAPO](#20250318-dapo)
+    - [2025.0319, SWEET-RL ](#20250319-sweet-rl-)
+    - [2025.0321, Oat-Zero](#20250321-oat-zero)
+    - [2025.0215, VLM-R1](#20250215-vlm-r1)
+    - [2025.0202, R1-V](#20250202-r1-v)
+    - [2025.0306, r1-vlm](#20250306-r1-vlm)
+    - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
+    - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
+  - [Contributing](#contributing)
+    - [202x.0x0x, Template](#202x0x0x-template)
+  - [Citation](#citation)
+
 
 ## Overview
 
