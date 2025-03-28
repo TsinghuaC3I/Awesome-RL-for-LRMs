@@ -231,8 +231,22 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | REINFORCE++ loss with 0.001 unbiased KL coefficient.         |
 | Benchmark             | o3-mini-high level on K&K logic puzzle                       |
 | Core Insights         | With simple REINFORCE++ with KL loss, 7B model develops advanced reasoning skills that are absent from the logic corpus and generates to other tasks like math. |
-| Additional Notes      | Include KL penalty in GRPO. <br /> $$ \mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{[q \sim P(Q), \{o_i\}_{i=1}^G \sim \pi_{\theta_{\text{old}}}(O|q)]} $$ </br> $$ \frac{1}{G} \sum_{i=1}^G \frac{1}{|O_i|} \sum_{t=1}^{|O_i|} \left\{ \min \left[ \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}} \hat{A}_{i,t}, \text{clip} \left( \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}}, 1-\epsilon, 1+\epsilon \right) \hat{A}_{i,t} \right] - \beta \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] \right\}.$$  <br /><br />Use unbiased KL Estimation <br /> $$ \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] = \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - \log \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - 1. $$ |
+| Additional Notes      |  |
 
+Include KL penalty in GRPO.
+
+$$
+\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{[q \sim P(Q), \{o_i\}_{i=1}^G \sim \pi_{\theta_{\text{old}}}(O|q)]}
+$$
+
+$$
+\frac{1}{G} \sum_{i=1}^G \frac{1}{|O_i|} \sum_{t=1}^{|O_i|} \left\{ \min \left[ \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}} \hat{A}_{i,t}, \text{clip} \left( \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}}, 1-\epsilon, 1+\epsilon \right) \hat{A}_{i,t} \right] - \beta \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] \right\}.
+$$
+
+Use unbiased KL Estimation
+
+$$ \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] = \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - \log \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - 1.
+$$
 
 
 #### <div id="oreal">2025.0210, OREAL</div>
