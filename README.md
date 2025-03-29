@@ -37,6 +37,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0215, VLM-R1](#20250215-vlm-r1)
       - [2025.0306, r1-vlm](#20250306-r1-vlm)
       - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
+      - [2025.0310, MM-Eureka](#20250310-mm-eureka)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -87,8 +88,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0303 | ReSearch              | Agent-RL           | [GitHub](https://github.com/Agent-RL/ReSearch)<br />[More](#research) | ——                                                           | ——                                                           | <details><summary>Click</summary>The project train LLMs from scratch, utilizing RL with GRPO to learn to reason via search operations, without reliance on pre-existing reasoning frameworks or supervised data.</details> |
 | 2025.0306 | R1-VLM                | GroundLight        | [Blog](https://www.groundlight.ai/blog/visual-reasoning-models)<br />[GitHub](https://github.com/groundlight/r1_vlm)<br />[More](#r1-vlm) | ——                                                           | ——                                                           | <details><summary>Click</summary>R1-VLM enhances VLMs using RL, contributing significantly improved performance on complex visual reasoning tasks (spatial, counting, logic) where standard models falter. It shows that RL effectively unlocks advanced, multi-step reasoning capabilities specifically for vision-language understanding.</details> |
 | 2025.0310 | VisualThinker-R1-Zero | TurningPoint       | [Paper](https://arxiv.org/pdf/2503.05132) <br />[GitHub](https://github.com/turningpoint-ai/VisualThinker-R1-Zero)<br />[More](#visual-r1-zero) | [VisualThinker-R1-Zero](https://huggingface.co/turningpoint-ai/VisualThinker-R1-Zero) | ——                                                           | <details><summary>Click</summary>VisualThinker-R1-Zero adapts the R1-Zero RL paradigm (no supervised fine-tuning) to VLMs, achieving SoTa visual reasoning. It shows that complex visual reasoning can be effectively cultivated directly via RL on a base VLM, bypassing supervised data needs.</details> |
-| 2025.0310 | MM-EUREKA | Shanghai AI Lab && Shanghai Innovation Institute && SJTU && HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) | [MM-Eureka-Zero-38B](https://huggingface.co/FanqingM/MM-Eureka-Zero-38B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
-
+| 2025.0310 | MM-EUREKA | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) | [MM-Eureka-Zero-38B](https://huggingface.co/FanqingM/MM-Eureka-Zero-38B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
@@ -235,21 +235,6 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | With simple REINFORCE++ with KL loss, 7B model develops advanced reasoning skills that are absent from the logic corpus and generates to other tasks like math. |
 | Additional Notes      |  |
 
-Include KL penalty in GRPO.
-
-$$
-\mathcal{J}_{\text{GRPO}}(\theta) = \mathbb{E}_{[q \sim P(Q), \{o_i\}_{i=1}^G \sim \pi_{\theta_{\text{old}}}(O|q)]}
-$$
-
-$$
-\frac{1}{G} \sum_{i=1}^G \frac{1}{|O_i|} \sum_{t=1}^{|O_i|} \left\{ \min \left[ \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}} \hat{A}_{i,t}, \text{clip} \left( \frac{\pi_\theta^{i,t}}{\pi_{\theta_{\text{old}}}^{i,t}}, 1-\epsilon, 1+\epsilon \right) \hat{A}_{i,t} \right] - \beta \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] \right\}.
-$$
-
-Use unbiased KL Estimation
-
-$$ \mathbb{D}_{\text{KL}}[\pi_\theta \| \pi_{\text{ref}}] = \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - \log \frac{\pi_{\text{ref}}(O_{i,t} | q, O_{i,<t})}{\pi_\theta(O_{i,t} | q, O_{i,<t})} - 1.
-$$
-
 
 #### <div id="oreal">2025.0210, OREAL</div>
 
@@ -257,14 +242,14 @@ $$
 | --------------------- | ------------------------------------------------------------ |
 | GitHub                | [InternLM/OREAL](https://github.com/InternLM/OREA)           |
 | Backbone Model        | Qwen2.5-7B / Qwen2.5-32B                                     |
-| RL Algorithm          | OREAL loss: </br> $$\mathcal{L}_{\text{total}}(d) \triangleq \mathbb{E}_{s \sim S} \left[ \sum_{t=0}^T \left( -\omega_{s \leq t}^+ \log \pi_\theta(s_{\leq t} | d) I_{D_+}(s) + \eta \, \omega_{s \leq t}^- \log \frac{\pi_\theta(s_{\leq t} | d)}{\pi_{\text{old}}(s_{\leq t} | d)} I_{D_-}(s) \right) \right] $$ $$ + \beta \text{KL}(\pi_\theta(\cdot | d) \parallel \pi_{\text{old}}(\cdot | d))$$ |
+| RL Algorithm          |   |
 | Training Dataset      | [OREAL-RL-Prompts](https://huggingface.co/datasets/internlm/OREAL-RL-Prompts), 4k |
 | Rollout Configuration | 64 prompts * 16 responses; Temprature = 1.0; Online Accuracy Filtering; Retain only one correct and wrong solutions |
 | Reward Function       | Outcome Reward Signal by rule-based verifier and Qwen2.5-72B-Instruct + Token level Reward |
 | Policy Optimization   | OREAL loss with 0.01 KL coefficient                          |
 | Benchmark             | R1-level on MATH500, AIME2024, AIME2025-I, LiveMath, Olympiad |
 | Core Insights         | Behavior cloning on positive samples is sufficient for optimal learning and reward reshaping for negative samples is needed for consistent gradient estimation. A token-level reward model can be trained to addresses sparse rewards. |
-| Additional Notes      | Behavior cloning on positive samples:<br />  $$ \mathcal{L}_1(\theta) = \underbrace{\mathbb{E}_{s \sim \mathcal{D}^+} \left[ -\log \pi_\theta(s) \right]}_{\text{Positive example alignment}} + \underbrace{\beta \, \text{KL}(\pi_\theta \parallel \pi_{\text{old}})}_{\text{Policy constraint}}, $$  <br /><br />Reward reshaping for negative samples:  <br />$$ \mathcal{L}_2(\theta) = \mathbb{E}_{s \sim S^-} \left[ F(1-p) \cdot \log \frac{\pi_\theta(s)}{\pi_{\text{old}}(s)} \right] + \beta \, \text{KL}(\pi_\theta \parallel \pi_{\text{old}}), $$ <br /><br /> Total loss: <br /> $$ \mathcal{L}_{\text{total}}(d) \triangleq \mathbb{E}_{s \sim S} \left[ \sum_{t=0}^T \left( -\omega_{s \leq t}^+ \log \pi_\theta(s_{\leq t} | d) I_{D_+}(s) + \eta \, \omega_{s \leq t}^- \log \frac{\pi_\theta(s_{\leq t} | d)}{\pi_{\text{old}}(s_{\leq t} | d)} I_{D_-}(s) \right) \right] $$ $$ + \beta \, \text{KL}(\pi_\theta(\cdot | d) \parallel \pi_{\text{old}}(\cdot | d)), $$ |
+| Additional Notes      | |
 
 
 
@@ -281,7 +266,7 @@ $$
 | Policy Optimization   | PPO loss with 0.01 KL coefficient                            |
 | Benchmark             | GPT-4o level on AIME2024, MATH500, AMC2023                   |
 | Core Insights         | Precisely selected data may be the key to unlocking the enhanced reasoning capabilities of LLMs. |
-| Additional Notes      | The author uses the trained model's average reward curve as a reference for measuring sample effectiveness: <br /> $$ r_{\text{avg}}^k = \frac{1}{N} \sum_{i=1}^N r_i^k, \quad k = 1, \dots, K $$  <br />where $ r_i^k $ represents the reward of sample $ i $ at epoch $ k $, and $ N $ is the total number of samples.  <br /><br />For each sample, LIM computes a normalized alignment score:  <br />$$ s_i = 1 - \frac{\sum_{k=1}^K (r_i^k - r_{\text{avg}}^k)^2}{\sum_{k=1}^K (1 - r_{\text{avg}}^k)^2}, \quad i = 1, \dots, N $$ |
+| Additional Notes      | The author uses the trained model's average reward curve as a reference for measuring sample effectiveness. |
 
 
 
