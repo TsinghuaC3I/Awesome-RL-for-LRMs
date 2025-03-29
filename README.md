@@ -87,6 +87,8 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0303 | ReSearch              | Agent-RL           | [GitHub](https://github.com/Agent-RL/ReSearch)<br />[More](#research) | ——                                                           | ——                                                           | <details><summary>Click</summary>The project train LLMs from scratch, utilizing RL with GRPO to learn to reason via search operations, without reliance on pre-existing reasoning frameworks or supervised data.</details> |
 | 2025.0306 | R1-VLM                | GroundLight        | [Blog](https://www.groundlight.ai/blog/visual-reasoning-models)<br />[GitHub](https://github.com/groundlight/r1_vlm)<br />[More](#r1-vlm) | ——                                                           | ——                                                           | <details><summary>Click</summary>R1-VLM enhances VLMs using RL, contributing significantly improved performance on complex visual reasoning tasks (spatial, counting, logic) where standard models falter. It shows that RL effectively unlocks advanced, multi-step reasoning capabilities specifically for vision-language understanding.</details> |
 | 2025.0310 | VisualThinker-R1-Zero | TurningPoint       | [Paper](https://arxiv.org/pdf/2503.05132) <br />[GitHub](https://github.com/turningpoint-ai/VisualThinker-R1-Zero)<br />[More](#visual-r1-zero) | [VisualThinker-R1-Zero](https://huggingface.co/turningpoint-ai/VisualThinker-R1-Zero) | ——                                                           | <details><summary>Click</summary>VisualThinker-R1-Zero adapts the R1-Zero RL paradigm (no supervised fine-tuning) to VLMs, achieving SoTa visual reasoning. It shows that complex visual reasoning can be effectively cultivated directly via RL on a base VLM, bypassing supervised data needs.</details> |
+| 2025.0310 | MM-EUREKA | Shanghai AI Lab && Shanghai Innovation Institute && SJTU && HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) | [MM-Eureka-Zero-38B](https://huggingface.co/FanqingM/MM-Eureka-Zero-38B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
+
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
@@ -505,6 +507,21 @@ $$
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
+
+#### <div id="visual-r1-zero">2025.0310, MM-Eureka</div>
+
+| Project or Paper      | [MM-EUREKA: EXPLORING VISUAL AHA MOMENT WITH RULE-BASED LARGE-SCALE REINFORCEMENT LEARNING](https://arxiv.org/pdf/2503.07365) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [ModalMinds/MM-EURRKA](https://github.com/ModalMinds/MM-EUREKA) |
+| Backbone Model        | InternVL2.5-Pretrained-38B                                                 |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | [MM-Eureka-Dataset] (https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)，55K;      |
+| Rollout Configuration | 128 (prompts + images) * 8 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Accuracy-String Match, Format)；         |
+| Policy Optimization   | PPO Loss                            |
+| Benchmark             | +9.2%, +4.7% compared with base model on OlympicBench and L12 respectively; |
+| Core Insights         |                                                              |
+| Additional Notes      |                                                              |
 
 
 ## Contributing
