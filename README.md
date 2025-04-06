@@ -92,7 +92,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0303 | ReSearch              | Agent-RL           | [GitHub](https://github.com/Agent-RL/ReSearch)<br />[More](#research) | ——                                                           | ——                                                           | <details><summary>Click</summary>The project train LLMs from scratch, utilizing RL with GRPO to learn to reason via search operations, without reliance on pre-existing reasoning frameworks or supervised data.</details> |
 | 2025.0306 | R1-VLM                | GroundLight        | [Blog](https://www.groundlight.ai/blog/visual-reasoning-models)<br />[GitHub](https://github.com/groundlight/r1_vlm)<br />[More](#r1-vlm) | ——                                                           | ——                                                           | <details><summary>Click</summary>R1-VLM enhances VLMs using RL, contributing significantly improved performance on complex visual reasoning tasks (spatial, counting, logic) where standard models falter. It shows that RL effectively unlocks advanced, multi-step reasoning capabilities specifically for vision-language understanding.</details> |
 | 2025.0310 | VisualThinker-R1-Zero | TurningPoint       | [Paper](https://arxiv.org/pdf/2503.05132) <br />[GitHub](https://github.com/turningpoint-ai/VisualThinker-R1-Zero)<br />[More](#visual-r1-zero) | [VisualThinker-R1-Zero](https://huggingface.co/turningpoint-ai/VisualThinker-R1-Zero) | ——                                                           | <details><summary>Click</summary>VisualThinker-R1-Zero adapts the R1-Zero RL paradigm (no supervised fine-tuning) to VLMs, achieving SoTa visual reasoning. It shows that complex visual reasoning can be effectively cultivated directly via RL on a base VLM, bypassing supervised data needs.</details> |
-| 2025.0310 | MM-EUREKA | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) | [MM-Eureka-Zero-38B](https://huggingface.co/FanqingM/MM-Eureka-Zero-38B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
+| 2025.0310 | MM-EUREKA | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) | [MM-Eureka-Qwen-7B](https://huggingface.co/FanqingM/MM-Eureka-Qwen-7B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
@@ -141,7 +141,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 | Project or Paper      | [Kimi k1.5: Scaling Reinforcement Learning with LLMs](https://arxiv.org/pdf/2501.12599) |
 | --------------------- | ------------------------------------------------------------ |
-| GitHub                | [[MoonshotAI/Kimi-k1.5](https://github.com/MoonshotAI/Kimi-k1.5)](https://github.com/MoonshotAI/Kimi-k1.5) |
+| GitHub                | [MoonshotAI/Kimi-k1.5](https://github.com/MoonshotAI/Kimi-k1.5) |
 | Backbone Model        | Kimi k-series model (closed source)                          |
 | RL Algorithm          | Online Policy Mirror Decent/Length Penalty Reward/Curriculum Sampling/Prioritized Sampling/Chain-of-Thought RM/Long2short RL |
 | Training Dataset      | Code: 1000 contest problem; </br>Math: 800k in-context learning/800k chain-of-thought data; </br> Vision: unknown number of real-world/synthetic visual reasoning/text-rendered data |
@@ -178,7 +178,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [hkust-nlp/simpleRL-reason](https://github.com/hkust-nlp/simpleRL-reason) |
 | Backbone Model        | Qwen2.5-Math-7B                                              |
 | RL Algorithm          | PPO based on OpenRLHF                                        |
-| Training Dataset      | [MATH](https://huggingface.co/datasets/EleutherAI/hendrycks_math),  8k Level3-Level5 |
+| Training Dataset      | [MATH](https://huggingface.co/datasets/EleutherAI/hendrycks_math), 8k Level3-Level5 |
 | Rollout Configuration | 128 prompts * 8 responses; Temperature = 0.6                 |
 | Reward Function       | Rule-based Rewards                                           |
 | Policy Optimization   | PPO loss with 0.01 KL coefficient                            |
@@ -312,11 +312,11 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 | Project or Paper      | [What’s Behind PPO’s Collapse in Long-CoT? Value Optimization Holds the Secret](https://arxiv.org/pdf/2503.01491) |
 | --------------------- | ------------------------------------------------------------ |
-| GitHub                | N/A.                                                         |
+| GitHub                | N/A                                                          |
 | Backbone Model        | Qwen2.5-32B-Base                                             |
 | RL Algorithm          | VC-PPO                                                       |
 | Training Dataset      | A compilation of questions from all past AIME competitions (excluding the last two years), supplemented with artificially constructed challenging mathematical problems. |
-| Rollout Configuration | N/A.                                                         |
+| Rollout Configuration | N/A                                                          |
 | Reward Function       | Rule-based Rewards                                           |
 | Policy Optimization   | PPO loss, Value Estimate with Decoupled-GAE                  |
 | Benchmark             | AIME 2024, GPQA, CodeForces                                  |
@@ -351,7 +351,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Backbone Model        | DeepSeek-R1-Distill-Qwen-32B/7B/1.5B / DeepScaleR-1.5B-Preview /  Llama-3.1-8B/3B-Instruct |
 | RL Algorithm          | MRT                                                          |
 | Training Dataset      | None                                                         |
-| Rollout Configuration | 256 prompts * 4 responses, temperature = 0.7,                |
+| Rollout Configuration | 256 prompts * 4 responses, temperature = 0.7                 |
 | Reward Function       | 0/1 reward + dense reward                                    |
 | Policy Optimization   | SFT Loss + Dense Reward Bonus Loss                           |
 | Benchmark             | AIME 2024, AIME 2025, AMC 2023, MinervaMATH, MATH500         |
@@ -401,8 +401,8 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [sail-sg/understand-r1-zero](https://github.com/sail-sg/understand-r1-zero) |
 | Backbone Model        | Qwen2.5-1.5B                                                 |
 | RL Algorithm          | Dr. GRPO (fixes GRPO’s bias in optimization)                 |
-| Training Dataset      | Questions sampled from the MATH                              |
-| Rollout Configuration | N/A.                                                         |
+| Training Dataset      | Questions sampled from the MATH;                             |
+| Rollout Configuration | N/A                                                          |
 | Reward Function       | Rule-based Rewards                                           |
 | Policy Optimization   | Dr. GRPO Loss (remove two normalization terms in GRPO)       |
 | Benchmark             | AIME2024, AMC, MATH500, Minerva Math and OlympiadBench       |
@@ -420,11 +420,11 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [EvolvingLMMs-Lab/open-r1-multimodal](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) |
 | Backbone Model        | Qwen2-VL 2B/7B                                               |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified)，7.69K |
+| Training Dataset      | [multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified), 7.69K; |
 | Rollout Configuration | 1 (prompts + images) * 8 responses; Temperature=0.9;         |
 | Reward Function       | Rule-based Rewards (Choice, Format)                          |
 | Policy Optimization   | PPO Loss                                                     |
-| Benchmark             | MMMU:  <br />2B: +4.02% vs w./ reasoning, -4.48% vs base; <br />7B: 7.5% vs w./ reasoning，-1.2% vs base;  <br />Mathvista-mini:  <br />2B: +0.8% vs w./ reasoning, -2.2% vs base; <br />7B: -0.3% vs w./ reasoning, +3.5% vs base； |
+| Benchmark             | MMMU:  <br />2B: +4.02% vs w./ reasoning, -4.48% vs base; <br />7B: 7.5% vs w./ reasoning, -1.2% vs base;  <br />Mathvista-mini:  <br />2B: +0.8% vs w./ reasoning, -2.2% vs base; <br />7B: -0.3% vs w./ reasoning, +3.5% vs base; |
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
@@ -432,16 +432,16 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 #### <div id="r1v">2025.0202, R1-V</div>
 
-| Project or Paper      | [RLVR in Vision Language Models: Findings, Questions and Directions](https://deepagent.notion.site/rlvr-in-vlms[)](https://arxiv.org/pdf/2501.12948) |
+| Project or Paper      | [RLVR in Vision Language Models: Findings, Questions and Directions](https://deepagent.notion.site/rlvr-in-vlms) |
 | --------------------- | ------------------------------------------------------------ |
 | GitHub                | [Deep-Agent/R1-V](https://github.com/Deep-Agent/R1-V[)       |
 | Backbone Model        | Visual Counting/Complex Visual Reasoning: Qwen2-VL-2B-Instruct; <br />Geometry Reasoning: Qwen2.5-VL-7B-Instruct; |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | Visual Counting: [Clevr CoGenT-A](https://huggingface.co/datasets/leonardPKU/clevr_cogen_a_train)，70K<br /> Geometry Reasoning: [GeoQA-Train](https://huggingface.co/datasets/leonardPKU/GEOQA_R1V_Train_8K)，8K<br /> Complex Visual Reasoning: [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1)，37.8K |
+| Training Dataset      | Visual Counting: [Clevr CoGenT-A](https://huggingface.co/datasets/leonardPKU/clevr_cogen_a_train), 70K<br /> Geometry Reasoning: [GeoQA-Train](https://huggingface.co/datasets/leonardPKU/GEOQA_R1V_Train_8K), 8K<br /> Complex Visual Reasoning: [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1), 37.8K |
 | Rollout Configuration | 1 (prompts + images) * 8 responses; Temperature=1.0;         |
 | Reward Function       | Rule-based Rewards (Accuracy: Number/bool, Format)           |
 | Policy Optimization   | PPO Loss                                                     |
-| Benchmark             | Visual Counting (Acc.): Clevr CoGenT-B: 46%, comparable vs base and CoT+SFT models； SuperClevr:  40%, 11% higher than base and CoT+SFT models;  <br />Geometry Reasoning (Acc., no CoT data): GeoQA-Test: 24%, 1% higher than base and SFT models;  <br />Complex Visual Reasoning: SuperClevr: 53.48%, 49.28% higher than base and CoT+SFT models; |
+| Benchmark             | Visual Counting (Acc.): Clevr CoGenT-B: 46%, comparable vs base and CoT+SFT models; SuperClevr:  40%, 11% higher than base and CoT+SFT models;  <br />Geometry Reasoning (Acc., no CoT data): GeoQA-Test: 24%, 1% higher than base and SFT models;  <br />Complex Visual Reasoning: SuperClevr: 53.48%, 49.28% higher than base and CoT+SFT models; |
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
@@ -454,7 +454,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1)      |
 | Backbone Model        | Qwen2.5-VL-3B                                                |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [COCO](https://cocodataset.org/#download)，83K，no improvement for both STF and RL model<br /> [Description Detection Dataset](https://github.com/shikras/d-cube)，24K; |
+| Training Dataset      | [COCO](https://cocodataset.org/#download), 83K, no improvement for both STF and RL model<br /> [Description Detection Dataset](https://github.com/shikras/d-cube), 24K; |
 | Rollout Configuration | 8 (prompts + images) * 8 responses; Temperature=0.9;         |
 | Reward Function       | Rule-based Rewards (IoU, Format)                             |
 | Policy Optimization   | PPO Loss + KL Loss (default 0.04)                            |
@@ -471,7 +471,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [groundlight/r1_vlm](https://github.com/groundlight/r1_vlm)  |
 | Backbone Model        | Qwen2.5-VL-3B-Instruct                                       |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | Message Decoding: [message-decoding-words-and-sequences-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-and-sequences-r1)，27K<br /> Message Decoding-Single Word [message-decoding-words-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-r1)，10K<br />Digit Recognition: [digit-recognition-r1 ](https://huggingface.co/datasets/sunildkumar/digit-recognition-r1)，2K |
+| Training Dataset      | Message Decoding: [message-decoding-words-and-sequences-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-and-sequences-r1), 27K<br /> Message Decoding-Single Word [message-decoding-words-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-r1), 10K<br />Digit Recognition: [digit-recognition-r1 ](https://huggingface.co/datasets/sunildkumar/digit-recognition-r1), 2K |
 | Rollout Configuration | 1 (prompts + images) * 9 responses; Temperature=1.0;         |
 | Reward Function       | Rule-based Rewards (Decoding, Correctness, Format)           |
 | Policy Optimization   | PPO Loss + KL Loss (default 0.01)                            |
@@ -488,11 +488,11 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [turningpoint-ai/VisualThinker-R1-Zero](https://github.com/turningpoint-ai/VisualThinker-R1-Zero) |
 | Backbone Model        | Qwen2-VL-2B                                                  |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [SAT](https://huggingface.co/datasets/array/SAT)，218K;      |
+| Training Dataset      | [SAT](https://huggingface.co/datasets/array/SAT), 218K;      |
 | Rollout Configuration | 4 (prompts + images) * 8 responses; Temperature=1.0;         |
-| Reward Function       | Rule-based Rewards (Accuracy-String Match, Format)；         |
+| Reward Function       | Rule-based Rewards (Accuracy-String Match, Format);         |
 | Policy Optimization   | PPO Loss + KL Loss (default 0.04)                            |
-| Benchmark             | CV-Bench (Choice): +25% vs base, +10.83% vs SFT；<br /> BLINK: +46.44 vs base, +0.75% vs SFT； <br />VSR: +62.32% vs base, +26.53% vs SFT; |
+| Benchmark             | CV-Bench (Choice): +25% vs base, +10.83% vs SFT;<br /> BLINK: +46.44 vs base, +0.75% vs SFT; <br />VSR: +62.32% vs base, +26.53% vs SFT; |
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
@@ -504,9 +504,9 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [ModalMinds/MM-EURRKA](https://github.com/ModalMinds/MM-EUREKA) |
 | Backbone Model        | InternVL2.5-Pretrained-38B                                                 |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [MM-Eureka-Dataset] (https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)，55K;      |
+| Training Dataset      | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset), 55K;      |
 | Rollout Configuration | 128 (prompts + images) * 8 responses; Temperature=1.0;         |
-| Reward Function       | Rule-based Rewards (Accuracy-String Match, Format)；         |
+| Reward Function       | Rule-based Rewards (Accuracy-String Match, Format);         |
 | Policy Optimization   | PPO Loss                            |
 | Benchmark             | +9.2%, +4.7% compared with base model on OlympicBench and L12 respectively; |
 | Core Insights         |                                                              |
