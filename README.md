@@ -40,6 +40,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0306, r1-vlm](#20250306-r1-vlm)
       - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
+      - [2025.0315, MetaSpatial](#20250315-metaspatial)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -95,6 +96,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0310 | MM-EUREKA | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07365) <br />[Github](https://github.com/ModalMinds/MM-EUREKA) <br /> [More](#mm-eureka) | [MM-Eureka-Qwen-7B](https://huggingface.co/FanqingM/MM-Eureka-Qwen-7B) | [MM-Eureka-Dataset](https://huggingface.co/datasets/FanqingM/MM-Eureka-Dataset)       | <details><summary>Click</summary>MM-EUREKA reproduces key characteristics of text-based RL systems like DeepSeek-R1 in the multimodal space, which demonstrates that both instruction-tuned and pre-trained models can develop strong multimodal reasoning capabilities through rule-based RL without supervised fine-tuning, showing superior data efficiency compared to alternative approaches. </details> |
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
+| 2025.0315 | MetaSpatial                | Northwestern University                                | [Paper](https://arxiv.org/abs/2503.18470)<br />[Project](https://github.com/PzySeere/MetaSpatial)<br />[GitHub](https://github.com/PzySeere/MetaSpatial) | ——                                                           | [3D_Reasoning](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning)                                                          | <details><summary>Click</summary>MetaSpatial leverages reinforcement learning to enhance 3D spatial reasoning in vision-language models (VLMs), enabling more structured, realistic, and adaptive scene generation for applications in the metaverse, AR/VR, and game development.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
 
 
@@ -510,8 +512,22 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | PPO Loss                            |
 | Benchmark             | +9.2%, +4.7% compared with base model on OlympicBench and L12 respectively; |
 | Core Insights         |                                                              |
-| Additional Notes      |                                                              |
+| Additional Notes      |      
+|
+#### <div id="metaspatial">2025.0315, MetaSpatial</div>
 
+| Project or Paper      | [MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse](https://arxiv.org/abs/2503.18470) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [PzySeere/MetaSpatial](https://github.com/PzySeere/MetaSpatial) |
+| Backbone Model        | Qwen2.5-VL-7B                                                 |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | [3D-Reasoning-Dataset](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning), 50;      |
+| Rollout Configuration | 16 (prompts + images) * 4 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Format Reward, Physics Reward, Rendering-based Reward);         |
+| Policy Optimization   | PPO Loss                            |
+| Benchmark             | +74% compared with base model on test-set of 3d-reasoning dataset; |
+| Core Insights         |   Injecting physics reward and gpt-4o-based rendering evaluation reward.                                                    |
+| Additional Notes      |   
 
 ## Contributing
 
