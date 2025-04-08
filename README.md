@@ -401,7 +401,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | GitHub                | [knoveleng/open-rs](https://github.com/knoveleng/open-rs) |
 | Backbone Model        | DeepSeek-R1-Distill-Qwen-1.5B                                                 |
 | RL Algorithm          | GRPO                 |
-| Training Dataset      | [open-s1](https://huggingface.co/datasets/knoveleng/open-s1), 18.6k</br>[open-deepscalar](https://huggingface.co/datasets/knoveleng/open-deepscaler), 21k</br>[open-r](https://huggingface.co/datasets/knoveleng/open-rs), 7k</br>                             |
+| Training Dataset      | [open-s1](https://huggingface.co/datasets/knoveleng/open-s1), 18.6k</br>[open-deepscalar](https://huggingface.co/datasets/knoveleng/open-deepscaler), 21k</br>[open-rs](https://huggingface.co/datasets/knoveleng/open-rs), 7k</br>                             |
 | Rollout Configuration | 24 prompts * 6 responses, Temperature = 0.7                                                          |
 | Reward Function       | Rule-based Rewards with Cosine Reward assigning higher rewards to shorter but correct response.                                           |
 | Policy Optimization   | GRPO       |
