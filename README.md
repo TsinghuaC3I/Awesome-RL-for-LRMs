@@ -217,7 +217,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Backbone Model        | deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B                    |
 | RL Algorithm          | GRPO                                                         |
 | Training Dataset      | [Omni-MATH](https://omni-math.github.io/) and [Still](https://github.com/RUCAIBox/Slow_Thinking_with_LLMs) |
-| Rollout Configuration | 8K->16K->24K                                                 |
+| Rollout Configuration | 128 * 16 (bs*n);temperature=0.6; Context Length:8K->16K->24K |
 | Reward Function       | 0/1 reward                                                   |
 | Policy Optimization   | vanilla GRPO: (KL Loss; Length Penalty; Token-level loss)    |
 | Benchmark             | AIME 2024/ MATH 500 /AMC 2023 / Minerva Math/ OlympiadBench  |
