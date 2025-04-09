@@ -34,6 +34,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0318, DAPO](#20250318-dapo)
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
+      - [2025.0407, VAPO](#20250407-vapo)
     - [Multimodal and Applications](#multimodal-and-applications-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
@@ -81,6 +82,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0321 | Oat-Zero           | Sail-Sg                            | [Paper](https://arxiv.org/abs/2503.20783)<br />[GitHub](https://github.com/sail-sg/understand-r1-zero)<br />[More](#oat-zero) | [Qwen2.5-Math-7B-Oat-Zero](https://huggingface.co/sail/Qwen2.5-Math-7B-Oat-Zero)<br />[Qwen2.5-Math-1.5B-Oat-Zero](https://huggingface.co/sail/Qwen2.5-Math-1.5B-Oat-Zero)<br />[Llama-3.2-3B-Oat-Zero](https://huggingface.co/sail/Llama-3.2-3B-Oat-Zero) | [MATH](https://huggingface.co/datasets/EleutherAI/hendrycks_math) | <details><summary>Click</summary>This work critically analyzes R1-Zero-like RL training. It reveals base model properties and GRPO algorithm biases (e.g., length bias) significantly impact outcomes. It contributes the efficient, unbiased Dr. GRPO algorithm and an open-source recipe/codebase for better understanding and reproduction.</details> |
 | 2025.0321 | FastCuRL           | Tencent Hunyuan                    | [Paper](https://arxiv.org/abs/2503.17287)<br />[GitHub](https://github.com/nick7nlp/FastCuRL) | [FastCuRL-1.5B-Preview](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview) | [FastCuRL](https://huggingface.co/datasets/Nickyang/FastCuRL) | <details><summary>Click</summary>FastCuRL introduces a simple, efficient Curriculum RL method for LLMs. Its core contribution uses target perplexity to dynamically scale the standard RL loss (like PPO), creating an effective curriculum without complex reward models or auxiliary components, enabling faster, more stable training.</details> |
 | 2025.0401 | Z1           | THU                    | [Paper](https://arxiv.org/abs/2504.00810)<br />[GitHub](https://github.com/efficientscaling/Z1) | [Z1-7B](https://huggingface.co/efficientscaling/Z1-7B) | [Z1-Code-Reasoning-107K](https://huggingface.co/datasets/efficientscaling/Z1-Code-Reasoning-107K) | <details><summary>Click</summary>This paper proposes training LLMs on code-related reasoning trajectories using a curated dataset and a "Shifted Thinking Window" technique. This allows models to reduce excessive thinking tokens, achieving efficient test-time scaling and generalizing reasoning abilities.</details> |
+| 2025.0401 | VAPO           | ByteDance Seed                    | [Paper](https://arxiv.org/pdf/2504.05118)<br /> | —— | —— | <details><summary>Click</summary>VAPO offers an integrated solution that effectively alleviates value model bias, the presence of heterogeneous sequence lengths, and the sparsity of reward signal.</details> |
 | <div id="latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
@@ -428,7 +430,20 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | 1. The DeepSeek-V3-Base model exhibits significant reasoning capabilities, termed an “aha moment,” even prior to reinforcement learning fine-tuning. 2. GRPO introduces an optimization bias that artificially increases response length during training, particularly affecting incorrect outputs. |
 | Additional Notes      |                                                              |
 
+#### <div id="vapo">2025.0407, VAPO</div>
 
+| Project or Paper      | [VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks](https://arxiv.org/pdf/2504.05118) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | -- |
+| Backbone Model        | Qwen-32B                                                 |
+| RL Algorithm          | Value-based Augmented PPO              |
+| Training Dataset      | N/A                             |
+| Rollout Configuration | N/A                                                          |
+| Reward Function       | Rule-based Rewards                                           |
+| Policy Optimization   | PPO       |
+| Benchmark             | AIME 2024       |
+| Core Insights         | VAPO integrates clip-higher, token-level loss, value-pretraining, decoupled-GAE, self-imitation learning and group-sampling.  |
+| Additional Notes      |       First value-based RL training framework to outperform value-free methods on long COT tasks significantly   |
 
 ### Multimodal and Applications
 
