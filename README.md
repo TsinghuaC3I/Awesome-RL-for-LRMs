@@ -596,6 +596,10 @@ If you have any updates or improvements for this document, please feel free to s
 | Additional Notes      | (e.g., code snippet)                                     |
 
 
+## Contributors
+<a href="https://github.com/TsinghuaC3I/Awesome-RL-Reasoning-Recipes/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TsinghuaC3I/Awesome-RL-Reasoning-Recipes" />
+</a>
 
 ## Citation
 
