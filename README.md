@@ -46,6 +46,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
       - [2025.0310, Curr\_ReFT](#20250310-curr_reft)
+      - [2025.0315, MetaSpatial](#20250315-metaspatial)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -105,6 +106,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0310 | Curr-ReFT | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07065)<br />[GitHub](https://github.com/ding523/Curr_REFT)<br />[More](#curr-reft) | [3B-Curr-ReFT](https://huggingface.co/ZTE-AIM/3B-Curr-ReFT)<br />[7B-Curr-ReFT](https://huggingface.co/ZTE-AIM/7B-Curr-ReFT) | [Curr-ReFT-data](https://huggingface.co/datasets/ZTE-AIM/Curr-ReFT-data)       | <details><summary>Click</summary>Curr-ReFT proposes a Curriculum Reinforcement Finetuning strategy to enhance the out-of-distribution generalization and reasoning abilities. The curriculum paradim ensures steady progression. Moreover, a rejected sampling-based self-improvement is proposed to maintain the fundamental capabilities of VLMs through selective learning from high-quality multimodal and language examples. </details> |
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
+| 2025.0315 | MetaSpatial                | Northwestern University                                | [Paper](https://arxiv.org/abs/2503.18470)<br />[Project](https://github.com/PzySeere/MetaSpatial)<br />[GitHub](https://github.com/PzySeere/MetaSpatial) | ——                                                           | [3D_Reasoning](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning)                                                          | <details><summary>Click</summary>MetaSpatial leverages reinforcement learning to enhance 3D spatial reasoning in vision-language models (VLMs), enabling more structured, realistic, and adaptive scene generation for applications in the metaverse, AR/VR, and game development.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
 | 2025.0404 | MAYE           | SJTU & GAIR                | [Paper](https://arxiv.org/pdf/2504.02587)<br />[GitHub](https://github.com/GAIR-NLP/MAYE) |——  | [ManTle/MAYE](https://huggingface.co/datasets/ManTle/MAYE) | <details><summary>Click</summary>MAYE is a transparent, reproducible framework and a comprehensive evaluation scheme for applying reinforcement learning (RL) to vision-language models (VLMs). Its codebase is developed entirely from scratch without relying on any existing RL toolkits.</details> |
 | <div id="vlm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
@@ -562,7 +564,8 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | PPO Loss                            |
 | Benchmark             | +9.2%, +4.7% compared with base model on OlympicBench and L12 respectively; |
 | Core Insights         |                                                              |
-| Additional Notes      |                                                              |
+| Additional Notes      |      
+|
 
 #### <div id="curr-reft">2025.0310, Curr_ReFT</div>
 
@@ -578,6 +581,21 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Benchmark             | ID (In-Distribution), compared to base and SFT:<br/>Math (Math360K+Geo170K, 1K for testing): -3B +11.0%, +8.8%, -7B +11.2%, +4.4%;<br/>Detection (RefCOCO, 1K for testing): -3B +58.0%, +14.6%, -7B +51.3%, +2.5%;<br/>Classification: (RefCOCO, 1K for testing) -3B +31.9%, +21.3%, -7B +44.6%, +4.2%;<br/><br/>OOD(Out-of-Distribution), compared to base and SFT: <br/>Math (CLEVER-70K, 0.5K for testing): -3B +55.9%, +42.9%, -7B +46.6%, +21.6%;<br/>Detection (Refgta, 1K for testing): -3B +43.3%, +13.3% -7B +41.7%, +28.3%;<br/>Classification: (Pascal-VOC, 1K for testing) -3B +15.4%, +18.0%, -7B +12.5%, +6.5%; |
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
+
+#### <div id="metaspatial">2025.0315, MetaSpatial</div>
+
+| Project or Paper      | [MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse](https://arxiv.org/abs/2503.18470) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [PzySeere/MetaSpatial](https://github.com/PzySeere/MetaSpatial) |
+| Backbone Model        | Qwen2.5-VL-7B                                                 |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | [3D-Reasoning-Dataset](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning), 50;      |
+| Rollout Configuration | 16 (prompts + images) * 4 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Format Reward, Physics Reward, Rendering-based Reward);         |
+| Policy Optimization   | PPO Loss                            |
+| Benchmark             | +74% compared with base model on test-set of 3d-reasoning dataset; |
+| Core Insights         |   Injecting physics reward and gpt-4o-based rendering evaluation reward.                                                    |
+| Additional Notes      |   
 
 ## Contributing
 
