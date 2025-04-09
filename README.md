@@ -388,7 +388,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | RL Algorithm          | DAPO                                                         |
 | Training Dataset      | [BytedTsinghua-SIA/DAPO-Math-17k](https://huggingface.co/datasets/BytedTsinghua-SIA/DAPO-Math-17k), 17K |
 | Rollout Configuration | 512 prompts * 16 responses Dynamic Sampling                  |
-| Reward Function       | Rule-based Rewards + Length-Aware Penalty Reward             |
+| Reward Function       | Rule-based Rewards + Length-Aware Penalty Reward (Overlong Filtering strategy)           |
 | Policy Optimization   | DAPO loss, without KL loss                                   |
 | Benchmark             | DeepSeek-R1-Zero-Qwen-32B level on AIME 2024                 |
 | Core Insights         | DAPO introduces four key techniques: Clip-Higher to promote diversity and prevent entropy collapse; Dynamic Sampling to enhance training efficiency and stability; Token-Level Policy Gradient Loss to refine long-chain reasoning; and Overlong Reward Shaping to reduce reward noise and stabilize training. |
