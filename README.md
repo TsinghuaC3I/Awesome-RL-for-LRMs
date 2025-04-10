@@ -5,9 +5,10 @@
 A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
 ## Contents
-> This outline highlights only a selection of projects. For the most recent updates, please scroll to the bottom of the table:
-> - [Jump to Latest LLM Projects](#llm_latest)
-> - [Jump to Latest VLM & App Projects](#vlm_latest)
+
+> ⚠️⚠️⚠️ The following table of contents highlight only a selection of projects, which provide detailed configurations. For the most recent updates, please scroll to the bottom of the table:
+> - [Jump to Latest LLM Projects 🚀🚀🚀](#llm_latest)
+> - [Jump to Latest VLM & Agent Projects 🚀🚀🚀](#vlm_latest)
 > - [Jump to Latest Agent Projects](#agent_latest)
 
 
@@ -15,12 +16,12 @@ A curated collection covering models, datasets, reward designs, optimization met
   - [Contents](#contents)
   - [Overview](#overview)
     - [Large Language Models](#large-language-models)
-    - [Multimodal and Applications](#multimodal-and-applications)
-    - [Agents](#agents)
+    - [Multimodal Models](#multimodal-and-applications)
+    - [Agentic Applications](#agents)
   - [Projects](#projects)
     - [Large Language Models](#large-language-models-1)
-        - [2025.0102, PRIME-RL](#20250102-prime-rl)
-        - [2025.0122, DeepSeek-R1](#20250122-deepseek-r1)
+      - [2025.0102, PRIME-RL](#20250102-prime-rl)
+      - [2025.0122, DeepSeek-R1](#20250122-deepseek-r1)
       - [2025.0122, Kimi k1.5](#20250122-kimi-k15)
       - [2025.0124, TinyZero](#20250124-tinyzero)
       - [2025.0125, SimpleRL](#20250125-simplerl)
@@ -39,7 +40,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
       - [2025.0407, VAPO](#20250407-vapo)
-    - [Multimodal and Applications](#multimodal-and-applications-1)
+    - [Multimodal and Agents](#multimodal-and-agents-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
       - [2025.0215, VLM-R1](#20250215-vlm-r1)
@@ -92,12 +93,13 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0321 | FastCuRL           | Tencent Hunyuan                    | [Paper](https://arxiv.org/abs/2503.17287)<br />[GitHub](https://github.com/nick7nlp/FastCuRL) | [FastCuRL-1.5B-Preview](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview) | [FastCuRL](https://huggingface.co/datasets/Nickyang/FastCuRL) | <details><summary>Click</summary>FastCuRL introduces a simple, efficient Curriculum RL method for LLMs. Its core contribution uses target perplexity to dynamically scale the standard RL loss (like PPO), creating an effective curriculum without complex reward models or auxiliary components, enabling faster, more stable training.</details> |
 | 2025.0401 | Z1           | THU                    | [Paper](https://arxiv.org/abs/2504.00810)<br />[GitHub](https://github.com/efficientscaling/Z1) | [Z1-7B](https://huggingface.co/efficientscaling/Z1-7B) | [Z1-Code-Reasoning-107K](https://huggingface.co/datasets/efficientscaling/Z1-Code-Reasoning-107K) | <details><summary>Click</summary>This paper proposes training LLMs on code-related reasoning trajectories using a curated dataset and a "Shifted Thinking Window" technique. This allows models to reduce excessive thinking tokens, achieving efficient test-time scaling and generalizing reasoning abilities.</details> |
 | 2025.0401 | VAPO           | ByteDance Seed                    | [Paper](https://arxiv.org/pdf/2504.05118)<br /> | —— | —— | <details><summary>Click</summary>VAPO offers an integrated solution that effectively alleviates value model bias, the presence of heterogeneous sequence lengths, and the sparsity of reward signal.</details> |
+|2025.0407 |  ConciseRL  |   Wand AI   | [Paper](https://arxiv.org/pdf/2504.05185) | —— | —— | <details><summary>Click</summary>This work challenges the idea that longer reasoning chains in LLMs inherently mean better accuracy. It uses mathematical analysis of RL principles, particularly PPO, to show that lengthier responses often arise from the optimization process itself, not necessarily improved reasoning.</details> |
 | 2025.0409 | AdaRFT           | USC LIME Lab                    | [Paper](https://arxiv.org/abs/2504.05520)<br />[GitHub](https://github.com/uscnlp-lime/verl) | —— | [DeepScaleR_Difficulty](https://huggingface.co/datasets/lime-nlp/DeepScaleR_Difficulty) | <details><summary>Click</summary>AdaRFT proposes Adaptive Curriculum Reinforcement Finetuning to improve LLM reasoning training efficiency. It dynamically adjusts task difficulty based on recent reward signals, accelerating learning by keeping challenges optimally balanced. Experiments on competition math benchmarks show up to 2x fewer steps and improved accuracy, using standard PPO with minimal changes.</details> |
 | <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
-### Multimodal and Applications
-| Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Contribution                                                 |
+### Multimodal and Agents
+| Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Takeaway Messages                                                 |
 | --------- | --------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 2025.0126 | RAGEN              | RAGEN-AI                           | [GitHub](https://github.com/RAGEN-AI/RAGEN)                  | ——                                                           | ——                                                           | <details><summary>Click</summary>RAGEN introduces a RL framework to train reasoning-capable LLM agents for interactive, stochastic environments. Its core contribution is the Reasoning-Interaction Chain Optimization (RICO) algorithm, which jointly optimizes reasoning and action strategies by reinforcing entire trajectories.</details> |
 | 2025.0128 | Open-R1-MultiModal    | LLMs Lab           | [GitHub](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal)<br />[More](#open-r1-mm) | [Qwen2-VL-2B-GRPO-8k](https://huggingface.co/lmms-lab/Qwen2-VL-2B-GRPO-8k)<br />[Qwen2-VL-7B-GRPO-8k](https://huggingface.co/lmms-lab/Qwen2-VL-7B-GRPO-8k) | [multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified) | <details><summary>Click</summary>Open-R1-MultiModal provides an open-source replication of R1-Zero-like RL for Multimodal LLMs, aiming to enhance complex visual reasoning. It demonstrates the effectiveness of these RL techniques for boosting multimodal performance and promotes reproducibility in the field.</details> |
@@ -458,7 +460,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | VAPO integrates clip-higher, token-level loss, value-pretraining, decoupled-GAE, self-imitation learning and group-sampling.  |
 | Additional Notes      |       First value-based RL training framework to outperform value-free methods on long COT tasks significantly   |
 
-### Multimodal and Applications
+### Multimodal and Agents
 
 #### <div id="open-r1-mm">2025.0128, open-r1-multimodal</div>
 
