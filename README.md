@@ -581,8 +581,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | PPO Loss                            |
 | Benchmark             | +9.2%, +4.7% compared with base model on OlympicBench and L12 respectively; |
 | Core Insights         |                                                              |
-| Additional Notes      |      
-|
+| Additional Notes      |      |
 
 #### <div id="curr-reft">2025.0310, Curr_ReFT</div>
 
