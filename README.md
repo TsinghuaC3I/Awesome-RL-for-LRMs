@@ -593,7 +593,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
 | --------------------- | ------------------------------------------------------------ |
 | GitHub                | [PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1) |
-| Backbone Model        | : Qwen-2.5-3B (Base/Instruct) and Qwen-2.5-7B (Base/Instruct)                         |
+| Backbone Model        | Qwen-2.5-3B (Base/Instruct) and Qwen-2.5-7B (Base/Instruct)                         |
 | RL Algorithm          | GRPO and PPO                                                  |
 | Training Dataset      | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus)      |
 | Rollout Configuration | 64 prompts * 5 responses; Temperature=1.0;         |
