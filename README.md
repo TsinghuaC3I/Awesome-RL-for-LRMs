@@ -37,6 +37,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
       - [2025.0407, VAPO](#20250407-vapo)
+      - [2025.0409, AdaRFT](#20250409-adarft)
     - [Multimodal and Applications](#multimodal-and-applications-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
