@@ -5,7 +5,7 @@
 A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
 ## Contents
-> ⚠️⚠️⚠️ This outline highlights only a selection of projects. For the most recent updates, please scroll to the bottom of the table:
+> ⚠️⚠️⚠️ The following table of contents highlight only a selection of projects, which provide detailed configurations. For the most recent updates, please scroll to the bottom of the table:
 > - [Jump to Latest LLM Projects 🚀🚀🚀](#llm_latest)
 > - [Jump to Latest VLM & Agent Projects 🚀🚀🚀](#vlm_latest)
 
