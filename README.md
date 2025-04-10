@@ -590,8 +590,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Additional Notes      |                                                              |
 
 #### <div id="search-r1">2024.0312, Search-R1</div>
-| Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search
-Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
+| Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
 | --------------------- | ------------------------------------------------------------ |
 | GitHub                | [PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1) |
 | Backbone Model        | : Qwen-2.5-3B (Base/Instruct) and Qwen-2.5-7B (Base/Instruct)                         |
