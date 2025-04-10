@@ -37,7 +37,6 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
       - [2025.0407, VAPO](#20250407-vapo)
-      - [2025.0409, AdaRFT](#20250409-adarft)
     - [Multimodal and Applications](#multimodal-and-applications-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
@@ -61,7 +60,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 ### Large Language Models
 
-| Date      | Project            | Org                                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Contribution                                                 |
+| Date      | Project            | Org                                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Takeaway Messages                                                 |
 | --------- | ------------------ | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 2025.0102 | PRIME-RL           | THU & UIUC <br /> Shang AILab      | [Paper](https://arxiv.org/abs/2502.01456)<br />[GitHub](https://github.com/PRIME-RL/PRIME)<br /> [More](#primerl) | [Eurus-2-7B-PRIME](https://huggingface.co/PRIME-RL/Eurus-2-7B-PRIME) <br />[Eurus-2-7B-PRIME-Zero](https://huggingface.co/PRIME-RL/Eurus-2-7B-PRIME-Zero) | [Eurus-2-RL-Data](https://huggingface.co/datasets/PRIME-RL/Eurus-2-RL-Data) | <details><summary>Click</summary>PRIME offers scalable Reinforcement Learning by using dense, token-level implicit rewards derived only from final outcomes. This bypasses costly step-by-step annotations, providing fine-grained feedback to improve sample efficiency and reasoning.</details> |
 | 2025.0122 | DeepSeek-R1        | DeepSeek                           | [Paper](https://arxiv.org/abs/2501.12948)<br />[GitHub](https://github.com/deepseek-ai/DeepSeek-R1/tree/main)<br />[More](#deepseek-r1) | [DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1) <br />[DeepSeek-R1-Zero](https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero) | ——                                                           | <details><summary>Click</summary>DeepSeek-R1's core contribution is demonstrating large-scale RL from scratch (600B+) without SFT, achieving emergent "aha moments" (self-reflective reasoning) and matching OpenAI o1's performance at 1/30 cost</details> |
