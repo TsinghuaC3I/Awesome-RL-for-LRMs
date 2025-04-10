@@ -8,16 +8,16 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 > ⚠️⚠️⚠️ The following table of contents highlight only a selection of projects, which provide detailed configurations. For the most recent updates, please scroll to the bottom of the table:
 > - [Jump to Latest LLM Projects 🚀🚀🚀](#llm_latest)
-> - [Jump to Latest VLM & Agent Projects 🚀🚀🚀](#vlm_latest)
-> - [Jump to Latest Agent Projects](#agent_latest)
+> - [Jump to Latest Multimodal Projects 🚀🚀🚀](#vlm_latest)
+> - [Jump to Latest Agent Projects 🚀🚀🚀](#agent_latest)
 
 
 - [Awesome RL Reasoning Recipes ("Triple R")](#awesome-rl-reasoning-recipes-triple-r)
   - [Contents](#contents)
   - [Overview](#overview)
     - [Large Language Models](#large-language-models)
-    - [Multimodal Models](#multimodal-and-applications)
-    - [Agentic Applications](#agents)
+    - [Multimodal Models](#multimodal-models)
+    - [Agentic Applications](#agentic-applications)
   - [Projects](#projects)
     - [Large Language Models](#large-language-models-1)
       - [2025.0102, PRIME-RL](#20250102-prime-rl)
@@ -40,21 +40,19 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
       - [2025.0407, VAPO](#20250407-vapo)
-    - [Multimodal and Agents](#multimodal-and-agents-1)
+    - [Multimodal Models](#multimodal-models-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
       - [2025.0215, VLM-R1](#20250215-vlm-r1)
       - [2025.0303, Visual-RFT](#20250303-visual-rft)
       - [2025.0306, r1-vlm](#20250306-r1-vlm)
-      - [2025.0309, CoA](#20250309-coa)
       - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
       - [2025.0310, Curr\_ReFT](#20250310-curr_reft)
-      - [2025.0312, Search-R1](#20250312-search-r1)
       - [2025.0315, MetaSpatial](#20250315-metaspatial)
-      - [2025.0325, ReSearch](#20250325-research)
-      - [2025.0404, DeepResearcher](#20250404-deepresearcher)
-      - [2025.0407, SWiRL](#20250407-swirl)
+    - [Agentic Applications](#agentic-applications-1)
+      - [2025.0307, R1-Searcher](#20250307-r1-searcher)
+      - [2024.0312, Search-R1](#20240312-search-r1)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -83,6 +81,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0217 | LIMR               | SJTU                               | [Paper](https://arxiv.org/pdf/2502.11886)<br />[GitHub](https://github.com/GAIR-NLP/LIMR)<br /> [More](#limr) | [LIMR](https://huggingface.co/GAIR/LIMR)                     | [LIMR](https://huggingface.co/datasets/GAIR/LIMR)            | <details><summary>Click</summary>The paper challenges the assumption that scaling up RL training data inherently improves performance in language models, instead finding that a strategically selected subset of 1,389 samples can outperform a full 8,523-sample dataset.</details> |
 | 2025.0218 | Open-Reasoner-Zero | StepFun & THU                      | [Paper](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/blob/main/ORZ_paper.pdf) <br />[GitHub](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/)<br />   [More](#openreaon-zero) | [Open-Reasoner-Zero-7B](https://huggingface.co/Open-Reasoner-Zero/Open-Reasoner-Zero-7B)<br />[Open-Reasoner-Zero-32B](https://huggingface.co/Open-Reasoner-Zero/Open-Reasoner-Zero-32B) | [ORZ-Math-57k](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero/tree/main/data) | <details><summary>Click</summary>The Open-Reasoner-Zero model has achieved notable performance, with Open-Reasoner-Zero-32B outperforming DeepSeek-R1-Zero-Qwen-32B on the GPQA Diamond benchmark while requiring significantly fewer training steps.</details> |
 | 2025.0225 | SWE-RL             | FAIR at Meta                       | [Paper](https://arxiv.org/abs/2502.18449)<br />[GitHub](https://github.com/facebookresearch/swe-rl)<br />[More](#swerl) | ——                                                           | ——                                                           | <details><summary>Click</summary>SWE-RL enhances LLMs' code reasoning through RL using open-source software evolution data, achieving state-of-the-art results in software engineering tasks and demonstrating generalized reasoning capabilities beyond coding.</details> |
+| 2025.0227 | Med-RLVR              | Microsoft Research | [Paper](https://arxiv.org/pdf/2502.19655)<br />[More](#medrlvr) | ——                                                           | ——                                                           | <details><summary>Click</summary>The Med-RLVR framework demonstrates emergent medical reasoning via RL, achieving performance parity with SFT on in-distribution tasks and improving out-of-distribution generalization, all without explicit reasoning supervision, showcasing RL's potential in medicine.</details> |
 | 2025.0303 | VC-PPO             | Bytedance                          | [Paper](https://arxiv.org/abs/2503.01491)<br />[More](#vcppo) | ——                                                           | ——                                                           | <details><summary>Click</summary>VC-PPO (Value-Calibrated PPO) diagnoses PPO's collapse in long CoT tasks as stemming from value function inaccuracies (initialization bias and reward signal decay in long sequences). Its core contribution is modifying PPO with value pretraining and decoupled GAE for actor and critic.</details> |
 | 2025.0306 | LCPO-L1            | CMU                                | [Paper](https://arxiv.org/abs/2503.04697)<br />[GitHub](https://github.com/cmu-l3/l1)<br />[More](#lcpol1) | [L1-Qwen-1.5B-Max](https://huggingface.co/l3lab/L1-Qwen-1.5B-Max)<br /> [L1-Qwen-1.5B-Exact](https://huggingface.co/l3lab/L1-Qwen-1.5B-Exact) | ——                                                           | <details><summary>Click</summary>L1 introduces Length Controlled Policy Optimization (LCPO), a RL method enabling precise control over a reasoning model's thinking time (output length) via prompt instructions. It shows that RL effectively controls reasoning duration and unexpectedly enhances even short-chain reasoning capabilities.</details> |
 | 2025.0310 | MRT                | CMU                                | [Paper](https://arxiv.org/pdf/2503.07572)<br />[Project](https://cohenqu.github.io/mrt.github.io/)<br />[GitHub](https://github.com/CMU-AIRe/MRT) | ——                                                           | ——                                                           | <details><summary>Click</summary>MRT (Mixed-Reality Trajectory Preferences) introduces a novel method for fine-tuning cooperative LLM agents. It effectively blends human preferences on real interaction trajectories with AI preferences on synthetic variations, improving data efficiency. This mixed-reality approach surpasses purely AI-driven feedback (RLAIF), especially for complex, multi-turn collaborative tasks.</details> |
@@ -98,16 +97,12 @@ A curated collection covering models, datasets, reward designs, optimization met
 | <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
-### Multimodal and Agents
+### Multimodal Models
 | Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Takeaway Messages                                                 |
 | --------- | --------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 2025.0126 | RAGEN              | RAGEN-AI                           | [GitHub](https://github.com/RAGEN-AI/RAGEN)                  | ——                                                           | ——                                                           | <details><summary>Click</summary>RAGEN introduces a RL framework to train reasoning-capable LLM agents for interactive, stochastic environments. Its core contribution is the Reasoning-Interaction Chain Optimization (RICO) algorithm, which jointly optimizes reasoning and action strategies by reinforcing entire trajectories.</details> |
 | 2025.0128 | Open-R1-MultiModal    | LLMs Lab           | [GitHub](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal)<br />[More](#open-r1-mm) | [Qwen2-VL-2B-GRPO-8k](https://huggingface.co/lmms-lab/Qwen2-VL-2B-GRPO-8k)<br />[Qwen2-VL-7B-GRPO-8k](https://huggingface.co/lmms-lab/Qwen2-VL-7B-GRPO-8k) | [multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified) | <details><summary>Click</summary>Open-R1-MultiModal provides an open-source replication of R1-Zero-like RL for Multimodal LLMs, aiming to enhance complex visual reasoning. It demonstrates the effectiveness of these RL techniques for boosting multimodal performance and promotes reproducibility in the field.</details> |
 | 2025.0202 | R1-V                  | Deep Agent         | [Blog](https://deepagent.notion.site/rlvr-in-vlms)<br />[GitHub](https://github.com/Deep-Agent/R1-V)<br />[More](#r1v) | ——                                                           | [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1) | <details><summary>Click</summary>R1-V applies RL, specifically RLV-Instruct, to fine-tune VLMs. It enhances complex visual reasoning and instruction-following capabilities in VLMs beyond standard supervised fine-tuning.</details> |
-| 2025.0203 | Verifiers          | Independent                        | [GitHub](https://github.com/willccbb/verifiers) | ——                                                           | ——                                                           | <details><summary>Click</summary>This repository contains a set of tools for reinforcement learning with LLMs in verifiable environments. It can be used for LLM Agent RL in verifable environments.</details> |
 | 2025.0215 | VLM-R1                | OmAI Lab           | [Blog](https://om-ai-lab.github.io/index.html) <br />[GitHub](https://github.com/om-ai-lab/VLM-R1)<br />[More](#vlmr1) | [OVD](https://huggingface.co/omlab/VLM-R1-Qwen2.5VL-3B-OVD-0321)<br />[Math](https://huggingface.co/omlab/VLM-R1-Qwen2.5VL-3B-Math-0305) <br />[REC](https://huggingface.co/omlab/Qwen2.5VL-3B-VLM-R1-REC-500steps) | ——                                                           | <details><summary>Click</summary>VLM-R1 applies R1-style RL to VLMs, improving stability and generalization on visual reasoning tasks. It shows that RL enhances VLM generalization beyond standard fine-tuning, achieving SOTA results, particularly on complex or out-of-domain benchmarks.</details> |
-| 2025.0227 | Med-RLVR              | Microsoft Research | [Paper](https://arxiv.org/pdf/2502.19655)<br />[More](#medrlvr) | ——                                                           | ——                                                           | <details><summary>Click</summary>The Med-RLVR framework demonstrates emergent medical reasoning via RL, achieving performance parity with SFT on in-distribution tasks and improving out-of-distribution generalization, all without explicit reasoning supervision, showcasing RL's potential in medicine.</details> |
-| 2025.0303 | ReSearch              | Agent-RL           | [GitHub](https://github.com/Agent-RL/ReSearch)<br />[More](#research) | ——                                                           | ——                                                           | <details><summary>Click</summary>The project train LLMs from scratch, utilizing RL with GRPO to learn to reason via search operations, without reliance on pre-existing reasoning frameworks or supervised data.</details> |
 | 2025.0303 | Visual-RFT                | SJTU & Shanghai AI Lab & CUHK        | [Paper](https://arxiv.org/pdf/2503.01785)<br />[GitHub](https://github.com/Liuziyu77/Visual-RFT)<br />[More](#research) | [Reasoning Grounding](https://huggingface.co/Zery/Qwen2-VL-7B_visual_rft_lisa_IoU_reward) | [COCO_base65](https://huggingface.co/datasets/laolao77/ViRFT_COCO_base65)<br />[COCO](https://huggingface.co/datasets/laolao77/ViRFT_COCO)<br />[COCO_8_classes_4_shot](https://huggingface.co/datasets/laolao77/ViRFT_COCO_8_cate_4_shot)<br />[LVIS_few_shot](https://huggingface.co/datasets/laolao77/ViRFT_LVIS_few_shot)<br />[Flower_4_shot](https://huggingface.co/datasets/laolao77/ViRFT_CLS_flower_4_shot)<br />[FGVC_Aircraft_4_shot](https://huggingface.co/datasets/laolao77/ViRFT_CLS_fgvc_aircraft_4_shot)<br />[Car196_4_shot](https://huggingface.co/datasets/laolao77/ViRFT_CLS_car196_4shot)<br />[Pets37_4_shot](https://huggingface.co/datasets/laolao77/ViRFT_CLS_pets37_4shot)                                                           | <details><summary>Click</summary>Visual-RFT introduces Visual Reinforcement Fine-tuning, which extends reinforcement learning with verified rewards on visual perception tasks that are effective with limited data for fine-tuning.</details> |
 | 2025.0306 | R1-VLM                | GroundLight        | [Blog](https://www.groundlight.ai/blog/visual-reasoning-models)<br />[GitHub](https://github.com/groundlight/r1_vlm)<br />[More](#r1-vlm) | ——                                                           | ——                                                           | <details><summary>Click</summary>R1-VLM enhances VLMs using RL, contributing significantly improved performance on complex visual reasoning tasks (spatial, counting, logic) where standard models falter. It shows that RL effectively unlocks advanced, multi-step reasoning capabilities specifically for vision-language understanding.</details> |
 | 2025.0310 | VisualThinker-R1-Zero | TurningPoint       | [Paper](https://arxiv.org/pdf/2503.05132) <br />[GitHub](https://github.com/turningpoint-ai/VisualThinker-R1-Zero)<br />[More](#visual-r1-zero) | [VisualThinker-R1-Zero](https://huggingface.co/turningpoint-ai/VisualThinker-R1-Zero) | ——                                                           | <details><summary>Click</summary>VisualThinker-R1-Zero adapts the R1-Zero RL paradigm (no supervised fine-tuning) to VLMs, achieving SoTa visual reasoning. It shows that complex visual reasoning can be effectively cultivated directly via RL on a base VLM, bypassing supervised data needs.</details> |
@@ -115,18 +110,27 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0310 | Curr-ReFT | Shanghai AI Lab & SJTU & HKU       | [Paper](https://arxiv.org/pdf/2503.07065)<br />[GitHub](https://github.com/ding523/Curr_REFT)<br />[More](#curr-reft) | [3B-Curr-ReFT](https://huggingface.co/ZTE-AIM/3B-Curr-ReFT)<br />[7B-Curr-ReFT](https://huggingface.co/ZTE-AIM/7B-Curr-ReFT) | [Curr-ReFT-data](https://huggingface.co/datasets/ZTE-AIM/Curr-ReFT-data)       | <details><summary>Click</summary>Curr-ReFT proposes a Curriculum Reinforcement Finetuning strategy to enhance the out-of-distribution generalization and reasoning abilities. The curriculum paradim ensures steady progression. Moreover, a rejected sampling-based self-improvement is proposed to maintain the fundamental capabilities of VLMs through selective learning from high-quality multimodal and language examples. </details> |
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
-| 2025.0312 | Search-R1             | UIUC & UMass Amherst | [Paper](https://arxiv.org/abs/2503.09516)<br />[GitHub](https://github.com/PeterGriffinJin/Search-R1)<br />[More](#search-r1) | [Search-R1](https://huggingface.co/collections/PeterJinGo/search-r1-67d1a021202731cb065740f5)   | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus) | <details><summary>Click</summary>The paper introduces Search-R1, a novel RL framework that enables LLMs to interact with search engines in an interleaved manner with their own reasoning. The framework is shown to be effective, with experiments demonstrating average relative improvements of 41% and 20% over RAG baselines, and providing insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning.</details> |
 | 2025.0315 | MetaSpatial                | Northwestern University                                | [Paper](https://arxiv.org/abs/2503.18470)<br />[Project](https://github.com/PzySeere/MetaSpatial)<br />[GitHub](https://github.com/PzySeere/MetaSpatial) | ——                                                           | [3D_Reasoning](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning)                                                          | <details><summary>Click</summary>MetaSpatial leverages reinforcement learning to enhance 3D spatial reasoning in vision-language models (VLMs), enabling more structured, realistic, and adaptive scene generation for applications in the metaverse, AR/VR, and game development.</details> |
-| 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
-| 2025.0319 | SWEET-RL           | Meta AI                            | [Paper](https://arxiv.org/abs/2503.15478)<br />[GitHub](https://github.com/facebookresearch/sweet_rl/tree/main) | ——                                                           | [collaborative_agent_bench](https://huggingface.co/datasets/facebook/collaborative_agent_bench) | <details><summary>Click</summary>Sweet-RL introduces a novel RL algorithm for multi-turn collaborative reasoning LLM agents. Its core contribution is improving credit assignment across long interactions by using an asymmetric actor-critic structure where the critic leverages additional training-time information for step-wise evaluation.</details> |
 | 2025.0404 | MAYE           | SJTU & GAIR                | [Paper](https://arxiv.org/pdf/2504.02587)<br />[GitHub](https://github.com/GAIR-NLP/MAYE) |——  | [ManTle/MAYE](https://huggingface.co/datasets/ManTle/MAYE) | <details><summary>Click</summary>MAYE is a transparent, reproducible framework and a comprehensive evaluation scheme for applying reinforcement learning (RL) to vision-language models (VLMs). Its codebase is developed entirely from scratch without relying on any existing RL toolkits.</details> |
 | <div id="vlm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
+
+
+### Agentic Applications
+| Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Takeaway Messages                                                 |
+| --------- | --------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 2025.0126 | RAGEN              | RAGEN-AI                           | [GitHub](https://github.com/RAGEN-AI/RAGEN)                  | ——                                                           | ——                                                           | <details><summary>Click</summary>RAGEN introduces a RL framework to train reasoning-capable LLM agents for interactive, stochastic environments. Its core contribution is the Reasoning-Interaction Chain Optimization (RICO) algorithm, which jointly optimizes reasoning and action strategies by reinforcing entire trajectories.</details> |
+| 2025.0203 | Verifiers          | Independent                        | [GitHub](https://github.com/willccbb/verifiers) | ——                                                           | ——                                                           | <details><summary>Click</summary>This repository contains a set of tools for reinforcement learning with LLMs in verifiable environments. It can be used for LLM Agent RL in verifable environments.</details> |
+| 2025.0303 | ReSearch              | Agent-RL           | [GitHub](https://github.com/Agent-RL/ReSearch)<br />[More](#research) | ——                                                           | ——                                                           | <details><summary>Click</summary>The project train LLMs from scratch, utilizing RL with GRPO to learn to reason via search operations, without reliance on pre-existing reasoning frameworks or supervised data.</details> |
+| 2025.0312 | Search-R1             | UIUC & UMass Amherst | [Paper](https://arxiv.org/abs/2503.09516)<br />[GitHub](https://github.com/PeterGriffinJin/Search-R1)<br />[More](#search-r1) | [Search-R1](https://huggingface.co/collections/PeterJinGo/search-r1-67d1a021202731cb065740f5)   | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus) | <details><summary>Click</summary>The paper introduces Search-R1, a novel RL framework that enables LLMs to interact with search engines in an interleaved manner with their own reasoning. The framework is shown to be effective, with experiments demonstrating average relative improvements of 41% and 20% over RAG baselines, and providing insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning.</details> |
+| 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
+| 2025.0319 | SWEET-RL           | Meta AI                            | [Paper](https://arxiv.org/abs/2503.15478)<br />[GitHub](https://github.com/facebookresearch/sweet_rl/tree/main) | ——                                                           | [collaborative_agent_bench](https://huggingface.co/datasets/facebook/collaborative_agent_bench) | <details><summary>Click</summary>Sweet-RL introduces a novel RL algorithm for multi-turn collaborative reasoning LLM agents. Its core contribution is improving credit assignment across long interactions by using an asymmetric actor-critic structure where the critic leverages additional training-time information for step-wise evaluation.</details> |
+| <div id="agent_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 ## Projects
 
 ### Large Language Models
 
-##### <div id="primerl">2025.0102, PRIME-RL</div>
+#### <div id="primerl">2025.0102, PRIME-RL</div>
 
 | Project or Paper      | [Process Reinforcement through Implicit Rewards](https://arxiv.org/abs/2502.01456) |
 | --------------------- | ------------------------------------------------------------ |
@@ -143,7 +147,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 
 
-##### <div id="deepseek-r1">2025.0122, DeepSeek-R1</div>
+#### <div id="deepseek-r1">2025.0122, DeepSeek-R1</div>
 
 | Project or Paper      | [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2501.12948) |
 | --------------------- | ------------------------------------------------------------ |
@@ -460,7 +464,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | VAPO integrates clip-higher, token-level loss, value-pretraining, decoupled-GAE, self-imitation learning and group-sampling.  |
 | Additional Notes      |       First value-based RL training framework to outperform value-free methods on long COT tasks significantly   |
 
-### Multimodal and Agents
+### Multimodal Models
 
 #### <div id="open-r1-mm">2025.0128, open-r1-multimodal</div>
 
@@ -591,20 +595,6 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
-#### <div id="search-r1">2024.0312, Search-R1</div>
-| Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
-| --------------------- | ------------------------------------------------------------ |
-| GitHub                | [PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1) |
-| Backbone Model        | Qwen-2.5-3B (Base/Instruct) and Qwen-2.5-7B (Base/Instruct)                         |
-| RL Algorithm          | GRPO and PPO                                                  |
-| Training Dataset      | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus)      |
-| Rollout Configuration | 64 prompts * 5 responses; Temperature=1.0;         |
-| Reward Function       | Rule-based Rewards (Exact Match)         |
-| Policy Optimization   | PPO Loss with 0.001 KL coefficient, masking retrived tokens                         |
-| Benchmark             | General QA; Multi-Hop QA |
-| Core Insights         | SEARCH-R1 addresses the challenges of RL framework and stability, multi-turn interleaved reasoning and search, and reward design, and introduces retrieved token masking to ensure stable optimization.                                |
-| Additional Notes      |   
-
 
 #### <div id="metaspatial">2025.0315, MetaSpatial</div>
 
@@ -622,7 +612,8 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Additional Notes      |   
 
 
-### Agents
+### Agentic Applications
+
 
 #### <div id="r1-searcher">2025.0307, R1-Searcher</div>
 
@@ -637,6 +628,23 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | REINFORCE++ without KL Penalty                            |
 | Benchmark             | HotpotQA, 2WikiMultiHopQA, Musique,  Bamboogle |
 | Core Insights         | The proposed R1-Searcher framework integrates RAG with RL, enabling the model to invoke an external search engine during the reasoning process. The framework demonstrates the ability to generalize from in-domain training datasets to out-of-domain test datasets, and can seamlessly switch to online search to obtain up-to-date information.   
+
+
+#### <div id="search-r1">2024.0312, Search-R1</div>
+
+| Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1) |
+| Backbone Model        | Qwen-2.5-3B (Base/Instruct) and Qwen-2.5-7B (Base/Instruct)                         |
+| RL Algorithm          | GRPO and PPO                                                  |
+| Training Dataset      | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus)      |
+| Rollout Configuration | 64 prompts * 5 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Exact Match)         |
+| Policy Optimization   | PPO Loss with 0.001 KL coefficient, masking retrived tokens                         |
+| Benchmark             | General QA; Multi-Hop QA |
+| Core Insights         | SEARCH-R1 addresses the challenges of RL framework and stability, multi-turn interleaved reasoning and search, and reward design, and introduces retrieved token masking to ensure stable optimization.                                |
+| Additional Notes      |   
+
 
 ## Contributing
 
@@ -670,4 +678,3 @@ If you have any updates or improvements for this document, please feel free to s
   note={Github Repository},
 }
 ```
-
