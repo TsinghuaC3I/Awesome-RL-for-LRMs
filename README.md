@@ -8,6 +8,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 > This outline highlights only a selection of projects. For the most recent updates, please scroll to the bottom of the table:
 > - [Jump to Latest LLM Projects](#llm_latest)
 > - [Jump to Latest VLM & App Projects](#vlm_latest)
+> - [Jump to Latest Agent Projects](#agent_latest)
 
 
 - [Awesome RL Reasoning Recipes ("Triple R")](#awesome-rl-reasoning-recipes-triple-r)
@@ -15,6 +16,7 @@ A curated collection covering models, datasets, reward designs, optimization met
   - [Overview](#overview)
     - [Large Language Models](#large-language-models)
     - [Multimodal and Applications](#multimodal-and-applications)
+    - [Agents](#agents)
   - [Projects](#projects)
     - [Large Language Models](#large-language-models-1)
         - [2025.0102, PRIME-RL](#20250102-prime-rl)
@@ -47,6 +49,13 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
       - [2025.0310, Curr\_ReFT](#20250310-curr_reft)
       - [2025.0315, MetaSpatial](#20250315-metaspatial)
+    - [Agents](#agents-1)
+      - [2025.0307, R1-Searcher](#20250307-r1-searcher)
+      - [2025.0309, CoA](#20250309-coa)
+      - [2025.0312, Search-R1](#20250312-search-r1)
+      - [2025.0325, ReSearch](#20250325-research)
+      - [2025.0404, DeepResearcher](#20250404-deepresearcher)
+      - [2025.0407, SWiRL](#20250407-swirl)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -111,6 +120,13 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
 | 2025.0404 | MAYE           | SJTU & GAIR                | [Paper](https://arxiv.org/pdf/2504.02587)<br />[GitHub](https://github.com/GAIR-NLP/MAYE) |——  | [ManTle/MAYE](https://huggingface.co/datasets/ManTle/MAYE) | <details><summary>Click</summary>MAYE is a transparent, reproducible framework and a comprehensive evaluation scheme for applying reinforcement learning (RL) to vision-language models (VLMs). Its codebase is developed entirely from scratch without relying on any existing RL toolkits.</details> |
 | <div id="vlm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
+
+### Agents
+| Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Contribution                                                 |
+| --------- | --------------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 2025.0307 | R1-Searcher    | RUC & DataCanvas Alaya NeW          | [GitHub](https://github.com/RUCAIBox/R1-Searcher)<br />[More](#r1-searcher) | [Qwen-2.5-7B-Base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL)<br />[Llama-3.1-8B-Instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) | [RAG-RL-Hotpotqa-with-2wiki](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>The authors propose R1-Searcher, a novel two-stage outcome-based RL approach to enhance the search capabilities of LLMs. R1-Searcher allows LLMs to autonomously invoke external search systems to access additional knowledge during the reasoning process.</details> |
+
+| <div id="agent_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
 ## Projects
@@ -598,6 +614,23 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         |   Injecting physics reward and gpt-4o-based rendering evaluation reward.                                                    |
 | Additional Notes      |   
 
+
+### Agents
+
+#### <div id="r1-searcher">2025.0307, R1-Searcher</div>
+
+| Project or Paper      | [R1-Searcher: Incentivizing the Search Capability in LLMs via Reinforcement Learning](https://arxiv.org/pdf/2503.05592) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [RUCAIBox/R1-Searcher](https://github.com/RUCAIBox/R1-Searcher) |
+| Backbone Model        |  Qwen-2.5-7B-Base</br>Llama-3.1-8B-Instruct                                             |
+| RL Algorithm          | REINFORCE++                                                         |
+| Training Dataset      | [RAG-RL-Hotpotqa-with-2wiki](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) & [HotpotQA](https://huggingface.co/datasets/BeIR/hotpotqa), 350 for Stage-1 Training, 8k for Stage-2 Training      |
+| Rollout Configuration | 64 prompts * 16 responses; Temperature = 1.0;         |
+| Reward Function       | Rule-based Rewards (Format Reward for Stage-1 Training and Format Reward and Anser Reward for Stage-2 Training);         |
+| Policy Optimization   | REINFORCE++ without KL Penalty                            |
+| Benchmark             | HotpotQA, 2WikiMultiHopQA, Musique,  Bamboogle |
+| Core Insights         | The proposed R1-Searcher framework integrates RAG with RL, enabling the model to invoke an external search engine during the reasoning process. The framework demonstrates the ability to generalize from in-domain training datasets to out-of-domain test datasets, and can seamlessly switch to online search to obtain up-to-date information.   
+
 ## Contributing
 
 If you have any updates or improvements for this document, please feel free to submit a **Pull Request**. Thank you!
@@ -616,7 +649,6 @@ If you have any updates or improvements for this document, please feel free to s
 | Benchmark             | (MATH/GPQA; R1 level; GPT-4o level)                      |
 | Core Insights         | (Empirical / Theoretical / Insightful Curves)            |
 | Additional Notes      | (e.g., code snippet)                                     |
-
 
 ## Citation
 
