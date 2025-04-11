@@ -472,6 +472,22 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | VAPO integrates clip-higher, token-level loss, value-pretraining, decoupled-GAE, self-imitation learning and group-sampling.  |
 | Additional Notes      |       First value-based RL training framework to outperform value-free methods on long COT tasks significantly   |
 
+#### <div id="seed-thinking-v1.5">2025.0410, Seed-Thinking-v1.5</div>
+
+| Project or Paper | [Seed-Thinking-v1.5: Advancing Superb Reasoning Models with Reinforcement Learning](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5/blob/main/seed-thinking-v1.5.pdf) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub | [ByteDance-Seed/Seed-Thinking-v1.5](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5) |
+| Backbone Model | -- |
+| RL Algorithm | VAPO, DAPO |
+| Training Dataset | RL (Verifiable: STEM, code, logical puzzle; Non-verifiable: non-reasoning tasks including creative writing, translation, knowledge QA, role-playing...); SFT (300k verifiable data from RL training set, 100k non-verifiable data from SFT data of Doubao-Pro 1.5) |
+| Rollout Configuration | Streaming Rollout System |
+| Reward Function | Seed-Verifier and Seed-Thinking-Verifier that generates YES or NO with or without reasoning for verifiable problems; Pairwise generative reward model with probability of YES or NO for non-verifiable problems |
+| Policy Optimization | PPO |
+| Benchmark | AIME 2024, AIME 2025, BeyondAIME, Codeforces, GPQA diamond, superGPQA, ARC-AGI, SimpleQA, Collie, IFEval, SWE-bench, MMLU_PRO, LiveCodeBench, Aider Polyglot |
+| Core Insights | 1. Generative reward model improves training stability with mixed verifiable and non-verifiable data by minimizing conflicts; 2. Training RL techniques (Value-pretraining, Decoupled-GAE, Length-adaptive GAE, Dynamic Sampling, Clip-Higher, Token-level Loss, Positive Example LM Loss, Online Data Distribution Adaptation); 3. Heavy emphasis on chain-of-thought (CoT)-rich reasoning data; 4. Infrastructure (Streaming Rollout System for faster response generation and GPU utilization; Hybrid parallelism strategies (TP, EP, CP, FSDP), memory optimization, and automated tuning for efficient scaling.) |
+| Additional Notes | Seed-Thinking-v1.5 is a Mixture-of-Experts (MoE) model, featuring 20B activated and 200B total parameters. Two new benchmarks, BeyondAIME and Codeforces. |
+
+
 ### Multimodal Models
 
 #### <div id="open-r1-mm">2025.0128, open-r1-multimodal</div>
