@@ -50,6 +50,9 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
       - [2025.0310, Curr\_ReFT](#20250310-curr_reft)
       - [2025.0315, MetaSpatial](#20250315-metaspatial)
+      - [2025.0327, Reason-RFT](#20250327-reason-rft)
+      - [2025.0409, Kimi-VL-Thinking](#20250409-kimi-vl-thinking)
+      - [2025.0409, VideoChat-R1](#20250409-videochat-r1)
     - [Agentic Applications](#agentic-applications-1)
       - [2025.0307, R1-Searcher](#20250307-r1-searcher)
       - [2024.0312, Search-R1](#20240312-search-r1)
@@ -600,6 +603,23 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
+
+#### <div id="metaspatial">2025.0315, MetaSpatial</div>
+
+| Project or Paper      | [MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse](https://arxiv.org/abs/2503.18470) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [PzySeere/MetaSpatial](https://github.com/PzySeere/MetaSpatial) |
+| Backbone Model        | Qwen2.5-VL-7B                                                 |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | [3D-Reasoning-Dataset](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning), 50;      |
+| Rollout Configuration | 16 (prompts + images) * 4 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Format Reward, Physics Reward, Rendering-based Reward);         |
+| Policy Optimization   | PPO Loss                            |
+| Benchmark             | +74% compared with base model on test-set of 3d-reasoning dataset; |
+| Core Insights         |   Injecting physics reward and gpt-4o-based rendering evaluation reward.                                                    |
+| Additional Notes      |   
+
+
 #### <div id="curr-reft">2025.0327, Reason-RFT</div>
 
 | Project or Paper      | [Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning](https://arxiv.org/pdf/2503.20752) |
@@ -647,21 +667,6 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
-
-#### <div id="metaspatial">2025.0315, MetaSpatial</div>
-
-| Project or Paper      | [MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse](https://arxiv.org/abs/2503.18470) |
-| --------------------- | ------------------------------------------------------------ |
-| GitHub                | [PzySeere/MetaSpatial](https://github.com/PzySeere/MetaSpatial) |
-| Backbone Model        | Qwen2.5-VL-7B                                                 |
-| RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [3D-Reasoning-Dataset](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning), 50;      |
-| Rollout Configuration | 16 (prompts + images) * 4 responses; Temperature=1.0;         |
-| Reward Function       | Rule-based Rewards (Format Reward, Physics Reward, Rendering-based Reward);         |
-| Policy Optimization   | PPO Loss                            |
-| Benchmark             | +74% compared with base model on test-set of 3d-reasoning dataset; |
-| Core Insights         |   Injecting physics reward and gpt-4o-based rendering evaluation reward.                                                    |
-| Additional Notes      |   
 
 
 ### Agentic Applications
