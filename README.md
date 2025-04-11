@@ -111,7 +111,12 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0311 | LLM-R1                | CUHK & Ant Group   | [Paper](https://arxiv.org/pdf/2503.07536)<br />[GitHub](https://github.com/TideDra/lmm-r1) | ——                                                           | ——                                                           | <details><summary>Click</summary>LLM-R1 contributes the RMAVO algorithm to stably enhance LLM reasoning using RL, preventing reward hacking and achieving SOTA results with smaller models via an open-source implementation. It shows that reward model assistance in value optimization is key for stable RL.</details> |
 | 2025.0311 | Vision-R1             | ECNU & Xiaohongshu | [Paper](https://arxiv.org/abs/2503.06749)<br />[GitHub](https://github.com/Osilly/Vision-R1) | ——                                                           | [Vision-R1-cold](https://huggingface.co/datasets/Osilly/Vision-R1-cold) | <details><summary>Click</summary>Vision-R1 adapts the R1-Zero RL paradigm for VLMs, training them on visual reasoning chains. Its contribution is significantly boosting complex multimodal reasoning performance. It shows that RL applied to explicit reasoning steps effectively enhances VLM capabilities.</details> |
 | 2025.0315 | MetaSpatial                | Northwestern University                                | [Paper](https://arxiv.org/abs/2503.18470)<br />[Project](https://github.com/PzySeere/MetaSpatial)<br />[GitHub](https://github.com/PzySeere/MetaSpatial) | ——                                                           | [3D_Reasoning](https://huggingface.co/datasets/zhenyupan/3d_layout_reasoning)                                                          | <details><summary>Click</summary>MetaSpatial leverages reinforcement learning to enhance 3D spatial reasoning in vision-language models (VLMs), enabling more structured, realistic, and adaptive scene generation for applications in the metaverse, AR/VR, and game development.</details> |
+| 2025.0327 | Reason-RFT             | PKU & BAAI & CASIA & School of Artificial Intelligence, University of Chinese Academy of Sciences | [Paper](https://arxiv.org/pdf/2503.20752)<br />[GitHub](https://github.com/tanhuajie/Reason-RFT)<br />[Project](https://tanhuajie.github.io/ReasonRFT/) | ——                                                           | [tanhuajie2001/Reason-RFT-CoT-Dataset](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) | <details><summary>Click</summary>Reason-RFT introduces a two-phase training paradim: (1) SFT with CoT data to activate reasoning potential, followed by (2) GRPO-based reinforcement learning to enhance generalization, which further has potential applications in Emobodied AI.</details> |
 | 2025.0404 | MAYE           | SJTU & GAIR                | [Paper](https://arxiv.org/pdf/2504.02587)<br />[GitHub](https://github.com/GAIR-NLP/MAYE) |——  | [ManTle/MAYE](https://huggingface.co/datasets/ManTle/MAYE) | <details><summary>Click</summary>MAYE is a transparent, reproducible framework and a comprehensive evaluation scheme for applying reinforcement learning (RL) to vision-language models (VLMs). Its codebase is developed entirely from scratch without relying on any existing RL toolkits.</details> |
+| 2025.0408 | Step-R1-V-Mini           | StepFun               | [Website](https://platform.stepfun.com) |——  | —— | <details><summary>Click</summary>Step-R1-V-Mini excels in the domain of visual reasoning, while also demonstrating top-tier performance in mathematical, code, and textual reasoning tasks. It supports a context length of 100k.</details> |
+| 2025.0409 | Kimi-VL-Thinking           | Kimi Team               | [Technical Report](https://github.com/MoonshotAI/Kimi-VL/blob/main/Kimi-VL.pdf)<br />[GitHub](https://github.com/MoonshotAI/Kimi-VL) |[moonshotai/Kimi-VL-A3B-Thinking](https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking)  | —— | <details><summary>Click</summary>Kimi-VL-Thinking is designed to enhance long-horizon reasoning capabilities in vision-language tasks.  Built on a foundation of long CoT SFT and RL, with only 2.8 parameters,  Kimi-VL-Thinking achieves strong performance across a range of tasks requiring long-term reasoning. It excels in domains such as MMMU, MathVision, and MathVista, achieving impressive scores of 61.7, 36.8, and 71.3, respectively.</details> |
+| 2025.0409 | VideoChat-R1           | Shanghai AI Lab & NJU & ZJU & USTC & Shanghai Innovation Institute & SIAT               | [Paper](https://arxiv.org/pdf/2504.06958)<br />[GitHub](https://github.com/OpenGVLab/VideoChat-R1)  | —— | —— | <details><summary>Click</summary>VideoChat-R1 provides a systematic exploration of Reinforcement Fine-Tuning (RFT) with GRPO for video MLLMs, which exhibiting remarkable performance on spatio-temporal perception tasks without sacrificing chat ability, while exhibiting emerging spatio-temporal reasoning abilities. </details> |
+| 2025.0410 | Perception-R1           | HUST & BUPT & StepFun & JHU & Tsinghua University        | [Paper](https://arxiv.org/pdf/2504.07954)<br />[GitHub](https://github.com/linkangheng/PR1)  | [Perception-R1](https://huggingface.co/collections/Kangheng/perception-r1-67f6b14f89d307a0ece985af) | [Perception-R1](https://huggingface.co/collections/Kangheng/perception-r1-67f6b14f89d307a0ece985af) | <details><summary>Click</summary>Perception-R1 explores the effects of RL on different perception tasks, the researchers observe that the percep- tual perplexity is a major factor in determining the effectiveness of RL. The scalable Perception-R1 achieves remarkable performance on the perception tasks.  </details> |
 | <div id="vlm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
@@ -592,6 +597,53 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Reward Function       | Difficulty-aware Rule-based Rewards (Accuracy, IoU, Format)；         |
 | Policy Optimization   | PPO Loss                            |
 | Benchmark             | ID (In-Distribution), compared to base and SFT:<br/>Math (Math360K+Geo170K, 1K for testing): -3B +11.0%, +8.8%, -7B +11.2%, +4.4%;<br/>Detection (RefCOCO, 1K for testing): -3B +58.0%, +14.6%, -7B +51.3%, +2.5%;<br/>Classification: (RefCOCO, 1K for testing) -3B +31.9%, +21.3%, -7B +44.6%, +4.2%;<br/><br/>OOD(Out-of-Distribution), compared to base and SFT: <br/>Math (CLEVER-70K, 0.5K for testing): -3B +55.9%, +42.9%, -7B +46.6%, +21.6%;<br/>Detection (Refgta, 1K for testing): -3B +43.3%, +13.3% -7B +41.7%, +28.3%;<br/>Classification: (Pascal-VOC, 1K for testing) -3B +15.4%, +18.0%, -7B +12.5%, +6.5%; |
+| Core Insights         |                                                              |
+| Additional Notes      |                                                              |
+
+#### <div id="curr-reft">2025.0327, Reason-RFT</div>
+
+| Project or Paper      | [Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning](https://arxiv.org/pdf/2503.20752) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [tanhuajie/Reason-RFT](https://github.com/tanhuajie/Reason-RFT) |
+| Backbone Model        | Qwen2-VL-2/7B                                                 |
+| RL Algorithm          | GRPO                                                         |
+| Training Dataset      | Visual Counting: [CLEVR-Math](https://huggingface.co/datasets/dali-does/clevr-math), 35K for training,<br />Structure Perception: [Geo170K](https://huggingface.co/datasets/Luckyjhg/Geo170K), 4.5K for training,<br />Spatial Transformation: [TRANCE](https://github.com/hughplay/TVR), 60K for training;     |
+| Rollout Configuration | 2 * 8 responses; Temperature=1.0;         |
+| Reward Function       | Rule-based Rewards (Accuracy, Format)；         |
+| Policy Optimization   | PPO Loss                            |
+| Benchmark             | ID (In-Distribution), compared to base and CoT-SFT(stage-1):<br />Visual Counting: -2B +14.40%, +11.30%, -7B -3.00%, +12.30%;<br />Structure Perception: -2B +23.17%, +5.98%, -7B +15.97%, +7.93%;<br />Spatial Transformation: -2B +70.83%, +9.76%, -7B +66.44%, -1.34%;<br/><br/>OOD (Out-of-Distribution), compared to base and CoT-SFT(stage-1):<br/>Visual Counting: -2B +19.20%, +4.70%, -7B +8.90%, +8.60%;<br/>Structure Perception: -2B +12.50%, +7.88%, -7B +5.37%, +16.25%;<br/>Spatial Transformation: -2B +59.45%, +20.86%, -7B +46.64%, +11.46%;|
+| Core Insights         |                                                              |
+| Additional Notes      |                                                              |
+
+
+#### <div id="curr-reft">2025.0409, Kimi-VL-Thinking</div>
+
+| Project or Paper      | [KIMI-VL TECHNICAL REPORT](https://github.com/MoonshotAI/Kimi-VL/blob/main/Kimi-VL.pdf) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [MoonshotAI/Kimi-VL](https://github.com/MoonshotAI/Kimi-VL) |
+| Backbone Model        | Kimi-VL-A3B                                                |
+| RL Algorithm          | Online Policy Mirror Decent/Length Penalty Reward/Curriculum Sampling/Prioritized Sampling/Chain-of-Thought RM/Long2short RL                  |
+| Training Dataset      | Long-CoT data about mathematical problem-solving and domain-specific VQA     |
+| Rollout Configuration | None        |
+| Reward Function       | Correctness, Length；         |
+| Policy Optimization   | Online Policy Mirror Decent                     |
+| Benchmark             | Comparable with Qwen2.5-VL-32/72B on MathVision (Pass@1)     |
+| Core Insights         |                                                              |
+| Additional Notes      |                                                              |
+
+
+#### <div id="curr-reft">2025.0409, VideoChat-R1</div>
+
+| Project or Paper      | [VideoChat-R1: Enhancing Spatio-Temporal Perception via Reinforcement Fine-Tuning](https://arxiv.org/pdf/2504.06958) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [OpenGVLab/VideoChat-R1](https://github.com/OpenGVLab/VideoChat-R1) |
+| Backbone Model        | Qwen2.5-VL-7B                                               |
+| RL Algorithm          | GRPO    |
+| Training Dataset      | Joint training on three tasks: Temporal Grounding: Charade-STA, 5K; Object Tracking: GoT, 10K; Grounding QA: NExTGQA, 3K; total of 18K;   |  
+| Rollout Configuration | 1 * 8 responses; Temperature=1.0;       |
+| Reward Function       | Rule-based Rewards (Accuracy, Format, IoU)；         |
+| Policy Optimization   | PPO Loss                    |
+| Benchmark             | mIoU(Overlap on OT) compared with base and SFT:<br />Temporal Grounding: +31.8%, +14.5%;<br />Object Tracking: +31.2%, +2.0%;<br />Grounding QA: +17.0%, +4.2%;     |
 | Core Insights         |                                                              |
 | Additional Notes      |                                                              |
 
