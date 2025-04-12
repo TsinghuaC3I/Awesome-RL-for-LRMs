@@ -40,6 +40,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0320, Open RS](#20250320-open-rs)
       - [2025.0321, Oat-Zero](#20250321-oat-zero)
       - [2025.0407, VAPO](#20250407-vapo)
+      - [2025.0410, Seed-Thinking-v1.5](#20250410-seed-thinking-v15)
     - [Multimodal Models](#multimodal-models-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
       - [2025.0202, R1-V](#20250202-r1-v)
@@ -97,6 +98,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0401 | VAPO           | ByteDance Seed                    | [Paper](https://arxiv.org/pdf/2504.05118)<br /> | —— | —— | <details><summary>Click</summary>VAPO offers an integrated solution that effectively alleviates value model bias, the presence of heterogeneous sequence lengths, and the sparsity of reward signal.</details> |
 |2025.0407 |  ConciseRL  |   Wand AI   | [Paper](https://arxiv.org/pdf/2504.05185) | —— | —— | <details><summary>Click</summary>This work challenges the idea that longer reasoning chains in LLMs inherently mean better accuracy. It uses mathematical analysis of RL principles, particularly PPO, to show that lengthier responses often arise from the optimization process itself, not necessarily improved reasoning.</details> |
 | 2025.0409 | AdaRFT           | USC LIME Lab                    | [Paper](https://arxiv.org/abs/2504.05520)<br />[GitHub](https://github.com/uscnlp-lime/verl) | —— | [DeepScaleR_Difficulty](https://huggingface.co/datasets/lime-nlp/DeepScaleR_Difficulty) | <details><summary>Click</summary>AdaRFT proposes Adaptive Curriculum Reinforcement Finetuning to improve LLM reasoning training efficiency. It dynamically adjusts task difficulty based on recent reward signals, accelerating learning by keeping challenges optimally balanced. Experiments on competition math benchmarks show up to 2x fewer steps and improved accuracy, using standard PPO with minimal changes.</details> |
+| 2025.0410 | Seed-Thinking-v1.5 | ByteDance Seed                         | [Paper, GitHub](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5) | —— | —— | <details><summary>Click</summary>Seed-Thinking-v1.5 is a high-performing reasoning model that combines curated chain-of-thought data, stable reinforcement learning, and advanced infrastructure to achieve strong results across math, coding, and logic tasks.</details> |
 | <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
@@ -471,6 +473,22 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Benchmark             | AIME 2024       |
 | Core Insights         | VAPO integrates clip-higher, token-level loss, value-pretraining, decoupled-GAE, self-imitation learning and group-sampling.  |
 | Additional Notes      |       First value-based RL training framework to outperform value-free methods on long COT tasks significantly   |
+
+#### <div id="seed-thinking-v1.5">2025.0410, Seed-Thinking-v1.5</div>
+
+| Project or Paper | [Seed-Thinking-v1.5: Advancing Superb Reasoning Models with Reinforcement Learning](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5/blob/main/seed-thinking-v1.5.pdf) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub | [ByteDance-Seed/Seed-Thinking-v1.5](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5) |
+| Backbone Model | Doubao series model |
+| RL Algorithm | VAPO, DAPO |
+| Training Dataset | RL (Verifiable: STEM, code, logical puzzle; Non-verifiable: non-reasoning tasks including creative writing, translation, knowledge QA, role-playing...); SFT (300k verifiable data from RL training set, 100k non-verifiable data from SFT data of Doubao-Pro 1.5) |
+| Rollout Configuration | Streaming Rollout System |
+| Reward Function | Seed-Verifier and Seed-Thinking-Verifier that generates YES or NO with or without reasoning for verifiable problems; Pairwise generative reward model with probability of YES or NO for non-verifiable problems |
+| Policy Optimization | PPO |
+| Benchmark | AIME 2024, AIME 2025, BeyondAIME, Codeforces, GPQA diamond, superGPQA, ARC-AGI, SimpleQA, Collie, IFEval, SWE-bench, MMLU_PRO, LiveCodeBench, Aider Polyglot |
+| Core Insights | 1. Generative reward model improves training stability with mixed verifiable and non-verifiable data by minimizing conflicts; 2. Training RL techniques (Value-pretraining, Decoupled-GAE, Length-adaptive GAE, Dynamic Sampling, Clip-Higher, Token-level Loss, Positive Example LM Loss, Online Data Distribution Adaptation); 3. Heavy emphasis on chain-of-thought (CoT)-rich reasoning data; 4. Infrastructure (Streaming Rollout System and hybrid parallelism strategies) |
+| Additional Notes | Seed-Thinking-v1.5 is a Mixture-of-Experts (MoE) model, featuring 20B activated and 200B total parameters. Two new benchmarks, BeyondAIME and Codeforces. |
+
 
 ### Multimodal Models
 
