@@ -720,6 +720,19 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Core Insights         | SEARCH-R1 addresses the challenges of RL framework and stability, multi-turn interleaved reasoning and search, and reward design, and introduces retrieved token masking to ensure stable optimization.                                |
 | Additional Notes      |   
 
+#### <div id="DeepResearcher">2025.0404, DeepResearcher</div>
+
+| Project or Paper      | [DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments](https://arxiv.org/abs/2504.03160) |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| GitHub                | [GAIR-NLP/DeepResearcher](https://github.com/GAIR-NLP/DeepResearcher)                                                     |
+| Backbone Model        | Qwen2.5-7B-Instruct                                                                                                     |
+| RL Algorithm          | GRPO                                               |
+| Training Dataset      | [Open-domain QA datasets](https://github.com/GAIR-NLP/DeepResearcher/tree/main/data) (e.g. NQ, TQ, HotpotQA, 2Wiki) – – a total of about 80,000 examples                                           |
+| Rollout Configuration | 256 prompts * 16 responses, with a maximum of 10 tool calls per rollout                                                        |
+| Reward Function       | Rule-based Rewards(Word-level F1 score and Format Reward)                                                                                       |
+| Policy Optimization   | GRPO with masking obvervations                         |
+| Benchmark             | In-domain: NaturalQuestions, TriviaQA, HotpotQA, 2WikiMultiHopQA；Out-of-domain: Musique, Bamboogle, PopQA                                             |
+| Core Insights         | By training end-to-end with reinforcement learning in a real-world web environment, DeepResearcher can autonomously plan, cross-validate from multiple sources, reflect, and maintain honesty; it significantly improves open-domain QA and deep research capabilities; while also overcoming practical challenges such as search API limitations, web noise, and anti-crawling mechanisms. |
 
 ## Contributing
 
