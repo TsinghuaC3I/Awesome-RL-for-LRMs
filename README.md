@@ -704,6 +704,19 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Benchmark             | HotpotQA, 2WikiMultiHopQA, Musique,  Bamboogle |
 | Core Insights         | The proposed R1-Searcher framework integrates RAG with RL, enabling the model to invoke an external search engine during the reasoning process. The framework demonstrates the ability to generalize from in-domain training datasets to out-of-domain test datasets, and can seamlessly switch to online search to obtain up-to-date information.   
 
+#### <div id="AutoCoA">2025.0309, AutoCoA</div>
+
+| Project or Paper      | [Agent Models: Internalizing Chain-of-Action Generation into Reasoning Models](https://arxiv.org/abs/2503.06580) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [ADaM-BJTU/AutoCoA](https://github.com/ADaM-BJTU/AutoCoA)       |
+| Backbone Model        | DeepSeek-R1-Distill-Qwen-7B                                   |
+| RL Algorithm          | GRPO                                                        |
+| Training Dataset      | Synthesized data based on HotpotQA and DeepSeek-R1-Distill-Qwen-32B [data](https://github.com/ADaM-BJTU/AutoCoA/tree/main/data)  |
+| Rollout Configuration | 1 prompt * 5 responses; Temperature=0.6;                                                           |
+| Reward Function       | Rule-based Rewards (Exact Match and Format Reward)          |
+| Policy Optimization   | First through multi-stage SFT (using improved contrastive loss to train CoT+A, CoT+CoA [with/without observation mask]), then combined with an RL stage (GRPO optimization) for end-to-end fine-tuning |
+| Benchmark             | Open-domain QA evaluation: single-hop (NQ, TriviaQA) and multi-hop (HotpotQA, 2WikiMultiHopQA, MuSiQue, Bamboogle) |
+| Core Insights         | The AutoCoA framework internalizes the decision-making for external tool invocation (Chain-of-Action) into the reasoning model, enabling seamless alternation between thought and action, which significantly improves performance on multi-turn long-horizon tasks. It proposes a two-phase training method: injecting the "when-to-act" and "how-to-act" capabilities via supervised fine-tuning and reinforcement learning, effectively reducing the cost of real interactions and enhancing adaptability in real-world environments. |
 
 #### <div id="search-r1">2024.0312, Search-R1</div>
 
