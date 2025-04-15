@@ -56,7 +56,10 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0409, VideoChat-R1](#20250409-videochat-r1)
     - [Agentic Applications](#agentic-applications-1)
       - [2025.0307, R1-Searcher](#20250307-r1-searcher)
+      - [2025.0309, AutoCoA](#20250309-AutoCoA)
       - [2024.0312, Search-R1](#20240312-search-r1)
+      - [2025.0404, DeepResearcher](#20250404-DeepResearcher)
+      - [2025.0407, SWiRL](#20250407-SWiRL)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -746,6 +749,21 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Policy Optimization   | GRPO with masking obvervations                         |
 | Benchmark             | In-domain: NaturalQuestions, TriviaQA, HotpotQA, 2WikiMultiHopQA；Out-of-domain: Musique, Bamboogle, PopQA                                             |
 | Core Insights         | By training end-to-end with reinforcement learning in a real-world web environment, DeepResearcher can autonomously plan, cross-validate from multiple sources, reflect, and maintain honesty; it significantly improves open-domain QA and deep research capabilities; while also overcoming practical challenges such as search API limitations, web noise, and anti-crawling mechanisms. |
+
+#### <div id="SWiRL">2025.0407, SWiRL</div>
+
+| Project or Paper | [Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use](https://arxiv.org/abs/2504.04736) |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **GitHub**       | N/A                                                                                            |
+| **Backbone Model** | Gemma 2-27b                                                                                 |
+| **RL Algorithm** | Step-Wise Reinforcement Learning (SWiRL)                                                        |
+| **Training Dataset** | - HotPotQA: Generated 50,000 synthetic trajectories using 10,000 multi-step questions<br>- GSM8K: Generated 37,500 synthetic trajectories using 7,500 questions |
+| **Rollout Configuration** | N/A                                                                                    |
+| **Reward Function** | Model-based Rewards (scoring each step’s appropriateness using Gemini 1.5 Pro)               |
+| **Policy Optimization** | SWiRL: Stepwise optimization, similar to RLHF in Gemma 2                              |
+| **Benchmark**    | HotPotQA; GSM8K; CofCA; MuSiQue; BeerQA                                                           |
+| **Core Insights** | 1. Multi-step reasoning can be optimized via step-level rewards, benefiting even if the final answer is incorrect<br>2. Process filtering (selecting based on intermediate step quality) is superior to outcome filtering<br>3. Strong cross-task generalization: for example, training only on HotPotQA can improve GSM8K performance by approximately 16.9% |
+
 
 ## Contributing
 
