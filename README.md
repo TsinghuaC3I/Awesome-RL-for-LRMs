@@ -515,14 +515,14 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Project or Paper      | [d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning](https://arxiv.org/pdf/2504.12216) |
 | --------------------- | ------------------------------------------------------------ |
 | GitHub                | [dllm-reasoning/d1](https://github.com/dllm-reasoning/d1) |
-| Backbone Model        | Qwen2.5-1.5B                                                 |
-| RL Algorithm          | ARGO |
-| Training Dataset      | MATH;                             |
+| Backbone Model        | LLaDA-8B-Instruct                                          |
+| RL Algorithm          | diffu-GRPO |
+| Training Dataset      | GSM8K, MATH, Countdown, Sudoku;                             |
 | Rollout Configuration | N/A                                                          |
-| Reward Function       | Computed based on the similarity of sampled answer and ground truth answer |
-| Policy Optimization   | ARGO       |
-| Benchmark             | MATH500    |
-| Core Insights         | Incorporating ground truth answer into RL training can achieve a better convergence of loss and reward. |
+| Reward Function       | Rule-based Rewards |
+| Policy Optimization   |  |
+| Benchmark             | GSM8K, MATH500, Countdown, Sudoku|
+| Core Insights         | Attemping to improve the reasoning of diffusion LMs based on RL Algorithms. |
 | Additional Notes      |                                                              |
 
 ### Multimodal Models
