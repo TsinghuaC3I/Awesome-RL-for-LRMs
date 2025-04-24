@@ -526,7 +526,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Reward Function       | Rule-based Rewards |
 | Policy Optimization   | GRPO with adaptive entropy loss |
 | Benchmark             | AIME 2024, AIME 2025, LiveCodeBench (8/1/24-2/1/25) |
-| Core Insights         | 1. Multi-stage GRPO training with scaled-up context window improves training performance without sacrificing performance.<br/>2. Advantage masks of truncated samples, while sounds intuitive, does not transfer to performance.<br/>3. Adaptive entropy control robustly prevents entropy collapse and allows diverse sampling and continuous learning and improvement. |
+| Core Insights         | 1. Multi-stage GRPO training with scaled-up context window improves training efficiency without sacrificing performance.<br/>2. Advantage masks of truncated samples, while seems intuitive, does not transfer to performance.<br/>3. Adaptive entropy control robustly prevents entropy collapse and allows diverse sampling and continuous learning and improvement. |
 | Additional Notes      | |
 
 #### <div id="d1 & diffu-GRPO">2025.0416, d1 & diffu-GRPO</div>
