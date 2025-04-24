@@ -5,7 +5,7 @@
 A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
 ## News
-- 🔥**[2025-04-24]**: **Introducing TTRL — an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).**
+- **[2025-04-23]:** **🔥Introducing TTRL — an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).**
 
 ## Contents
 
