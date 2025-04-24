@@ -4,6 +4,9 @@
 
 A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
+## News
+- 🔥**[2025-04-24]**: **Introducing TTRL — an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).**
+
 ## Contents
 
 > ⚠️⚠️⚠️ The following table of contents highlight only a selection of projects, which provide detailed configurations. For the most recent updates, please scroll to the bottom of the table:
@@ -13,6 +16,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 
 - [Awesome RL Reasoning Recipes ("Triple R")](#awesome-rl-reasoning-recipes-triple-r)
+  - [News](#news)
   - [Contents](#contents)
   - [Overview](#overview)
     - [Large Language Models](#large-language-models)
@@ -52,10 +56,12 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0310, VisualThinker-R1-Zero](#20250310-visualthinker-r1-zero)
       - [2025.0310, MM-Eureka](#20250310-mm-eureka)
       - [2025.0310, Curr\_ReFT](#20250310-curr_reft)
+      - [2025.0311, MMR1](#20250311-mmr1)
       - [2025.0315, MetaSpatial](#20250315-metaspatial)
       - [2025.0327, Reason-RFT](#20250327-reason-rft)
       - [2025.0409, Kimi-VL-Thinking](#20250409-kimi-vl-thinking)
       - [2025.0409, VideoChat-R1](#20250409-videochat-r1)
+      - [2025.0410, VL-Rethinker](#20250410-vl-rethinker)
     - [Agentic Applications](#agentic-applications-1)
       - [2025.0307, R1-Searcher](#20250307-r1-searcher)
       - [2025.0309, AutoCoA](#20250309-autocoa)
@@ -106,6 +112,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0409 | AdaRFT           | USC LIME Lab                    | [Paper](https://arxiv.org/abs/2504.05520)<br />[GitHub](https://github.com/uscnlp-lime/verl) | —— | [DeepScaleR_Difficulty](https://huggingface.co/datasets/lime-nlp/DeepScaleR_Difficulty) | <details><summary>Click</summary>AdaRFT proposes Adaptive Curriculum Reinforcement Finetuning to improve LLM reasoning training efficiency. It dynamically adjusts task difficulty based on recent reward signals, accelerating learning by keeping challenges optimally balanced. Experiments on competition math benchmarks show up to 2x fewer steps and improved accuracy, using standard PPO with minimal changes.</details> |
 | 2025.0410 | Seed-Thinking-v1.5 | ByteDance Seed                         | [Paper, GitHub](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5) | —— | —— | <details><summary>Click</summary>Seed-Thinking-v1.5 is a high-performing reasoning model that combines curated chain-of-thought data, stable reinforcement learning, and advanced infrastructure to achieve strong results across math, coding, and logic tasks.</details> |
 | 2025.0410 | d1 & diffu-GRPO | UCLA & Meta| [Paper](https://arxiv.org/pdf/2504.12216)<br />[GitHub](https://github.com/dllm-reasoning/d1)<br />[Project](https://dllm-reasoning.github.io)  | —— | —— | <details><summary>Click</summary> This paper propose d1 to adapt pre-trained masked dLLMs into reasoning via a combination of SFT and RL. The RL method used is named diffu-GRPO. </details> |
+| 2025.0423 | TTRL | THU&Shanghai AI Lab | [Paper](https://arxiv.org/abs/2504.16084)<br />[GitHub](https://github.com/PRIME-RL/TTRL) | —— | —— | This paper investigates Reinforcement Learning (RL) on data without explicit labels for reasoning tasks in Large Language Models (LLMs). |
 | <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 ### Multimodal Models
