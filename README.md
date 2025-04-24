@@ -42,6 +42,7 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2025.0328, ARGO](#20250328-argo)
       - [2025.0407, VAPO](#20250407-vapo)
       - [2025.0410, Seed-Thinking-v1.5](#20250410-seed-thinking-v15)
+      - [2025.0413, Skywork-OR1](#20250413-skywork-or1)
       - [2025.0416, d1 \& diffu-GRPO](#20250416-d1--diffu-grpo)
     - [Multimodal Models](#multimodal-models-1)
       - [2025.0128, open-r1-multimodal](#20250128-open-r1-multimodal)
@@ -106,6 +107,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0409 | AdaRFT           | USC LIME Lab                    | [Paper](https://arxiv.org/abs/2504.05520)<br />[GitHub](https://github.com/uscnlp-lime/verl) | —— | [DeepScaleR_Difficulty](https://huggingface.co/datasets/lime-nlp/DeepScaleR_Difficulty) | <details><summary>Click</summary>AdaRFT proposes Adaptive Curriculum Reinforcement Finetuning to improve LLM reasoning training efficiency. It dynamically adjusts task difficulty based on recent reward signals, accelerating learning by keeping challenges optimally balanced. Experiments on competition math benchmarks show up to 2x fewer steps and improved accuracy, using standard PPO with minimal changes.</details> |
 | 2025.0410 | Seed-Thinking-v1.5 | ByteDance Seed                         | [Paper, GitHub](https://github.com/ByteDance-Seed/Seed-Thinking-v1.5) | —— | —— | <details><summary>Click</summary>Seed-Thinking-v1.5 is a high-performing reasoning model that combines curated chain-of-thought data, stable reinforcement learning, and advanced infrastructure to achieve strong results across math, coding, and logic tasks.</details> |
 | 2025.0410 | d1 & diffu-GRPO | UCLA & Meta| [Paper](https://arxiv.org/pdf/2504.12216)<br />[GitHub](https://github.com/dllm-reasoning/d1)<br />[Project](https://dllm-reasoning.github.io)  | —— | —— | <details><summary>Click</summary> This paper propose d1 to adapt pre-trained masked dLLMs into reasoning via a combination of SFT and RL. The RL method used is named diffu-GRPO. </details> |
+| 2025.0413 | Skywork-OR1 | Skywork AI| [Blog](https://capricious-hydrogen-41c.notion.site/Skywork-Open-Reasoner-Series-1d0bc9ae823a80459b46c149e4f51680)<br />[GitHub](https://github.com/SkyworkAI/Skywork-OR1)  | [Skywork-OR1-32B-Preview](https://huggingface.co/Skywork/Skywork-OR1-32B-Preview)<br />[Skywork-OR1-7B-Preview](https://huggingface.co/Skywork/Skywork-OR1-7B-Preview)<br />[Skywork-OR1-Math-7B](https://huggingface.co/Skywork/Skywork-OR1-Math-7B) | [Skywork-OR1-RL-Data](https://huggingface.co/datasets/Skywork/Skywork-OR1-RL-Data) | <details><summary>Click</summary> Skywork-OR1 is a series of robust open-source models trained on carefully curated math and code data. The training process incorporates several modifications to the original GRPO, including offline and online data filtering, multi-stage training, and adaptive entropy control. </details> |
 | <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 ### Multimodal Models
@@ -511,6 +513,21 @@ A curated collection covering models, datasets, reward designs, optimization met
 | Benchmark | AIME 2024, AIME 2025, BeyondAIME, Codeforces, GPQA diamond, superGPQA, ARC-AGI, SimpleQA, Collie, IFEval, SWE-bench, MMLU_PRO, LiveCodeBench, Aider Polyglot |
 | Core Insights | 1. Generative reward model improves training stability with mixed verifiable and non-verifiable data by minimizing conflicts; 2. Training RL techniques (Value-pretraining, Decoupled-GAE, Length-adaptive GAE, Dynamic Sampling, Clip-Higher, Token-level Loss, Positive Example LM Loss, Online Data Distribution Adaptation); 3. Heavy emphasis on chain-of-thought (CoT)-rich reasoning data; 4. Infrastructure (Streaming Rollout System and hybrid parallelism strategies) |
 | Additional Notes | Seed-Thinking-v1.5 is a Mixture-of-Experts (MoE) model, featuring 20B activated and 200B total parameters. Two new benchmarks, BeyondAIME and Codeforces. |
+
+#### <div id="skywork-or1">2025.0413, Skywork-OR1</div>
+
+| Project or Paper      | [Skywork Open Reasoner Series](https://capricious-hydrogen-41c.notion.site/Skywork-Open-Reasoner-Series-1d0bc9ae823a80459b46c149e4f51680) |
+| --------------------- | ------------------------------------------------------------ |
+| GitHub                | [Skywork-AI/Skywork-OR1](https://github.com/Skywork-AI/Skywork-OR1) |
+| Backbone Model        | DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-7B |
+| RL Algorithm          | Multi-stage GRPO with adaptive entropy control |
+| Training Dataset      | [Skywork-OR1-RL-Data](https://huggingface.co/datasets/Skywork/Skywork-OR1-RL-Data) |
+| Rollout Configuration | 256 prompts * 16 responses, with temperature = 1.0 and online filtering and rejection sampling |
+| Reward Function       | Rule-based Rewards |
+| Policy Optimization   | GRPO with adaptive entropy loss |
+| Benchmark             | AIME 2024, AIME 2025, LiveCodeBench (8/1/24-2/1/25) |
+| Core Insights         | 1. Multi-stage GRPO training with scaled-up context window improves training performance without sacrificing performance.<br/>2. Advantage masks of truncated samples, while sounds intuitive, does not transfer to performance.<br/>3. Adaptive entropy control robustly prevents entropy collapse and allows diverse sampling and continuous learning and improvement. |
+| Additional Notes      | |
 
 #### <div id="d1 & diffu-GRPO">2025.0416, d1 & diffu-GRPO</div>
 
