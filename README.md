@@ -869,3 +869,7 @@ If you have any updates or improvements for this document, please feel free to s
   note={Github Repository},
 }
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TsinghuaC3I/Awesome-RL-Reasoning-Recipes&type=Date)](https://www.star-history.com/#TsinghuaC3I/Awesome-RL-Reasoning-Recipes&Date)
