@@ -525,7 +525,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 
 | Project or Paper      | [Skywork Open Reasoner Series](https://capricious-hydrogen-41c.notion.site/Skywork-Open-Reasoner-Series-1d0bc9ae823a80459b46c149e4f51680) |
 | --------------------- | ------------------------------------------------------------ |
-| GitHub                | [Skywork-AI/Skywork-OR1](https://github.com/Skywork-AI/Skywork-OR1) |
+| GitHub                | [SkyworkAI/Skywork-OR1](https://github.com/SkyworkAI/Skywork-OR1) |
 | Backbone Model        | DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-7B |
 | RL Algorithm          | Multi-stage GRPO with adaptive entropy control |
 | Training Dataset      | [Skywork-OR1-RL-Data](https://huggingface.co/datasets/Skywork/Skywork-OR1-RL-Data) |
