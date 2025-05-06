@@ -857,6 +857,21 @@ A curated collection covering models, datasets, reward designs, optimization met
 | **Benchmark**    | HotPotQA; GSM8K; CofCA; MuSiQue; BeerQA                                                           |
 | **Core Insights** | 1. Multi-step reasoning can be optimized via step-level rewards, benefiting even if the final answer is incorrect<br>2. Process filtering (selecting based on intermediate step quality) is superior to outcome filtering<br>3. Strong cross-task generalization: for example, training only on HotPotQA can improve GSM8K performance by approximately 16.9% |
 
+#### <div id="ReTool">2025.0415, ReTool</div>
+
+| Project or Paper | [ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](https://arxiv.org/pdf/2504.11536) |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **GitHub**       | https://github.com/ReTool-RL/ReTool                                                                                          |
+| **Backbone Model** | Qwen2.5-32B-Instruct, DeepSeek-R1-Distill-Qwen-32B                                                                    |
+| **RL Algorithm** | PPO                                                        |
+| **Training Dataset** | [Tool-integrated synthesis data](https://huggingface.co/datasets/JoeYing/ReTool-SFT) |
+| **Rollout Configuration** | N/A                                                                                    |
+| **Reward Function** | Rule-based accuracy reward              |
+| **Policy Optimization** | Standard PPO                              |
+| **Benchmark**    | AIME 2024, AIME 2025                                                           |
+| **Core Insights** | 1. The model's average response length decreased by 40% after RL training, suggesting improved efficiency in reasoning token utilization.
+2. The model's proficiency in code utilization improved during RL training, with the average code ratio increasing to nearly 98% and the average code lines increasing fivefold |
+
 #### <div id="WebThinker">2025.0430, WebThinker</div>
 
 | Project or Paper | [WebThinker: Empowering Large Reasoning Models with Deep Research Capability](https://arxiv.org/pdf/2504.21776) |
