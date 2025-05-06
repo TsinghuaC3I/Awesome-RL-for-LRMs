@@ -869,8 +869,7 @@ A curated collection covering models, datasets, reward designs, optimization met
 | **Reward Function** | Rule-based accuracy reward              |
 | **Policy Optimization** | Standard PPO                              |
 | **Benchmark**    | AIME 2024, AIME 2025                                                           |
-| **Core Insights** | 1. The model's average response length decreased by 40% after RL training, suggesting improved efficiency in reasoning token utilization.
-2. The model's proficiency in code utilization improved during RL training, with the average code ratio increasing to nearly 98% and the average code lines increasing fivefold |
+| **Core Insights** | 1. The model's average response length decreased by 40% after RL training, suggesting improved efficiency in reasoning token utilization. <br/ >2. The model's proficiency in code utilization improved during RL training, with the average code ratio increasing to nearly 98% and the average code lines increasing fivefold |
 
 #### <div id="WebThinker">2025.0430, WebThinker</div>
 
