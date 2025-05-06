@@ -880,7 +880,7 @@ If you have any updates or improvements for this document, please feel free to s
 ```tex
 @misc{zhang2025TripleR,
   title={Awesome RL Recipes for Reasoning},
-  author={Kaiyan Zhang, Yuchen Fan, Yuxin Zuo, Guoli Jia, Xingtai Lv, Xuekai Zhu, Ermo Hua, Ning Ding, Biqing Qi, Bowen Zhou},
+  author={Kaiyan Zhang, Yuchen Fan, Yuxin Zuo, Guoli Jia, Kai Tian, Xingtai Lv, Xuekai Zhu, Ermo Hua, Ning Ding, Biqing Qi, Bowen Zhou},
   year={2025},
   howpublished={\url{https://github.com/}},
   note={Github Repository},
