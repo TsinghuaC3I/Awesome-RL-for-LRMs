@@ -855,6 +855,19 @@ A curated collection covering models, datasets, reward designs, optimization met
 | **Benchmark**    | HotPotQA; GSM8K; CofCA; MuSiQue; BeerQA                                                           |
 | **Core Insights** | 1. Multi-step reasoning can be optimized via step-level rewards, benefiting even if the final answer is incorrect<br>2. Process filtering (selecting based on intermediate step quality) is superior to outcome filtering<br>3. Strong cross-task generalization: for example, training only on HotPotQA can improve GSM8K performance by approximately 16.9% |
 
+#### <div id="WebThinker">2025.0407, WebThinker</div>
+
+| Project or Paper | [WebThinker: Empowering Large Reasoning Models with Deep Research Capability](https://arxiv.org/pdf/2504.21776) |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **GitHub**       | https://github.com/RUC-NLPIR/WebThinker                                                                                          |
+| **Backbone Model** | QwQ-32B,  DeepSeek-R1-Distilled-Qwen-7B,  DeepSeek-R1-Distilled-Qwen-14B,  DeepSeek-R1-Distilled-Qwen-32B                                                                                |
+| **RL Algorithm** | Online DPO                                                        |
+| **Training Dataset** | 3k example sampled from SuperGPQA, WebWalkerQA, OpenThoughts, Natural Reasoning, Numina Math |
+| **Rollout Configuration** | N/A                                                                                    |
+| **Reward Function** | Correctness, Tool Efficiency, and Thinking Conciseness               |
+| **Policy Optimization** | Iterative Online DPO                              |
+| **Benchmark**    | GPQA; GAIA; WebWalkerQA; HLE; Glaive                                                           |
+| **Core Insights** | The framework's Deep Web Explorer and Autonomous Think-Search-and-Draft strategy enable LRMs to autonomously explore the web and produce comprehensive outputs. WebThinker outperforms existing methods and strong proprietary systems in complex reasoning benchmarks and scientific report generation tasks, enhancing LRM reliability and applicability in complex scenarios. |
 
 ## Contributing
 
