@@ -5,7 +5,7 @@
 A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
 
 ## News
-- **[2025-05-06]:** **🔥We release a survey on Efficient Diffusion Models — this survey provides resources and updates related to our research including **RL for Image Generation**. Check it out: [Github](https://github.com/TsinghuaC3I/Efficient-Diffusion-Models) and [Paper]([https://arxiv.org/abs/2504.16084](https://arxiv.org/pdf/2410.11795)).**
+- **[2025-05-06]:** **🔥Releasing a survey on Efficient Diffusion Models — this survey provides resources and updates related to our research including **RL for Image Generation**. Check it out: [Github](https://github.com/TsinghuaC3I/Efficient-Diffusion-Models) and [Paper](https://arxiv.org/abs/2504.16084).**
 - **[2025-04-23]:** **🔥Introducing TTRL — an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).**
 
 ## Contents
