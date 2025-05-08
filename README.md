@@ -69,6 +69,8 @@ A curated collection covering models, datasets, reward designs, optimization met
       - [2024.0312, Search-R1](#20240312-search-r1)
       - [2025.0404, DeepResearcher](#20250404-deepresearcher)
       - [2025.0407, SWiRL](#20250407-swirl)
+      - [2025.0415, ReTool](#20250415-retool)
+      - [2025.0430, WebThinker](#20250430-webthinker)
   - [Contributing](#contributing)
       - [202x.0x0x, Template](#202x0x0x-template)
   - [Citation](#citation)
@@ -151,6 +153,8 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0312 | Search-R1             | UIUC & UMass Amherst | [Paper](https://arxiv.org/abs/2503.09516)<br />[GitHub](https://github.com/PeterGriffinJin/Search-R1)<br />[More](#search-r1) | [Search-R1](https://huggingface.co/collections/PeterJinGo/search-r1-67d1a021202731cb065740f5)   | [2018 Wikipedia](https://huggingface.co/datasets/PeterJinGo/wiki-18-corpus) | <details><summary>Click</summary>The paper introduces Search-R1, a novel RL framework that enables LLMs to interact with search engines in an interleaved manner with their own reasoning. The framework is shown to be effective, with experiments demonstrating average relative improvements of 41% and 20% over RAG baselines, and providing insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning.</details> |
 | 2025.0318 | R1-Searcher           | RUC                | [Paper](https://arxiv.org/pdf/2503.05592)<br />[GitHub](https://github.com/RUCAIBox/R1-Searcher) | [Llama-3.1-8B-instruct-RAG-RL](https://huggingface.co/XXsongLALA/Llama-3.1-8B-instruct-RAG-RL) <br />[Qwen-2.5-7B-base-RAG-RL](https://huggingface.co/XXsongLALA/Qwen-2.5-7B-base-RAG-RL) | [RAG-RL-Hotpotqa](https://huggingface.co/datasets/XXsongLALA/RAG-RL-Hotpotqa-with-2wiki) | <details><summary>Click</summary>R1-Searcher enhances LLM reasoning via RL by training the model to perform adaptive model-based search during generation. This integration enables flexible thinking depth, improving reasoning efficiency and performance compared to fixed-step methods like R1-Zero.</details> |
 | 2025.0319 | SWEET-RL           | Meta AI                            | [Paper](https://arxiv.org/abs/2503.15478)<br />[GitHub](https://github.com/facebookresearch/sweet_rl/tree/main) | ——                                                           | [collaborative_agent_bench](https://huggingface.co/datasets/facebook/collaborative_agent_bench) | <details><summary>Click</summary>Sweet-RL introduces a novel RL algorithm for multi-turn collaborative reasoning LLM agents. Its core contribution is improving credit assignment across long interactions by using an asymmetric actor-critic structure where the critic leverages additional training-time information for step-wise evaluation.</details> |
+| 2025.0415 | ReTool          | ByteDance                            | [Paper](https://arxiv.org/abs/2504.11536)<br />[GitHub](https://github.com/ReTool-RL/ReTool)<br />[More](#retool) | [ReTool-Qwen-32B](https://huggingface.co/JoeYing/ReTool-Qwen-32B)                                                        | [ReTool-SFT](https://huggingface.co/datasets/JoeYing/ReTool-SFT)  | <details><summary>Click</summary>ReTool is a reinforcement learning framework that integrates code interpreter execution into the reasoning loop of large language models (LLMs) to improve their mathematical reasoning capabilities. The framework consists of two primary stages: cold-start supervised fine-tuning and reinforcement learning with interleaved code execution rollout, allowing the model to learn when and how to invoke tools based on outcome feedback.</details> |
+| 2025.0430 | WebThinker           | RUC                            | [Paper](https://arxiv.org/abs/2504.21776)<br />[GitHub](https://github.com/RUC-NLPIR/WebThinker)<br />[More](#webthinker) | [WebThinker-QwQ-32B](https://huggingface.co/lixiaoxi45/WebThinker-QwQ-32B) <br />[WebThinker-R1-7B](https://huggingface.co/lixiaoxi45/WebThinker-R1-7B)<br/>[WebThinker-R1-14B](https://huggingface.co/lixiaoxi45/WebThinker-R1-14B)<br />[WebThinker-R1-32B](https://huggingface.co/lixiaoxi45/WebThinker-R1-32B)                                                           | ——  | <details><summary>Click</summary>WebThinker is a deep research agent that empowers large reasoning models (LRMs) to autonomously search the web, navigate web pages, and draft research reports during the reasoning process. It integrates a Deep Web Explorer module and employs an Autonomous Think-Search-and-Draft strategy, allowing for real-time report writing and information gathering.</details> |
 | <div id="agent_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 ## Projects
@@ -853,6 +857,33 @@ A curated collection covering models, datasets, reward designs, optimization met
 | **Benchmark**    | HotPotQA; GSM8K; CofCA; MuSiQue; BeerQA                                                           |
 | **Core Insights** | 1. Multi-step reasoning can be optimized via step-level rewards, benefiting even if the final answer is incorrect<br>2. Process filtering (selecting based on intermediate step quality) is superior to outcome filtering<br>3. Strong cross-task generalization: for example, training only on HotPotQA can improve GSM8K performance by approximately 16.9% |
 
+#### <div id="ReTool">2025.0415, ReTool</div>
+
+| Project or Paper | [ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](https://arxiv.org/pdf/2504.11536) |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **GitHub**       | https://github.com/ReTool-RL/ReTool                                                                                          |
+| **Backbone Model** | Qwen2.5-32B-Instruct, DeepSeek-R1-Distill-Qwen-32B                                                                    |
+| **RL Algorithm** | PPO                                                        |
+| **Training Dataset** | [Tool-integrated synthesis data](https://huggingface.co/datasets/JoeYing/ReTool-SFT) |
+| **Rollout Configuration** | N/A                                                                                    |
+| **Reward Function** | Rule-based accuracy reward              |
+| **Policy Optimization** | Standard PPO                              |
+| **Benchmark**    | AIME 2024, AIME 2025                                                           |
+| **Core Insights** | 1. The model's average response length decreased by 40% after RL training, suggesting improved efficiency in reasoning token utilization. <br/>2. The model's proficiency in code utilization improved during RL training, with the average code ratio increasing to nearly 98% and the average code lines increasing fivefold |
+
+#### <div id="WebThinker">2025.0430, WebThinker</div>
+
+| Project or Paper | [WebThinker: Empowering Large Reasoning Models with Deep Research Capability](https://arxiv.org/pdf/2504.21776) |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **GitHub**       | https://github.com/RUC-NLPIR/WebThinker                                                                                          |
+| **Backbone Model** | QwQ-32B,  DeepSeek-R1-Distilled-Qwen-7B,  DeepSeek-R1-Distilled-Qwen-14B,  DeepSeek-R1-Distilled-Qwen-32B                                                                                |
+| **RL Algorithm** | Online DPO                                                        |
+| **Training Dataset** | 3k example sampled from SuperGPQA, WebWalkerQA, OpenThoughts, Natural Reasoning, Numina Math |
+| **Rollout Configuration** | N/A                                                                                    |
+| **Reward Function** | Correctness, Tool Efficiency, and Thinking Conciseness               |
+| **Policy Optimization** | Iterative Online DPO                              |
+| **Benchmark**    | GPQA; GAIA; WebWalkerQA; HLE; Glaive                                                           |
+| **Core Insights** | The framework's Deep Web Explorer and Autonomous Think-Search-and-Draft strategy enable LRMs to autonomously explore the web and produce comprehensive outputs. WebThinker outperforms existing methods and strong proprietary systems in complex reasoning benchmarks and scientific report generation tasks, enhancing LRM reliability and applicability in complex scenarios. |
 
 ## Contributing
 
