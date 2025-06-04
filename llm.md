@@ -24,6 +24,7 @@
   - [2025.0407, VAPO](#20250407-vapo)
   - [2025.0410, Seed-Thinking-v1.5](#20250410-seed-thinking-v15)
   - [2025.0413, Skywork-OR1](#20250413-skywork-or1)
+  - [2025.0415, DeepMath](#20250415-deepmath)
   - [2025.0416, d1 \& diffu-GRPO](#20250416-d1--diffu-grpo)
 
 
@@ -405,6 +406,21 @@
 | Benchmark             | AIME 2024, AIME 2025, LiveCodeBench (8/1/24-2/1/25) |
 | Core Insights         | 1. Multi-stage GRPO training with scaled-up context window improves training efficiency without sacrificing performance.<br/>2. Advantage masks of truncated samples, while seems intuitive, does not transfer to performance.<br/>3. Adaptive entropy control robustly prevents entropy collapse and allows diverse sampling and continuous learning and improvement. |
 | Additional Notes      | |
+
+#### <div id="deepmath">2025.0415, DeepMath</div>
+
+| Project or Paper      | [DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for Advancing Reasoning](https://arxiv.org/pdf/2504.11456)                          |
+| :-------------------- | :------------------------------------------------------- |
+| GitHub                | [zwhe99/DeepMath](https://github.com/zwhe99/DeepMath)    |
+| Backbone Model        | Qwen-2.5-7B  Qwen-2.5-Math-7B R1-Distill-Qwen-1.5B OpenMath-Nemotron-1.5B|
+| RL Algorithm          | GRPO; Verl |
+| Training Dataset      | [zwhe99/DeepMath-103K](https://huggingface.co/datasets/zwhe99/DeepMath-103K) |
+| Rollout Configuration | See the paper or code repo for details |
+| Reward Function       | Outcome |
+| Policy Optimization   | See the paper or code repo for details |
+| Benchmark             | AIME24, AIME25, AMC23, MATH500, MinervaMath, OlympiadBench, GPQA ; o1-mini level |
+| Core Insights         | Challenging, novel and diverse data make your models state-of-the-art and generalize well. |
+| Additional Notes      |  |
 
 #### <div id="d1 & diffu-GRPO">2025.0416, d1 & diffu-GRPO</div>
 
