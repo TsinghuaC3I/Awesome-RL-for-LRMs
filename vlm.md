@@ -42,7 +42,7 @@
 | GitHub                | [Deep-Agent/R1-V](https://github.com/Deep-Agent/R1-V[)       |
 | Backbone Model        | Visual Counting/Complex Visual Reasoning: Qwen2-VL-2B-Instruct; <br />Geometry Reasoning: Qwen2.5-VL-7B-Instruct; |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | Visual Counting: [Clevr CoGenT-A](https://huggingface.co/datasets/leonardPKU/clevr_cogen_a_train), 70K<br /> Geometry Reasoning: [GeoQA-Train](https://huggingface.co/datasets/leonardPKU/GEOQA_R1V_Train_8K), 8K<br /> Complex Visual Reasoning: [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1), 37.8K |
+| Training Dataset      | Visual Counting: [Clevr CoGenT-A](https://huggingface.co/datasets/leonardPKU/clevr_cogen_a_train), 70K;<br /> Geometry Reasoning: [GeoQA-Train](https://huggingface.co/datasets/leonardPKU/GEOQA_R1V_Train_8K), 8K;<br /> Complex Visual Reasoning: [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1), 37.8K; |
 | Rollout Configuration | 1 (prompts + images) * 8 responses; Temperature=1.0;         |
 | Reward Function       | Rule-based Rewards (Accuracy: Number/bool, Format)           |
 | Policy Optimization   | PPO Loss                                                     |
@@ -59,7 +59,7 @@
 | GitHub                | [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1)      |
 | Backbone Model        | Qwen2.5-VL-3B                                                |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [COCO](https://cocodataset.org/#download), 83K, no improvement for both STF and RL model<br /> [Description Detection Dataset](https://github.com/shikras/d-cube), 24K; |
+| Training Dataset      | [COCO](https://cocodataset.org/#download), 83K, no improvement for both STF and RL model;<br /> [Description Detection Dataset](https://github.com/shikras/d-cube), 24K; |
 | Rollout Configuration | 8 (prompts + images) * 8 responses; Temperature=0.9;         |
 | Reward Function       | Rule-based Rewards (IoU, Format)                             |
 | Policy Optimization   | PPO Loss + KL Loss (default 0.04)                            |
@@ -75,7 +75,7 @@
 | GitHub                | [Liuziyu77/Visual-RFT](https://github.com/Liuziyu77/Visual-RFT)      |
 | Backbone Model        | Qwen2-VL-2/7B                                                |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | [ViRFT Datasets] (https://huggingface.co/collections/laolao77/virft-datasets-67bc271b6f2833eccc0651df)，6K/6k/32/408/400/784/148; |
+| Training Dataset      | [ViRFT Datasets](https://huggingface.co/collections/laolao77/virft-datasets-67bc271b6f2833eccc0651df), 6K/6k/32/408/400/784/148; |
 | Rollout Configuration | 2 * 8 responses; Temperature=1.0;                            |
 | Reward Function       | Rule-based Rewards (Accuracy, IoU, Format)；                  |
 | Policy Optimization   | PPO Loss                         |
@@ -91,7 +91,7 @@
 | GitHub                | [groundlight/r1_vlm](https://github.com/groundlight/r1_vlm)  |
 | Backbone Model        | Qwen2.5-VL-3B-Instruct                                       |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | Message Decoding: [message-decoding-words-and-sequences-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-and-sequences-r1), 27K<br /> Message Decoding-Single Word [message-decoding-words-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-r1), 10K<br />Digit Recognition: [digit-recognition-r1 ](https://huggingface.co/datasets/sunildkumar/digit-recognition-r1), 2K |
+| Training Dataset      | Message Decoding: [message-decoding-words-and-sequences-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-and-sequences-r1), 27K;<br /> Message Decoding-Single Word [message-decoding-words-r1](https://huggingface.co/datasets/sunildkumar/message-decoding-words-r1), 10K;<br />Digit Recognition: [digit-recognition-r1 ](https://huggingface.co/datasets/sunildkumar/digit-recognition-r1), 2K; |
 | Rollout Configuration | 1 (prompts + images) * 9 responses; Temperature=1.0;         |
 | Reward Function       | Rule-based Rewards (Decoding, Correctness, Format)           |
 | Policy Optimization   | PPO Loss + KL Loss (default 0.01)                            |
@@ -187,7 +187,7 @@
 | GitHub                | [tanhuajie/Reason-RFT](https://github.com/tanhuajie/Reason-RFT) |
 | Backbone Model        | Qwen2-VL-2/7B                                                 |
 | RL Algorithm          | GRPO                                                         |
-| Training Dataset      | Visual Counting: [CLEVR-Math](https://huggingface.co/datasets/dali-does/clevr-math), 35K for training,<br />Structure Perception: [Geo170K](https://huggingface.co/datasets/Luckyjhg/Geo170K), 4.5K for training,<br />Spatial Transformation: [TRANCE](https://github.com/hughplay/TVR), 60K for training;     |
+| Training Dataset      | Visual Counting: [CLEVR-Math](https://huggingface.co/datasets/dali-does/clevr-math), 35K for training;<br />Structure Perception: [Geo170K](https://huggingface.co/datasets/Luckyjhg/Geo170K), 4.5K for training;<br />Spatial Transformation: [TRANCE](https://github.com/hughplay/TVR), 60K for training;     |
 | Rollout Configuration | 2 * 8 responses; Temperature=1.0;         |
 | Reward Function       | Rule-based Rewards (Accuracy, Format)；         |
 | Policy Optimization   | PPO Loss                            |
