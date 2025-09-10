@@ -3,7 +3,7 @@
 - [Agentic Applications](#agentic-applications)
   - [2025.0307, R1-Searcher](#20250307-r1-searcher)
   - [2025.0309, AutoCoA](#20250309-autocoa)
-  - [2024.0312, Search-R1](#20240312-search-r1)
+  - [2025.0312, Search-R1](#20250312-search-r1)
   - [2025.0404, DeepResearcher](#20250404-deepresearcher)
   - [2025.0407, SWiRL](#20250407-swirl)
   - [2025.0415, ReTool](#20250415-retool)
@@ -22,7 +22,7 @@
 | Reward Function       | Rule-based Rewards (Format Reward for Stage-1 Training and Format Reward and Anser Reward for Stage-2 Training);         |
 | Policy Optimization   | REINFORCE++ without KL Penalty                            |
 | Benchmark             | HotpotQA, 2WikiMultiHopQA, Musique,  Bamboogle |
-| Core Insights         | The proposed R1-Searcher framework integrates RAG with RL, enabling the model to invoke an external search engine during the reasoning process. The framework demonstrates the ability to generalize from in-domain training datasets to out-of-domain test datasets, and can seamlessly switch to online search to obtain up-to-date information.   
+| Core Insights         | The proposed R1-Searcher framework integrates RAG with RL, enabling the model to invoke an external search engine during the reasoning process. The framework demonstrates the ability to generalize from in-domain training datasets to out-of-domain test datasets, and can seamlessly switch to online search to obtain up-to-date information. |
 
 #### <div id="AutoCoA">2025.0309, AutoCoA</div>
 
@@ -38,7 +38,7 @@
 | Benchmark             | Open-domain QA evaluation: single-hop (NQ, TriviaQA) and multi-hop (HotpotQA, 2WikiMultiHopQA, MuSiQue, Bamboogle) |
 | Core Insights         | The AutoCoA framework internalizes the decision-making for external tool invocation (Chain-of-Action) into the reasoning model, enabling seamless alternation between thought and action, which significantly improves performance on multi-turn long-horizon tasks. It proposes a two-phase training method: injecting the "when-to-act" and "how-to-act" capabilities via supervised fine-tuning and reinforcement learning, effectively reducing the cost of real interactions and enhancing adaptability in real-world environments. |
 
-#### <div id="search-r1">2024.0312, Search-R1</div>
+#### <div id="search-r1">2025.0312, Search-R1</div>
 
 | Project or Paper      | [Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://arxiv.org/pdf/2503.09516) |
 | --------------------- | ------------------------------------------------------------ |

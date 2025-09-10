@@ -39,7 +39,7 @@
 
 | Project or Paper      | [RLVR in Vision Language Models: Findings, Questions and Directions](https://deepagent.notion.site/rlvr-in-vlms) |
 | --------------------- | ------------------------------------------------------------ |
-| GitHub                | [Deep-Agent/R1-V](https://github.com/Deep-Agent/R1-V[)       |
+| GitHub                | [Deep-Agent/R1-V](https://github.com/Deep-Agent/R1-V)       |
 | Backbone Model        | Visual Counting/Complex Visual Reasoning: Qwen2-VL-2B-Instruct; <br />Geometry Reasoning: Qwen2.5-VL-7B-Instruct; |
 | RL Algorithm          | GRPO                                                         |
 | Training Dataset      | Visual Counting: [Clevr CoGenT-A](https://huggingface.co/datasets/leonardPKU/clevr_cogen_a_train), 70K;<br /> Geometry Reasoning: [GeoQA-Train](https://huggingface.co/datasets/leonardPKU/GEOQA_R1V_Train_8K), 8K;<br /> Complex Visual Reasoning: [Clevr_CoGenT_TrainA_R1](https://huggingface.co/datasets/MMInstruction/Clevr_CoGenT_TrainA_R1), 37.8K; |
