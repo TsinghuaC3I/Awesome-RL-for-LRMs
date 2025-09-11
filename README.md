@@ -10,7 +10,7 @@
 
 ## 🎉 News
 
-- **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**!
+- **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll update the full paper list as soon as possible!
 
 
 ## 📖 Contents
