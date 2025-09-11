@@ -8,6 +8,9 @@
 
 </div>
 
+> We welcome everyone to open an issue for any related work we haven’t discussed, and we’ll try to address it in the next release!
+
+
 ## 🎉 News
 
 - **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll update the full paper list as soon as possible!
