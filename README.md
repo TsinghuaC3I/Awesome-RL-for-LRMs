@@ -283,3 +283,7 @@ If you find this survey helpful, please cite our work:
   year={2025}
 }
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TsinghuaC3I/Awesome-RL-for-LRMs&type=Date)](https://www.star-history.com/#TsinghuaC3I/Awesome-RL-for-LRMs&Date)
