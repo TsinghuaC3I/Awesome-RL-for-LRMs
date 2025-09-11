@@ -276,7 +276,7 @@ We organize the survey into five main sections:
 
 ## 🌟 Acknowledgment
 
-This survey is extended and refined from the original **Awesome RL Reasoning Recipes** repo. We are deeply grateful to all contributors for their efforts, and we sincerely thank for their all interest in **Awesome RL Reasoning Recipes**. The contents of the previous repository are available [here](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs/releases/tag/TripleR).
+This survey is extended and refined from the original **Awesome RL Reasoning Recipes** repo. We are deeply grateful to all contributors for their efforts, and we sincerely thank for their all interest in **Awesome RL Reasoning Recipes**. The contents of the previous repository are available [here](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs/tree/TripleR).
 
 
 ## 🎈 Citation
