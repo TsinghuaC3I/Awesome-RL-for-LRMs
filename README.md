@@ -1,41 +1,48 @@
-# Awesome Reinforcement Learning for Large Reasoning Models (RL for LRMs)
+<div align="center">
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+<img src="figs/survey_logo.png" style="width: 70%;"/>
 
-A curated collection covering models, datasets, reward designs, optimization methods, hyperparameters, empirical findings, theoretical insights, and everything about reasoning with reinforcement learning.
+## A Survey of Reinforcement Learning for Large Reasoning Models
 
-## News
-- **[2025-09-10]:** 🔥We will soon release a survey paper and update the paper list in the form, stay tuned.
-- **[2025-08-15]:** 🔥We present **SSRL**, an investigation for Agentic Search RL without reliance on external search engine while maintaining strong sim2real generalization. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL)
-- **[2025-05-27]:** 🔥We are very excited to release **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
-- **[2025-04-23]:** 🔥Introducing **TTRL**, an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
+[![Awesome](https://img.shields.io/badge/Awesome-0066CC?style=for-the-badge&logo=awesome-lists&logoColor=white)](https://github.com/sindresorhus/awesome) [![Survey](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/xxxx.xxxxx)  [![Github](https://img.shields.io/badge/Awesome--RL--for--LRMs-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TsinghuaC3I/Awesome-RL-Reasoning-Recipes)
 
-## Contents
+</div>
 
-> ⚠️⚠️⚠️ For the most recent updates, please scroll to the bottom of the table:
-> - [Jump to Latest LLM Projects 🚀🚀🚀](#llm_latest)
-> - [Jump to Latest Multimodal Projects 🚀🚀🚀](#vlm_latest)
-> - [Jump to Latest Agent Projects 🚀🚀🚀](#agent_latest)
+## 🎉 News
+
+- **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**!
 
 
-- [Awesome RL Reasoning Recipes ("Triple R")](#awesome-rl-reasoning-recipes-triple-r)
-  - [News](#news)
-  - [Contents](#contents)
-  - [Overview](#overview)
-    - [Large Language Models](#large-language-models)
-    - [Multimodal Models](#multimodal-models)
-    - [Agentic Applications](#agentic-applications)
-  - [Projects](#projects)
-  - [Contributing](#contributing)
-      - [202x.0x0x, Template](#202x0x0x-template)
-  - [Citation](#citation)
-  - [Star History](#star-history)
+## 📖 Contents
+- [A Survey of Reinforcement Learning for Large Reasoning Models](#a-survey-of-reinforcement-learning-for-large-reasoning-models)
+- [🎉 News](#-news)
+- [📖 Contents](#-contents)
+- [🗺️ Overview](#️-overview)
+- [📄 Paper List](#-paper-list)
+  - [Large Language Models](#large-language-models)
+  - [Multimodal Models](#multimodal-models)
+  - [Agentic Applications](#agentic-applications)
+- [🌟 Acknowledgment](#-acknowledgment)
+- [🎈 Citation](#-citation)
 
 
-## Overview
+## 🗺️ Overview
 
-**This collection covers recent progress in reinforcement learning for large language model reasoning, starting from 2025 in the timeline.**
+Our survey provides a comprehensive examination of **Reinforcement Learning for Large Reasoning Models**.
 
+<p align="center">
+   <img src="figs/teaser.png" alt="Overview of RL for LRMs Survey" style="width: 100%;">
+</p>
+
+We organize the survey into five main sections:
+
+1. <u>Foundational Components:</u> Reward design, policy optimization, and sampling strategies
+2. <u>Foundational Problems:</u> Key debates and challenges in RL for LRMs
+3. <u>Training Resources:</u> Static corpora, dynamic environments, and infrastructure
+4. <u>Applications:</u> Real-world implementations across diverse domains
+5. <u>Future Directions:</u> Emerging research opportunities and challenges
+
+## 📄 Paper List
 
 ### Large Language Models
 
@@ -156,7 +163,6 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0905 |  HPT  |   THU  | [Paper](https://arxiv.org/abs/2509.04419)<br />[GitHub](https://github.com/TsinghuaC3I/Unify-Post-Training) | - | - | <details><summary>Click</summary>A unified policy gradient estimator and Hybrid Post-Training algorithm effectively combine online and offline data for post-training language models, improving performance across various benchmarks.</details> |
 | 2025.0909 |  TraceRL |   Princeton   | [Paper](https://arxiv.org/abs/2509.06949)<br />[GitHub](https://github.com/Gen-Verse/dLLM-RL) | - | - | <details><summary>Click</summary>TraceRL enhances diffusion language models with trajectory-aware reinforcement learning, improving reasoning performance on complex tasks and enabling flexible sampling.</details> |
 | 2025.0910 |  Parallel-R1 | Tencent AI | [Paper](https://arxiv.org/abs/2509.07980)<br />[GitHub](https://github.com/zhengkid/Parallel-R1) | - | - | <details><summary>Click</summary>Parallel-R1, a reinforcement learning framework, enhances large language models' reasoning capabilities by enabling parallel thinking through a progressive curriculum, leading to significant performance improvements on math benchmarks.</details> |
-| <div id="llm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 ### Multimodal Models
 | Date      | Project               | Org                | Intro                                                        | HF Model                                                     | HF Dataset                                                   | Takeaway Messages                                                 |
@@ -194,7 +200,6 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0702 |   GLM-4.1V-Thinking  |  THU   | [Paper](https://arxiv.org/abs/2507.01006)<br />[GitHub](https://github.com/THUDM/GLM-4.1V-Thinking) | - | - | <details><summary>Click</summary>A vision-language model (VLM) named GLM-4.1V-Thinking, developed with a reasoning-centric training framework, achieves state-of-the-art performance across various tasks, including STEM problem solving, video understanding, and long document understanding, outperforming larger models on many benchmarks.</details> |
 | 2025.0909 |  REVPT  |  HUST  | [Paper](https://arxiv.org/abs/2509.01656)<br />[GitHub](https://github.com/ls-kelvin/REVPT) | - | - | <details><summary>Click</summary>ReVPT enhances multi-modal LLMs' visual reasoning capabilities using reinforcement learning, achieving state-of-the-art performance on visual benchmarks.</details> |
 | 2025.0910 |  Mini-o3 |   ByteDance     | [Paper](https://arxiv.org/abs/2509.07969)<br />[GitHub](https://github.com/Mini-o3/Mini-o3) | - | - | <details><summary>Click</summary>Mini-o3, a system for deep, multi-turn reasoning in visual search tasks, uses an iterative data collection pipeline and over-turn masking strategy to achieve state-of-the-art performance with rich reasoning patterns.</details> |
-| <div id="vlm_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
 
 ### Agentic Applications
@@ -259,46 +264,22 @@ A curated collection covering models, datasets, reward designs, optimization met
 | 2025.0903 | UT-TARS-2  |  Bytedance | [Paper](https://arxiv.org/abs/2509.02544)<br />[GitHub](https://seed-tars.com/showcase/ui-tars-2/) | - | - | <details><summary>Click</summary>UI-TARS-2, a native GUI-centered agent model, addresses challenges in data scalability, multi-turn reinforcement learning, and environment stability, achieving significant improvements over its predecessor and strong baselines across various benchmarks.</details> |
 | 2025.0903 |  SimpleTIR |    Tiktok  | [Paper](https://arxiv.org/abs/2509.02479)<br />[GitHub](https://github.com/ltzheng/SimpleTIR) | - | - | <details><summary>Click</summary>SimpleTIR stabilizes multi-turn Tool-Integrated Reasoning training by filtering out void turns, achieving state-of-the-art performance on math reasoning benchmarks.</details> |
 | 2025.0909 |  WebExplorer |   HKUST    | [Paper](https://arxiv.org/abs/2509.06501) |- | - | <details><summary>Click</summary>WebExplorer, a data-driven approach for developing advanced web agents, achieves state-of-the-art performance in information-seeking tasks through systematic data generation and reinforcement learning.</details> |
-| <div id="agent_latest">2025.0x0x</div> |             |                      | [Paper]()<br />[GitHub]() | [hf models]() | [hf datasets]() | <details><summary>Click</summary>insights and contributions about RL for reasoning within 30 words.</details> |
 
-## Projects
-- [Detailed Recipes of LLM + RL](llm.md)
-- [Detailed Recipes of VLM + RL](vlm.md)
-- [Detailed Recipes of Agent + RL](agent.md)
 
-## Contributing
+## 🌟 Acknowledgment
 
-If you have any updates or improvements for this document, please feel free to submit a **Pull Request**. Thank you!
+This survey is extended and refined from the original **Awesome RL Reasoning Recipes** repo. We are deeply grateful to all contributors for their efforts, and we sincerely thank for their all interest in **Awesome RL Reasoning Recipes**. The contents of the previous repository are available [here](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs/releases/tag/TripleR).
 
-#### <div id="template">202x.0x0x, Template</div>
 
-| Project or Paper      | [Project name or Paper title]()                          |
-| :-------------------- | :------------------------------------------------------- |
-| GitHub                | [Username/Project]()                                     |
-| Backbone Model        | (Base / Instruct / Reasoning;  HF Model)                 |
-| RL Algorithm          | (PPO / GRPO / RLOO / REINFORCE++; OpenRLHF / Verl / Trl) |
-| Training Dataset      | (Size / Source / HF Dataset)                             |
-| Rollout Configuration | (Batch Size * N Samples ; Temperature; Dynamic Sampling) |
-| Reward Function       | (Outcome; Process; Repetition & Length)                  |
-| Policy Optimization   | (KL Loss; Length Penalty; Token-level loss)              |
-| Benchmark             | (MATH/GPQA; R1 level; GPT-4o level)                      |
-| Core Insights         | (Empirical / Theoretical / Insightful Curves)            |
-| Additional Notes      | (e.g., code snippet)                                     |
+## 🎈 Citation
 
-## Citation
+If you find this survey helpful, please cite our work:
 
- If you find our repository useful in your research, please star us ⭐ and consider citing:
-
-```tex
-@misc{zhang2025TripleR,
-  title={Awesome RL Recipes for Reasoning},
-  author={Kaiyan Zhang, Yuchen Fan, Yuxin Zuo, Guoli Jia, Kai Tian, Xingtai Lv, Xuekai Zhu, Ermo Hua, Ning Ding, Biqing Qi, Bowen Zhou},
-  year={2025},
-  howpublished={\url{https://github.com/}},
-  note={Github Repository},
+```bibtex
+@article{zhang2025survey,
+  title={A Survey of Reinforcement Learning for Large Reasoning Models},
+  author={Zhang, Kaiyan and Zuo, Yuxin and He, Bingxiang and Sun, Youbang and Liu, Runze and Jiang, Che and Fan, Yuchen and Tian, Kai and Jia, Guoli and Li, Pengfei and others},
+  journal={arXiv preprint arXiv:2509.08827},
+  year={2025}
 }
 ```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=TsinghuaC3I/Awesome-RL-Reasoning-Recipes&type=Date)](https://www.star-history.com/#TsinghuaC3I/Awesome-RL-Reasoning-Recipes&Date)
