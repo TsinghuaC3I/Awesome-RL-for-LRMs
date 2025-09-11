@@ -14,7 +14,6 @@
 ## 🎉 News
 
 - **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll be updating the full list of papers in with a new category structure soon. Check it out: [HF Paper](https://huggingface.co/papers/2509.08827)
-- **[2025-09-10]** 🔥 We will soon release a survey paper and update the paper list in the form, stay tuned.
 - **[2025-08-15]** 🔥 We present **SSRL**, an investigation for Agentic Search RL without reliance on external search engine while maintaining strong sim2real generalization. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL)
 - **[2025-05-27]** 🔥 We are very excited to release **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
 - **[2025-04-23]** 🔥 Introducing **TTRL**, an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
