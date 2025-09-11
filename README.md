@@ -4,7 +4,7 @@
 
 ## A Survey of Reinforcement Learning for Large Reasoning Models
 
-[![Awesome](https://img.shields.io/badge/Awesome-0066CC?style=for-the-badge&logo=awesome-lists&logoColor=white)](https://github.com/sindresorhus/awesome) [![Survey](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.08827)  [![Github](https://img.shields.io/badge/Awesome--RL--for--LRMs-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TsinghuaC3I/Awesome-RL-Reasoning-Recipes)  [![Huggingface Papers](https://img.shields.io/badge/HuggingFace-%23FFD14D?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=000000)](https://huggingface.co/papers/2509.08827)
+[![Awesome](https://img.shields.io/badge/Awesome-0066CC?style=for-the-badge&logo=awesome-lists&logoColor=white)](https://github.com/sindresorhus/awesome) [![Survey](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.08827)  [![Github](https://img.shields.io/badge/Awesome--RL--for--LRMs-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TsinghuaC3I/Awesome-RL-Reasoning-Recipes)  [![HF Papers](https://img.shields.io/badge/HF--Paper-%23FFD14D?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/papers/2509.08827)
 
 </div>
 
@@ -13,10 +13,10 @@
 
 ## 🎉 News
 
-- **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll be updating the full list of papers in with a new category structure soon. Check it out: [Paper](https://huggingface.co/papers/2509.08827)
-- **[2025-08-15]** 🔥 We present **SSRL**, an investigation for Agentic Search RL without reliance on external search engine while maintaining strong sim2real generalization. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL) and [Paper](https://arxiv.org/abs/2508.10874).
-- **[2025-05-27]** 🔥 We are very excited to release **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
-- **[2025-04-23]** 🔥 Introducing **TTRL**, an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
+- **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll be updating the full list of papers in with a new category structure soon. Check it out: [Paper](https://huggingface.co/papers/2509.08827).
+- **[2025-08-15]** 🔥 Introducing **SSRL**: an investigation for Agentic Search RL without reliance on external search engine. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL) and [Paper](https://arxiv.org/abs/2508.10874).
+- **[2025-05-27]** 🔥 Introducing **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
+- **[2025-04-23]** 🔥 Introducing **TTRL**: an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
 - **[2025-03-20]** 🔥 We are excited to introduce collection of papers and projects on RL for reasoning models!
 
 ## 📖 Contents
