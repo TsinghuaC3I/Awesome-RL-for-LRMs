@@ -17,7 +17,7 @@
 - **[2025-08-15]** 🔥 We present **SSRL**, an investigation for Agentic Search RL without reliance on external search engine while maintaining strong sim2real generalization. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL)
 - **[2025-05-27]** 🔥 We are very excited to release **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
 - **[2025-04-23]** 🔥 Introducing **TTRL**, an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
-- **[2025-03-20]** 🔥 We are excited to introduce our collection of papers and projects on RL for reasoning models!
+- **[2025-03-20]** 🔥 We are excited to introduce collection of papers and projects on RL for reasoning models!
 
 ## 📖 Contents
 - [A Survey of Reinforcement Learning for Large Reasoning Models](#a-survey-of-reinforcement-learning-for-large-reasoning-models)
