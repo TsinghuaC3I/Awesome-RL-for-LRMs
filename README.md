@@ -13,6 +13,7 @@
 
 ## 🎉 News
 
+- **[2025-09-12]** 🎉 Our survey was ranked **#1 Paper of the Day** on 🤗 [Hugging Face Daily Papers](https://huggingface.co/papers/2509.08827)!
 - **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll be updating the full list of papers in with a new category structure soon. Check it out: [Paper](https://huggingface.co/papers/2509.08827).
 - **[2025-08-15]** 🔥 Introducing **SSRL**: an investigation for Agentic Search RL without reliance on external search engine. Check it out: [GitHub](https://github.com/TsinghuaC3I/SSRL) and [Paper](https://arxiv.org/abs/2508.10874).
 - **[2025-05-27]** 🔥 Introducing **MARTI**: A Framework for LLM-based Multi-Agent Reinforced Training and Inference. Check it out: [Github](https://github.com/TsinghuaC3I/MARTI).
