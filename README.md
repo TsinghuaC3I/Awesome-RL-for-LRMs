@@ -27,11 +27,47 @@
 - [📖 Contents](#-contents)
 - [🗺️ Overview](#️-overview)
 - [📄 Paper List](#-paper-list)
-  - [Large Language Models](#large-language-models)
-  - [Multimodal Models](#multimodal-models)
-  - [Agentic Applications](#agentic-applications)
+    - [Generative Rewards](#generative-rewards)
+    - [Dense Rewards](#dense-rewards)
+    - [Unsupervised Rewards](#unsupervised-rewards)
+    - [Rewards Shaping](#rewards-shaping)
+    - [Policy Gradient Objective](#policy-gradient-objective)
+    - [Critic-based Algorithms](#critic-based-algorithms)
+    - [Critic-Free Algorithms](#critic-free-algorithms)
+    - [Off-policy Optimization](#off-policy-optimization)
+    - [Off-policy Optimization (Exp replay)](#off-policy-optimization-exp-replay)
+    - [Regularization Objectives](#regularization-objectives)
+    - [Dynamic and Structured Sampling](#dynamic-and-structured-sampling)
+    - [Sampling Hyper-Parameters](#sampling-hyper-parameters)
+    - [Static Corpus (Code)](#static-corpus-code)
+    - [Static Corpus (STEM)](#static-corpus-stem)
+    - [Static Corpus (Math)](#static-corpus-math)
+    - [Static Corpus (Agent)](#static-corpus-agent)
+    - [Static Corpus (Mix)](#static-corpus-mix)
+    - [Dynamic Environment (Rule-based)](#dynamic-environment-rule-based)
+    - [Dynamic Environment (Code-based)](#dynamic-environment-code-based)
+    - [Dynamic Environment (Game-based)](#dynamic-environment-game-based)
+    - [Dynamic Environment (Model-based)](#dynamic-environment-model-based)
+    - [Dynamic Environment (Ensemble-based)](#dynamic-environment-ensemble-based)
+    - [RL Infrastructure (Primary)](#rl-infrastructure-primary)
+    - [RL Infrastructure (Secondary)](#rl-infrastructure-secondary)
+    - [Coding Agent](#coding-agent)
+    - [Search Agent](#search-agent)
+    - [Browser-Use Agent](#browser-use-agent)
+    - [DeepResearch Agent](#deepresearch-agent)
+    - [GUI\&Computer Agent](#guicomputer-agent)
+    - [Agent (Others)](#agent-others)
+    - [Code Generation](#code-generation)
+    - [Software Engineering](#software-engineering)
+    - [Multimodal Understanding](#multimodal-understanding)
+    - [Multimodal Generation](#multimodal-generation)
+    - [Robotics Tasks](#robotics-tasks)
+    - [Multi-Agent Systems](#multi-agent-systems)
+    - [Scientific Tasks](#scientific-tasks)
+    - [Frontier Models](#frontier-models)
 - [🌟 Acknowledgment](#-acknowledgment)
 - [🎈 Citation](#-citation)
+- [Star History](#star-history)
 
 
 ## 🗺️ Overview
@@ -180,7 +216,7 @@ We organize the survey into five main sections:
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
 | 2025-09 | `DARLING` | Jointly Reinforcing Diversity and Quality in Language Model Generations | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.02534) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/darling?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/darling) |
-| 2025-09 | `DRER` | Rethinking Reasoning Quality in Large Language Models through Enhanced Chain-of-Thought via RL | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.06024) | [![GitHub Stars](https://img.shields.io/github/stars/Henryhe09/DRER?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Henryhe09/DRER) |
+| 2025-09 | `DRER` | Rethinking Reasoning Quality in Large Language Models through Enhanced Chain-of-Thought via RL | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.06024) | - |
 | 2025-09 | `OBE` | Outcome-based Exploration for LLM Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.06941) | - |
 | 2025-08 | `Pass@kTraining` | Pass@k Training for Adaptively Balancing Exploration and Exploitation of Large Reasoning Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.10751) | [![GitHub Stars](https://img.shields.io/github/stars/RUCAIBox/Passk_Training?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RUCAIBox/Passk_Training) |
 | 2025-05 | `PKPO` | Pass@K Policy Optimization: Solving Harder Reinforcement Learning Problems | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.15201) | - |
@@ -600,7 +636,7 @@ We organize the survey into five main sections:
 
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
-| 2025-08 | `UTRL` | Learning to Generate Unit Test via Adversarial Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2508.21107) | [![GitHub Stars](https://img.shields.io/github/stars/dgjun32/UTRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/dgjun32/UTRL) |
+| 2025-08 | `UTRL` | Learning to Generate Unit Test via Adversarial Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2508.21107) | - |
 | 2025-07 | `RePaCA` | RePaCA: Leveraging Reasoning Large Language Models for Static Automated Patch Correctness Assessment | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2507.22580) | - |
 | 2025-07 | `Repair-R1` | Repair-R1: Better Test Before Repair | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2507.22853) | [![GitHub Stars](https://img.shields.io/github/stars/Tomsawyerhu/APR-RL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Tomsawyerhu/APR-RL) |
 | 2025-06 | `CURE` | Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2506.03136) | [![GitHub Stars](https://img.shields.io/github/stars/Gen-Verse/CURE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Gen-Verse/CURE) |
@@ -751,7 +787,7 @@ We organize the survey into five main sections:
 | 2025-05 | `INTELLECT-2` | INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.07291) | - |
 | 2025-05 | `Hunyuan-TurboS` | Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.15431) | [![GitHub Stars](https://img.shields.io/github/stars/Tencent/Hunyuan-TurboS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Tencent/Hunyuan-TurboS) |
 | 2025-05 | `Skywork OR-1` | Skywork Open Reasoner 1 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.22312) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-OR1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-OR1) |
-| 2025-04 | `Phi-4 Reasoning` | Phi-4-reasoning Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21318) | [![GitHub Stars](https://img.shields.io/github/stars/marketplace/models?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/marketplace/models) |
+| 2025-04 | `Phi-4 Reasoning` | Phi-4-reasoning Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21318) | - |
 | 2025-04 | `Skywork-R1V2` | Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.16656) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-R1V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-R1V) |
 | 2025-04 | `InternVL3` | InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.10479) | [![GitHub Stars](https://img.shields.io/github/stars/OpenGVLab/InternVL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenGVLab/InternVL) |
 | 2025-03 | `ORZ` | Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.24290) | [![GitHub Stars](https://img.shields.io/github/stars/Open-Reasoner-Zero/Open-Reasoner-Zero?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero) |
