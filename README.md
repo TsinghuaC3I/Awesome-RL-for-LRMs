@@ -27,18 +27,23 @@
 - [📖 Contents](#-contents)
 - [🗺️ Overview](#️-overview)
 - [📄 Paper List](#-paper-list)
+  - [Frontier Models](#frontier-models)
+  - [Reward Design](#reward-design)
     - [Generative Rewards](#generative-rewards)
     - [Dense Rewards](#dense-rewards)
     - [Unsupervised Rewards](#unsupervised-rewards)
     - [Rewards Shaping](#rewards-shaping)
+  - [Policy Optimization](#policy-optimization)
     - [Policy Gradient Objective](#policy-gradient-objective)
     - [Critic-based Algorithms](#critic-based-algorithms)
     - [Critic-Free Algorithms](#critic-free-algorithms)
     - [Off-policy Optimization](#off-policy-optimization)
     - [Off-policy Optimization (Exp replay)](#off-policy-optimization-exp-replay)
     - [Regularization Objectives](#regularization-objectives)
+  - [Sampling Strategy](#sampling-strategy)
     - [Dynamic and Structured Sampling](#dynamic-and-structured-sampling)
     - [Sampling Hyper-Parameters](#sampling-hyper-parameters)
+  - [Training Resource](#training-resource)
     - [Static Corpus (Code)](#static-corpus-code)
     - [Static Corpus (STEM)](#static-corpus-stem)
     - [Static Corpus (Math)](#static-corpus-math)
@@ -51,6 +56,7 @@
     - [Dynamic Environment (Ensemble-based)](#dynamic-environment-ensemble-based)
     - [RL Infrastructure (Primary)](#rl-infrastructure-primary)
     - [RL Infrastructure (Secondary)](#rl-infrastructure-secondary)
+  - [Applications](#applications)
     - [Coding Agent](#coding-agent)
     - [Search Agent](#search-agent)
     - [Browser-Use Agent](#browser-use-agent)
@@ -64,7 +70,6 @@
     - [Robotics Tasks](#robotics-tasks)
     - [Multi-Agent Systems](#multi-agent-systems)
     - [Scientific Tasks](#scientific-tasks)
-    - [Frontier Models](#frontier-models)
 - [🌟 Acknowledgment](#-acknowledgment)
 - [🎈 Citation](#-citation)
 - [Star History](#star-history)
@@ -88,6 +93,38 @@ We organize the survey into five main sections:
 
 ## 📄 Paper List
 
+### Frontier Models
+
+| Date | Name | Title | Paper | Github |
+|:-:|:-:|:-|:-:|:-:|
+| 2025-08 | `Intern-S1` | Intern-S1: A Scientific Multimodal Foundation Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.15763v1) | [![GitHub Stars](https://img.shields.io/github/stars/InternLM/Intern-S1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/Intern-S1) |
+| 2025-08 | `GLM-4.5` | GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.06471) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-4.5?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-4.5) |
+| 2025-08 | `gpt-oss` | gpt-oss-120b & gpt-oss-20b Model Card | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.10925) | [![GitHub Stars](https://img.shields.io/github/stars/openai/gpt-oss?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/gpt-oss) |
+| 2025-08 | `InternVL3.5` | InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.18265) | [![GitHub Stars](https://img.shields.io/github/stars/OpenGVLab/InternVL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenGVLab/InternVL) |
+| 2025-07 | `Kimi K2` | Kimi K2: Open Agentic Intelligence | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) | [![GitHub Stars](https://img.shields.io/github/stars/MoonshotAI/Kimi-K2?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MoonshotAI/Kimi-K2) |
+| 2025-07 | `Step 3` | Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19427) | [![GitHub Stars](https://img.shields.io/github/stars/stepfun-ai/Step3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/stepfun-ai/Step3) |
+| 2025-07 | `GLM-4.1V-Thinking` | GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.01006) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-V) |
+| 2025-07 | `Skywork-R1V3` | Skywork-R1V3 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.06167) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-R1V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-R1V) |
+| 2025-07 | `GLM-4.5V` | GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.01006) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-V) |
+| 2025-06 | `Magistral` | Magistral | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.10910) | - |
+| 2025-06 | `Minimax-M1` | MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.13585) | [![GitHub Stars](https://img.shields.io/github/stars/MiniMax-AI/MiniMax-M1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MiniMax-AI/MiniMax-M1) |
+| 2025-05 | `MiMo` | MiMo: Unlocking the Reasoning Potential of Language Model -- From Pretraining to Posttraining | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.07608) | [![GitHub Stars](https://img.shields.io/github/stars/XiaomiMiMo/MiMo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/XiaomiMiMo/MiMo) |
+| 2025-05 | `Qwen3` | Qwen3 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09388) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/Qwen3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/Qwen3) |
+| 2025-05 | `Llama-Nemotron-Ultra` | Llama-Nemotron: Efficient Reasoning Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.00949) | [![GitHub Stars](https://img.shields.io/github/stars/NVIDIA/Megatron-LM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/NVIDIA/Megatron-LM) |
+| 2025-05 | `INTELLECT-2` | INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.07291) | - |
+| 2025-05 | `Hunyuan-TurboS` | Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.15431) | [![GitHub Stars](https://img.shields.io/github/stars/Tencent/Hunyuan-TurboS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Tencent/Hunyuan-TurboS) |
+| 2025-05 | `Skywork OR-1` | Skywork Open Reasoner 1 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.22312) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-OR1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-OR1) |
+| 2025-04 | `Phi-4 Reasoning` | Phi-4-reasoning Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21318) | - |
+| 2025-04 | `Skywork-R1V2` | Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.16656) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-R1V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-R1V) |
+| 2025-04 | `InternVL3` | InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.10479) | [![GitHub Stars](https://img.shields.io/github/stars/OpenGVLab/InternVL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenGVLab/InternVL) |
+| 2025-03 | `ORZ` | Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.24290) | [![GitHub Stars](https://img.shields.io/github/stars/Open-Reasoner-Zero/Open-Reasoner-Zero?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero) |
+| 2025-01 | `DeepSeek-R1` | DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.12948) | [![GitHub Stars](https://img.shields.io/github/stars/deepseek-ai/DeepSeek-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/deepseek-ai/DeepSeek-R1) |
+| - | `QwQ` | QwQ-32B: Embracing the Power of Reinforcement Learning | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://qwenlm.github.io/blog/qwq-32b/) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/QwQ?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/QwQ) |
+| - | `Seed-OSS` | Seed-OSS Open-Source Models | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://github.com/ByteDance-Seed/seed-oss) | [![GitHub Stars](https://img.shields.io/github/stars/ByteDance-Seed/seed-oss?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ByteDance-Seed/seed-oss) |
+| - | `ERNIE-4.5-Thinking` | ERNIE 4.5 Technical Report | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf) | - |
+
+
+### Reward Design
 #### Generative Rewards
 
 | Date | Name | Title | Paper | Github |
@@ -225,6 +262,7 @@ We organize the survey into five main sections:
 | 2025-01 | `DeepSeek-R1` | DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.12948) | [![GitHub Stars](https://img.shields.io/github/stars/deepseek-ai/DeepSeek-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/deepseek-ai/DeepSeek-R1) |
 | 2024-09 | `Qwen2.5-Math` | Qwen2. 5-math technical report: Toward mathematical expert model via self-improvement | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.12122) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/Qwen2.5-Math?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/Qwen2.5-Math) |
 
+### Policy Optimization
 #### Policy Gradient Objective
 
 | Date | Name | Title | Paper | Github |
@@ -320,6 +358,7 @@ We organize the survey into five main sections:
 | 2025-03 | `DAPO` | DAPO: An Open-Source LLM Reinforcement Learning System at Scale | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2503.14476) | - |
 | 2025-03 | `L1` | L1: Controlling how long a reasoning model thinks with reinforcement learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.04697) | [![GitHub Stars](https://img.shields.io/github/stars/cmu-l3/l1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/cmu-l3/l1) |
 
+### Sampling Strategy
 #### Dynamic and Structured Sampling
 
 | Date | Name | Title | Paper | Github |
@@ -357,6 +396,7 @@ We organize the survey into five main sections:
 | - | `DeepScaleR` | DeepScaleR: Surpassing O1-Preview with a 1.5B Model by Scaling RL | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://pretty-radio-b75.notion.site/DeepScaleR-Surpassing-O1-Preview-with-a-1-5B-Model-by-Scaling-RL-19681902c1468005bed8ca303013a4e2) | [![GitHub Stars](https://img.shields.io/github/stars/rllm-org/rllm?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/rllm-org/rllm) |
 | - | `POLARIS` | POLARIS: A POst-training recipe for scaling reinforcement Learning on Advanced ReasonIng modelS | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://honorable-payment-890.notion.site/POLARIS-A-POst-training-recipe-for-scaling-reinforcement-Learning-on-Advanced-ReasonIng-modelS-1dfa954ff7c38094923ec7772bf447a1) | [![GitHub Stars](https://img.shields.io/github/stars/ChenxinAn-fdu/POLARIS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ChenxinAn-fdu/POLARIS) |
 
+### Training Resource
 #### Static Corpus (Code)
 
 | Date | Name | Title | Paper | Github |
@@ -514,6 +554,7 @@ We organize the survey into five main sections:
 | - | `prime-rl` | PRIME-RL: Decentralized RL Training at Scale | - | [![GitHub Stars](https://img.shields.io/github/stars/PrimeIntellect-ai/prime-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PrimeIntellect-ai/prime-rl) |
 | - | `MARTI` | A Framework for LLM-based Multi-Agent Reinforced Training and Inference | - | [![GitHub Stars](https://img.shields.io/github/stars/TsinghuaC3I/MARTI?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TsinghuaC3I/MARTI) |
 
+### Applications
 #### Coding Agent
 
 | Date | Name | Title | Paper | Github |
@@ -765,37 +806,6 @@ We organize the survey into five main sections:
 | 2024-12 | `HuatuoGPT-o1` | HuatuoGPT-o1, Towards Medical Complex Reasoning with LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.18925) | [![GitHub Stars](https://img.shields.io/github/stars/FreedomIntelligence/HuatuoGPT-o1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FreedomIntelligence/HuatuoGPT-o1) |
 | - | `Pro-1` | Pro-1 | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://michaelhla.com/blog/pro1.html) | [![GitHub Stars](https://img.shields.io/github/stars/michaelhla/pro-1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/michaelhla/pro-1) |
 | - | `rbio` | rbio1 - training scientific reasoning LLMs with biological world models as soft verifiers | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://www.biorxiv.org/content/10.1101/2025.08.18.670981v3) | [![GitHub Stars](https://img.shields.io/github/stars/czi-ai/rbio?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/czi-ai/rbio) |
-
-#### Frontier Models
-
-| Date | Name | Title | Paper | Github |
-|:-:|:-:|:-|:-:|:-:|
-| 2025-08 | `Intern-S1` | Intern-S1: A Scientific Multimodal Foundation Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.15763v1) | [![GitHub Stars](https://img.shields.io/github/stars/InternLM/Intern-S1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/Intern-S1) |
-| 2025-08 | `GLM-4.5` | GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.06471) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-4.5?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-4.5) |
-| 2025-08 | `gpt-oss` | gpt-oss-120b & gpt-oss-20b Model Card | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.10925) | [![GitHub Stars](https://img.shields.io/github/stars/openai/gpt-oss?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/gpt-oss) |
-| 2025-08 | `InternVL3.5` | InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.18265) | [![GitHub Stars](https://img.shields.io/github/stars/OpenGVLab/InternVL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenGVLab/InternVL) |
-| 2025-07 | `Kimi K2` | Kimi K2: Open Agentic Intelligence | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) | [![GitHub Stars](https://img.shields.io/github/stars/MoonshotAI/Kimi-K2?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MoonshotAI/Kimi-K2) |
-| 2025-07 | `Step 3` | Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19427) | [![GitHub Stars](https://img.shields.io/github/stars/stepfun-ai/Step3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/stepfun-ai/Step3) |
-| 2025-07 | `GLM-4.1V-Thinking` | GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.01006) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-V) |
-| 2025-07 | `Skywork-R1V3` | Skywork-R1V3 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.06167) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-R1V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-R1V) |
-| 2025-07 | `GLM-4.5V` | GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.01006) | [![GitHub Stars](https://img.shields.io/github/stars/zai-org/GLM-V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zai-org/GLM-V) |
-| 2025-06 | `Magistral` | Magistral | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.10910) | - |
-| 2025-06 | `Minimax-M1` | MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.13585) | [![GitHub Stars](https://img.shields.io/github/stars/MiniMax-AI/MiniMax-M1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MiniMax-AI/MiniMax-M1) |
-| 2025-05 | `MiMo` | MiMo: Unlocking the Reasoning Potential of Language Model -- From Pretraining to Posttraining | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.07608) | [![GitHub Stars](https://img.shields.io/github/stars/XiaomiMiMo/MiMo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/XiaomiMiMo/MiMo) |
-| 2025-05 | `Qwen3` | Qwen3 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09388) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/Qwen3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/Qwen3) |
-| 2025-05 | `Llama-Nemotron-Ultra` | Llama-Nemotron: Efficient Reasoning Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.00949) | [![GitHub Stars](https://img.shields.io/github/stars/NVIDIA/Megatron-LM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/NVIDIA/Megatron-LM) |
-| 2025-05 | `INTELLECT-2` | INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.07291) | - |
-| 2025-05 | `Hunyuan-TurboS` | Hunyuan-TurboS: Advancing Large Language Models through Mamba-Transformer Synergy and Adaptive Chain-of-Thought | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.15431) | [![GitHub Stars](https://img.shields.io/github/stars/Tencent/Hunyuan-TurboS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Tencent/Hunyuan-TurboS) |
-| 2025-05 | `Skywork OR-1` | Skywork Open Reasoner 1 Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.22312) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-OR1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-OR1) |
-| 2025-04 | `Phi-4 Reasoning` | Phi-4-reasoning Technical Report | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21318) | - |
-| 2025-04 | `Skywork-R1V2` | Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.16656) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/Skywork-R1V?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/Skywork-R1V) |
-| 2025-04 | `InternVL3` | InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.10479) | [![GitHub Stars](https://img.shields.io/github/stars/OpenGVLab/InternVL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenGVLab/InternVL) |
-| 2025-03 | `ORZ` | Open-Reasoner-Zero: An Open Source Approach to Scaling Up Reinforcement Learning on the Base Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.24290) | [![GitHub Stars](https://img.shields.io/github/stars/Open-Reasoner-Zero/Open-Reasoner-Zero?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero) |
-| 2025-01 | `DeepSeek-R1` | DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.12948) | [![GitHub Stars](https://img.shields.io/github/stars/deepseek-ai/DeepSeek-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/deepseek-ai/DeepSeek-R1) |
-| - | `QwQ` | QwQ-32B: Embracing the Power of Reinforcement Learning | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://qwenlm.github.io/blog/qwq-32b/) | [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/QwQ?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/QwQ) |
-| - | `Seed-OSS` | Seed-OSS Open-Source Models | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://github.com/ByteDance-Seed/seed-oss) | [![GitHub Stars](https://img.shields.io/github/stars/ByteDance-Seed/seed-oss?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ByteDance-Seed/seed-oss) |
-| - | `ERNIE-4.5-Thinking` | ERNIE 4.5 Technical Report | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf) | - |
-
 
 ## 🌟 Acknowledgment
 
