@@ -645,8 +645,8 @@ We organize the survey into five main sections:
 
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
-| 2025-03 | `Rec-R1` | Rec-R1: Bridging LLMs and Recommendation Systems via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.24289) | [![GitHub Stars](https://img.shields.io/github/stars/linjc16/Rec-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/linjc16/Rec-R1) |
 | 2025-07 | `Shop-R1` | Shop-R1: Rewarding LLMs to Simulate Human Behavior in Online Shopping via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.17842) | - |
+| 2025-03 | `Rec-R1` | Rec-R1: Bridging LLMs and Recommendation Systems via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.24289) | [![GitHub Stars](https://img.shields.io/github/stars/linjc16/Rec-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/linjc16/Rec-R1) |
 
 #### Agent (Others)
 
