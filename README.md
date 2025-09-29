@@ -28,7 +28,7 @@ If you find this survey helpful, please cite our work:
 
 ```bibtex
 @article{zhang2025survey,
-  title={A Survey of Reinforcement Learning for Large Reasoning Models},
+  title={A survey of reinforcement learning for large reasoning models},
   author={Zhang, Kaiyan and Zuo, Yuxin and He, Bingxiang and Sun, Youbang and Liu, Runze and Jiang, Che and Fan, Yuchen and Tian, Kai and Jia, Guoli and Li, Pengfei and others},
   journal={arXiv preprint arXiv:2509.08827},
   year={2025}
@@ -86,7 +86,7 @@ If you find this survey helpful, please cite our work:
     - [Multi-Agent Systems](#multi-agent-systems)
     - [Scientific Tasks](#scientific-tasks)
 - [🌟 Acknowledgment](#-acknowledgment)
-- [Star History](#star-history)
+- [✨ Star History](#-star-history)
 
 
 ## 🗺️ Overview
@@ -850,6 +850,6 @@ We organize the survey into five main sections:
 This survey is extended and refined from the original **Awesome RL Reasoning Recipes** repo. We are deeply grateful to all contributors for their efforts, and we sincerely thank for their all interest in **Awesome RL Reasoning Recipes**. The contents of the previous repository are available [here](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs/tree/TripleR).
 
 
-## Star History
+## ✨ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=TsinghuaC3I/Awesome-RL-for-LRMs&type=Date)](https://www.star-history.com/#TsinghuaC3I/Awesome-RL-for-LRMs&Date)
