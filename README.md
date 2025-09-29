@@ -21,9 +21,24 @@
 - **[2025-04-23]** 🔥 Introducing **TTRL**: an open-source solution for online RL on data without ground-truth labels, especially test data. Check it out: [Github](https://github.com/PRIME-RL/TTRL) and [Paper](https://arxiv.org/abs/2504.16084).
 - **[2025-03-20]** 🔥 We are excited to introduce collection of papers and projects on RL for reasoning models!
 
+
+## 🎈 Citation
+
+If you find this survey helpful, please cite our work:
+
+```bibtex
+@article{zhang2025survey,
+  title={A Survey of Reinforcement Learning for Large Reasoning Models},
+  author={Zhang, Kaiyan and Zuo, Yuxin and He, Bingxiang and Sun, Youbang and Liu, Runze and Jiang, Che and Fan, Yuchen and Tian, Kai and Jia, Guoli and Li, Pengfei and others},
+  journal={arXiv preprint arXiv:2509.08827},
+  year={2025}
+}
+```
+
 ## 📖 Contents
 - [A Survey of Reinforcement Learning for Large Reasoning Models](#a-survey-of-reinforcement-learning-for-large-reasoning-models)
 - [🎉 News](#-news)
+- [🎈 Citation](#-citation)
 - [📖 Contents](#-contents)
 - [🗺️ Overview](#️-overview)
 - [📄 Paper List](#-paper-list)
@@ -71,7 +86,6 @@
     - [Multi-Agent Systems](#multi-agent-systems)
     - [Scientific Tasks](#scientific-tasks)
 - [🌟 Acknowledgment](#-acknowledgment)
-- [🎈 Citation](#-citation)
 - [Star History](#star-history)
 
 
@@ -835,19 +849,6 @@ We organize the survey into five main sections:
 
 This survey is extended and refined from the original **Awesome RL Reasoning Recipes** repo. We are deeply grateful to all contributors for their efforts, and we sincerely thank for their all interest in **Awesome RL Reasoning Recipes**. The contents of the previous repository are available [here](https://github.com/TsinghuaC3I/Awesome-RL-for-LRMs/tree/TripleR).
 
-
-## 🎈 Citation
-
-If you find this survey helpful, please cite our work:
-
-```bibtex
-@article{zhang2025survey,
-  title={A Survey of Reinforcement Learning for Large Reasoning Models},
-  author={Zhang, Kaiyan and Zuo, Yuxin and He, Bingxiang and Sun, Youbang and Liu, Runze and Jiang, Che and Fan, Yuchen and Tian, Kai and Jia, Guoli and Li, Pengfei and others},
-  journal={arXiv preprint arXiv:2509.08827},
-  year={2025}
-}
-```
 
 ## Star History
 
