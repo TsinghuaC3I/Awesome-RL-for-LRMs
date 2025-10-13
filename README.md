@@ -694,7 +694,7 @@ We organize the survey into five main sections:
 | 2025-07 | `OpenTable-R1` | OpenTable-R1: A Reinforcement Learning Augmented Tool Agent for Open-Domain Table Question Answering | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.03018) | [![GitHub Stars](https://img.shields.io/github/stars/TabibitoQZP/OpenTableR1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TabibitoQZP/OpenTableR1) |
 | 2025-07 | `LaViPlan` | LaViPlan : Language-Guided Visual Path Planning with RLVR | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.12911) | - |
 | 2025-06 | `Drive-R1` | Drive-R1: Bridging Reasoning and Planning in VLMs for Autonomous Driving with Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2506.18234) | - |
-
+| - | `EPO` | EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/grape?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
 
 #### Code Generation
 
@@ -808,6 +808,7 @@ We organize the survey into five main sections:
 | 2025-02 | `ConRFT` | ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.05450) | [![GitHub Stars](https://img.shields.io/github/stars/cccedric/conrft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/cccedric/conrft) |
 | 2024-11 | `GRAPE` | GRAPE: Generalizing Robot Policy via Preference Alignment | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.19309) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/grape?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/aiming-lab/grape) |
 | - | `RLinf` | RLinf: Reinforcement Learning Infrastructure for Agentic AI | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://rlinf.readthedocs.io/en/latest/) | - |
+| - | `EPO` | EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/grape?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
 
 #### Multi-Agent Systems
 
@@ -860,6 +861,7 @@ We organize the survey into five main sections:
 | 2024-12 | `HuatuoGPT-o1` | HuatuoGPT-o1, Towards Medical Complex Reasoning with LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.18925) | [![GitHub Stars](https://img.shields.io/github/stars/FreedomIntelligence/HuatuoGPT-o1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FreedomIntelligence/HuatuoGPT-o1) |
 | - | `Pro-1` | Pro-1 | [![Blog](https://img.shields.io/badge/Blog-1F4E79?style=for-the-badge)](https://michaelhla.com/blog/pro1.html) | [![GitHub Stars](https://img.shields.io/github/stars/michaelhla/pro-1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/michaelhla/pro-1) |
 | - | `rbio` | rbio1 - training scientific reasoning LLMs with biological world models as soft verifiers | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://www.biorxiv.org/content/10.1101/2025.08.18.670981v3) | [![GitHub Stars](https://img.shields.io/github/stars/czi-ai/rbio?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/czi-ai/rbio) |
+| - | `EPO` | EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/grape?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
 
 ## 🌟 Acknowledgment
 
