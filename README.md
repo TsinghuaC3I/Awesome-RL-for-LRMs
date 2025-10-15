@@ -13,6 +13,7 @@
 
 ## 🎉 News
 
+- **[2025-10-15]** 🎉 Honored to give a talk at [BAAI](https://event.baai.ac.cn/activities/961)! Here are the [slides](Survey@RL4LRM-v1.pdf).
 - **[2025-09-18]** 🎉 We update the full list of papers in the category structure of the survey!
 - **[2025-09-12]** 🎉 Our survey was ranked **#1 Paper of the Day** on 🤗 [Hugging Face Daily Papers](https://huggingface.co/papers/2509.08827)!
 - **[2025-09-11]** 🔥 Excited to release our **RL for LRMs Survey**! We’ll be updating the full list of papers in with a new category structure soon. Check it out: [Paper](https://huggingface.co/papers/2509.08827).
@@ -77,6 +78,7 @@ If you find this survey helpful, please cite our work:
     - [Browser-Use Agent](#browser-use-agent)
     - [DeepResearch Agent](#deepresearch-agent)
     - [GUI\&Computer Agent](#guicomputer-agent)
+    - [Recommendation Agent](#recommendation-agent)
     - [Agent (Others)](#agent-others)
     - [Code Generation](#code-generation)
     - [Software Engineering](#software-engineering)
