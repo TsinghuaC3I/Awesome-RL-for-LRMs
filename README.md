@@ -817,6 +817,7 @@ We organize the survey into five main sections:
 
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
+| 2025-10 | `AgentFlow` | In-the-Flow Agentic System Optimization for Effective Planning and Tool Use | [![Paper](https://img.shields.io/badge/Paper-6772E5?style=for-the-badge)](https://huggingface.co/papers/2510.05592) | [![GitHub Stars](https://img.shields.io/github/stars/lupantech/AgentFlow?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lupantech/AgentFlow) |
 | 2025-09 | `SoftRankPO,` | Learning to Deliberate: Meta-policy Collaboration for Agentic LLMs with Multi-agent Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.03817) | - |
 | 2025-09 | `BFS-Prover-V2` | Scaling up Multi-Turn Off-Policy RL and Multi-Agent Tree Search for LLM Step-Provers | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.06493) | - |
 | 2025-08 | `MAGRPO` | LLM Collaboration With Multi-Agent Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2508.04652) | - |
