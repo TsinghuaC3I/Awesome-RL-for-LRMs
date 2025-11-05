@@ -13,6 +13,7 @@
 
 ## 🎉 News
 
+- **[2025-11-05]** 🔥 Excited to release our paper list about **Memory for Agents**, covering breakthroughs in Context Management and Learning from Experience powering self-improving AI agents. Check it out: [GitHub](https://github.com/TsinghuaC3I/Awesome-Memory-for-Agents)
 - **[2025-10]** 🎉 Honored to give talks at [BAAI](https://event.baai.ac.cn/activities/961), [Qingke Talk](https://qingkeai.online/archives/0h3Cm8Bi) and Tencent Wiztalk! Here are the [slides](Survey@RL4LRM-v1.pdf).
 - **[2025-09-18]** 🎉 We update the full list of papers in the category structure of the survey!
 - **[2025-09-12]** 🎉 Our survey was ranked **#1 Paper of the Day** on 🤗 [Hugging Face Daily Papers](https://huggingface.co/papers/2509.08827)!
