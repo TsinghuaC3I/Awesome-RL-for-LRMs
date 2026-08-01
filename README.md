@@ -13,6 +13,8 @@
 
 ## 🎉 News
 
+- **[2026-07-31]** 🎉 First **OpenRSI** release: **Frontis-MA1** (35B / 30B, with GGUF derivatives), the **OpenMLE** stack (Gym / RL / Evo), and the OpenMLE Tasks and OpenMLE SFT Traces datasets. Check it out: [GitHub](https://github.com/FrontisAI/OpenRSI).
+- **[2026-06-25]** 🎉 Our survey **Self-Improving Agents in the Era of Experience: A Survey of Self- to Meta-Evolution** is now available on OpenReview. Check it out: [GitHub](https://github.com/FrontisAI/Awesome-Self-Improving-Agents) and [OpenReview](https://openreview.net/pdf?id=IUltZSgLMm).
 - **[2025-11-05]** 🔥 Excited to release our paper list about **Memory for Agents**, covering breakthroughs in Context Management and Learning from Experience powering self-improving AI agents. Check it out: [GitHub](https://github.com/TsinghuaC3I/Awesome-Memory-for-Agents)
 - **[2025-10]** 🎉 Honored to give talks at [BAAI](https://event.baai.ac.cn/activities/961), [Qingke Talk](https://qingkeai.online/archives/0h3Cm8Bi) and Tencent Wiztalk! Here are the [slides](Survey@RL4LRM-v1.pdf).
 - **[2025-09-18]** 🎉 We update the full list of papers in the category structure of the survey!
