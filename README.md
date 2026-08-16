@@ -878,4 +878,4 @@ This survey is extended and refined from the original **Awesome RL Reasoning Rec
 
 ## ✨ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=TsinghuaC3I/Awesome-RL-for-LRMs&type=Date)](https://www.star-history.com/#TsinghuaC3I/Awesome-RL-for-LRMs&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=TsinghuaC3I/Awesome-RL-for-LRMs&type=Date)](https://star-history.dera.page/#TsinghuaC3I/Awesome-RL-for-LRMs&Date)
