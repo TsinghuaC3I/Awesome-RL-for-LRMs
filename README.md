@@ -600,6 +600,7 @@ We organize the survey into five main sections:
 | - | `verifiers` | Verifiers: Reinforcement Learning with LLMs in Verifiable Environments | - | [![GitHub Stars](https://img.shields.io/github/stars/willccbb/verifiers?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/willccbb/verifiers) |
 | - | `prime-rl` | PRIME-RL: Decentralized RL Training at Scale | - | [![GitHub Stars](https://img.shields.io/github/stars/PrimeIntellect-ai/prime-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PrimeIntellect-ai/prime-rl) |
 | - | `MARTI` | A Framework for LLM-based Multi-Agent Reinforced Training and Inference | - | [![GitHub Stars](https://img.shields.io/github/stars/TsinghuaC3I/MARTI?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TsinghuaC3I/MARTI) |
+| - | `Awesome-Perception-Aware-RLVR` | Awesome Perception-Aware RLVR: Unified Reproductions and Controlled Comparisons of Perception-Aware RLVR and On-Policy Distillation for Vision-Language Models | - | [![GitHub Stars](https://img.shields.io/github/stars/zsxm1998/awesome-perception-aware-rlvr?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zsxm1998/awesome-perception-aware-rlvr) |
 
 ### Applications
 #### Coding Agent
