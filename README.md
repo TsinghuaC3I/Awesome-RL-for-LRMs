@@ -279,6 +279,7 @@ We organize the survey into five main sections:
 
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
+| 2025-09 | `TagPR` | TagPR: Tag-Guided Process Supervision for Personalization Reasoning in Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.23140) | - |
 | 2025-09 | `CDE` | CDE: Curiosity-Driven Exploration for Efficient Reinforcement Learning in Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.09675) | - |
 | 2025-09 | `DARLING` | Jointly Reinforcing Diversity and Quality in Language Model Generations | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.02534) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/darling?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/darling) |
 | 2025-09 | `DRER` | Rethinking Reasoning Quality in Large Language Models through Enhanced Chain-of-Thought via RL | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.06024) | - |
