@@ -699,6 +699,7 @@ We organize the survey into five main sections:
 
 | Date | Name | Title | Paper | Github |
 |:-:|:-:|:-|:-:|:-:|
+| 2026-01 | `ToolMaster` | Teaching LLMs to Learn Tool Trialing and Execution through Environment Interaction | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.12762) | [![GitHub Stars](https://img.shields.io/github/stars/NEUIR/ToolMaster?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/NEUIR/ToolMaster) |
 | 2025-07 | `OpenTable-R1` | OpenTable-R1: A Reinforcement Learning Augmented Tool Agent for Open-Domain Table Question Answering | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.03018) | [![GitHub Stars](https://img.shields.io/github/stars/TabibitoQZP/OpenTableR1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TabibitoQZP/OpenTableR1) |
 | 2025-07 | `LaViPlan` | LaViPlan : Language-Guided Visual Path Planning with RLVR | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.12911) | - |
 | 2025-06 | `Drive-R1` | Drive-R1: Bridging Reasoning and Planning in VLMs for Autonomous Driving with Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2506.18234) | - |
